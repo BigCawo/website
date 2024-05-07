@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliot Bernaud Design Dessin Bricolage</title>
+    <link rel="shortcut icon" href="../../assets/course.gif">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../tests/test.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Roboto:wght@400&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="endGradient"></div>
+    
+    <div id = sidebar>
+        <div id="categories">
+            <p> <a href="../../">Accueil</a> </p>
+            <p><a href="../../qui-suis-je/">Qui&nbsp;suis-je&nbsp;?</a></p>   
+        </div>
+    </div>
+
+    <div id = main>
+
+        <div class="espace"></div>
+        <p class="img50pc"><i> Recherches formelles</i></p>
+        <div class="flexcontainer">
+            
+            <img loading="lazy" style="padding-left: 0;" src="../../assets/ollas-recherches-formelles 01.png" alt="">
+            <div class="espaceImg"></div>
+            <img loading="lazy" style="padding-left: 0;" src="../../assets/ollas-recherches-formelles-02.png    " alt="">
+        </div>
+    
+        <div class="espace"></div>
+
+        <p class="img50pc"><i> Expérimentations sur grasshopper</i></p>
+        <div class="flexcontainer">
+            
+            <img loading="lazy" style="padding-left: 0;" src="../../assets/ollas-test-texture-01.JPG.png" alt="">
+            <div class="espaceImg"></div>
+            <img loading="lazy" style="padding-left: 0;" src="../../assets/ollas-grasshopper.gif    " alt="">
+
+        </div>
+
+        <div class="espace"></div>
+
+        <p class="img50pc"><i> Fabrication du moule et coulage</i></p>
+        <div class="flexcontainer">
+            
+            <img loading="lazy" style="padding-left: 0;" src="../../assets/ollas-coulage-V2.gif" alt="">
+            <div class="espaceImg"></div>
+            <img loading="lazy" style="padding-left: 0;" src="../../assets/ollas-coucou.png" alt="">
+
+        </div>
+
+
+        <script>
+    
+            window.onresize=function(){
+                resize();
+    
+            }
+    
+            function resize(){
+                sw = document.getElementById('main').clientWidth
+                factor = sw/420
+                carousselWidth = document.getElementById("carousel")
+                carousselWidth.style.transform = "scale("+factor+")"
+    
+            }
+    
+    
+    
+    
+    
+            document.body.onload=function(){
+                resize();
+                nbr = 8;
+                p = 0;
+    
+    
+    
+                carouselContainer = document.getElementById("carouselContainer")
+                l = document.getElementById("l")
+                r = document.getElementById("r")
+                carouselContainer.style.width = (420*nbr)+"px";
+                for( i = 1 ; i <= nbr; i++){
+                    div = document.createElement("div");
+                    div.className="carouselPhoto"
+                    div.style.backgroundImage="url('../../assets/pol-dossiertechnique/dossier technique-0"+i+".svg')";
+                    carouselContainer.appendChild(div);
+                }
+                affichermasquer();
+            }
+    
+            r.onclick=function(){
+                if(p>-nbr+1)
+                    p--;
+                carouselContainer.style.transform="translate("+p*420+"px)";
+                carouselContainer.style.transition="all 0.5s ease"
+                affichermasquer();
+    
+            }
+    
+            l.onclick=function(){
+                if(p<0)
+                    p++;
+                carouselContainer.style.transform="translate("+p*420+"px)";
+                carouselContainer.style.transition="all 0.5s ease"
+                affichermasquer();
+            }
+    
+            function affichermasquer(){
+                if(p==-nbr+1)
+                    r.style.visibility = "hidden";
+                else
+                    r.style.visibility = "visible";
+    
+                if(p==0)
+                    l.style.visibility = "hidden";
+                else
+                    l.style.visibility = "visible";
+    
+            }
+        </script>
+
+        <p class="copyright">@ All right reserved @</p>
+
+
+    </div>
+</body>
+
+    <script src="../../script.js"> </script>
+    <script src="../../scriptSidebar.js"></script>
+    <script src="../../scriptIntro.js"> </script>
+    
+</html>
