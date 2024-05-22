@@ -5,7 +5,7 @@ var SliderDetector = document.getElementById("myRangeA");
 
 let wA = 1920
 let hA = 1396
-let nbr = 103;
+let nbr = 102;
 
 
 
@@ -49,9 +49,10 @@ document.body.onload=function(){
     r = document.getElementById("rA")
     carouselContainer.style.width = (wA*nbr)+"px";
     for( i = 1 ; i <= nbr; i++){
+        
         div = document.createElement("div");
         div.className="carouselPhotoA"
-        div.style.backgroundImage="url('../../assets/carnets/2023_10_A4/"+(i-1)+".jpg')";
+        div.style.backgroundImage="url('../../assets/carnets/2023_10_A4/"+ (i-1) +".jpg')";
         div.style.scrollSnapAlign = "start"
         carouselContainer.appendChild(div);
     }

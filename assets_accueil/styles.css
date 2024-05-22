@@ -32,6 +32,8 @@
     --projRatio: calc(var(--w-projAbs)/var(--h-projAbs));
     --w-desc : 35dvw;
 
+    /* left: calc((var(--p-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); */
+
     /* projects dimensions */
     --scaleFactor : 1;
 
