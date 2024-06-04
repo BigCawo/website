@@ -271,6 +271,11 @@ a:active {color: rgb(0, 0, 0);}
 
 }
 
+#imgIntro{
+    max-width: calc(var(--w-main)- var(--w-carton)) ;
+
+}
+
 
 .flexcontainer{
     display: flex;
@@ -775,6 +780,7 @@ p{
 }
 
 #imgIntro{
+    max-width: unset ;
     margin-bottom: 20px;
 }
 
