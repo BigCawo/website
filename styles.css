@@ -284,7 +284,7 @@ a:active {color: rgb(0, 0, 0);}
 }
 
 .carton{background-color: rgba(0, 255, 255, 0);
-    width: var(--w-carton) ; 
+    flex-basis: var(--w-carton) ; 
     flex-shrink: 0;
     padding-top: 25px;
     padding-bottom: 25px;  
@@ -842,7 +842,7 @@ html{
 }
 
 .texta{width: 100%; padding-right: 0px;}
-.carton{max-width: 100%;}
+.carton{flex-basis: 100%;}
 
 .flexcontainer{
     flex-direction: column;
