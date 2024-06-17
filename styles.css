@@ -272,7 +272,7 @@ a:active {color: rgb(0, 0, 0);}
 }
 
 #imgIntro{
-    max-width: 50% ;
+    max-width: calc(var(--w-main)- var(--w-carton)) ;
 
 }
 
