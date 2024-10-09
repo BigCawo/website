@@ -558,7 +558,29 @@ background-color: rgba(0, 0, 0, 0.8);
 /* accueil */
 
 
-
+/* shake elements */
+@keyframes shake {
+    10%, 90% {
+      opacity: 0;
+    }
+  
+    20%, 80% {
+        opacity: 1;
+    }
+  
+    30%, 50%, 70% {
+        opacity: 0;
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+  
+  .apply-shake {
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  }
+  
 
 
 #descriptions{ 

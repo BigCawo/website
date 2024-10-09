@@ -382,7 +382,16 @@ function projectSelect(x){
         }
 
         if (projectValue == 3){
-            null
+            let input = document.querySelector("div#LampeIcosaedre");
+
+   
+
+            input.style.transform = "translate3d(-4px, 0, 0)"
+            
+
+
+
+       
             // window.location.href = "objet/lampe-icosaedre/"
         }
 

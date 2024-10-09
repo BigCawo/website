@@ -1,4 +1,5 @@
 
+
 // carnet A4 10-2023
 
 var SliderDetector = document.getElementById("myRangeA");
