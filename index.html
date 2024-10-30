@@ -37,45 +37,26 @@
     </div>
 
     <div id="projectInformations">
-      <!-- <button class="closeButton"  onclick="shutDownBaaaa()"> X </button> -->
-
-      <button style="width: 100%; height: 100%; position: absolute; opacity: 0" onclick="projectSelect(-1)"></button>
-      <!-- <div id="imgContainer">
-            <img  src="assets/accueil/nasaV1.gif" alt="">
-        </div> -->
       <div id="descContainer">
-        <div id="ProjectIntro">
-          <h1 id="ProjectName" style="font-family: Fababrac; display: inline-block"></h1>
-          <h2 id="ProjectType" style="font-family: Fababrac; display: inline-block; font-weight: 400">Projet personnel</h2>
+        <button id="descButton" onclick="projectSelect(projectValue)"></button>
+        <div id="projectIntro">
+          <h1 id="projectName" style="font-family: Fababrac; display: inline-block"></h1>
+          <h2 id="projectType"></h2>
         </div>
-        <img style="display: none" src="assets/accueil/illustrations_APropos.png" alt="" />
-        <p id="ProjectText">
-          Je suis un artiste designer polyvalent diplômé depuis 2023 en création industrielle à l'ENSCI Les Ateliers. <br /><br />Je suis aussi dessinateur
-          autodidacte et passionné de sciences, de technique et de recherche.
-        </p>
-        <!-- <img id="ProjectImg" style="max-height: 100%; width: 100%;" src="../assets/terreslointaines.png" alt=""> -->
+
+        <p id="projectText"></p>
+        <img id="projectImg" src="" alt="">
       </div>
     </div>
 
     <div id="center">
-      <div
-        id="popup"
-        style="
-          position: fixed;
-          z-index: 50;
-          width: auto;
-          visibility: hidden;
-          background-color: rgba(255, 255, 255, 0.856);
-          border: 2px solid black;
-          border-radius: 5px;
-        "
-      >
+      <div id="popup">
         <h2 style="font-family: Fababrac; display: inline-block; padding: 0 5px 0 5px; font-size: 150%">bonjour</h2>
       </div>
 
       <div id="maison">
-        <div style="max-width: 50dvw;" id="services">
-
+        <div id="arrierePlan" >     
+          <img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt="">  
         </div>
         <div id="accueil">
           <div id="entete">
@@ -98,7 +79,7 @@
 
           <button class="buttonProject" id="buttonAPropos" onclick="projectSelect(1)"></button>
 
-          <div id="aPropos" class="Mediation Objet Illustration">
+          <div id="aPropos" class="Mediation Objet Illustration ">
             <img class="background" src="assets/accueil/aPropos.png" alt="" />
             <img class="backgroundColor" src="assets/accueil/aProposColor.png" alt="" />
             <img class="backgroundColor2" src="assets/accueil/aProposColor.png" alt="" />

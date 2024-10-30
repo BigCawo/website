@@ -560,9 +560,14 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
-        document.getElementById("ProjectName").innerHTML = projectList[x].name
-        document.getElementById("ProjectText").innerHTML = projectList[x].text
-        document.getElementById("ProjectType").innerHTML = projectList[x].type
+        document.getElementById("projectName").innerHTML = projectList[x].name
+        document.getElementById("projectText").innerHTML = projectList[x].text
+        document.getElementById("projectType").innerHTML = projectList[x].type
+        let image = projectList[x].imgSrc1
+        if (image == "none"){document.getElementById("projectImg").style.display = "none"}
+        else {document.getElementById("projectImg").style.display = "initial"
+        document.getElementById("projectImg").src = "assets/"+projectList[x].imgSrc1
+        }
         const elements = document.getElementById("spot").getElementsByTagName("div")
 
         //special accueil
