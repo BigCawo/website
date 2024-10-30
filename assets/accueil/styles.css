@@ -306,8 +306,7 @@ h3{
 
 
 #maison{
-    left: 100dvw;
-    /* position: relative; */
+    /* left: 100dvw; */
     background-color: rgba(0, 0, 0, 0.1);
     transition: background-color ease 0.25s;
     height: 100%; 
@@ -316,9 +315,15 @@ h3{
 
 }
 
+#services{
+    background-color: 0;
+}
+
 #accueil{
-    position: absolute;
-    height: 100%; width: 100vw;
+    position: relative;
+    display: inline;
+    height: 90dvw; 
+    width: 100vw;
 }
 
 
@@ -364,7 +369,7 @@ h3{
 
 #aPropos{
     position: absolute;
-    height: 100%; 
+    height: 90dvh; 
     width: auto;
     z-index: 5;
     transition: opacity 0.35s ease;

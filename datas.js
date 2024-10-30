@@ -16,7 +16,7 @@ let projectList = [
         size : [,],
         id : "aPropos",
         name: "Bienvenue !",
-        text: "Je suis un artiste designer polyvalent diplômé depuis 2023 en création industrielle à l'ENSCI Les Ateliers. Mon approche du design et de la création est à la fois poétique, rêveuse ; et réaliste, consciente des enjeux sociétaux, écologiques et techniques de demain.<br><br>Clique pour en savoir plus sur moi",
+        text: "Je m'appelle Eliot, je suis artiste designer diplômé en création industrielle à l'ENSCI - Les Ateliers. Mon approche du design et de la création est à la fois poétique, rêveuse ; et réaliste, consciente des enjeux sociétaux, écologiques et techniques de demain. <br><br>  Pour en savoir plus sur ma <u>pratique</u>, sur les <u>services</u> que je propose ainsi que sur mes <u>travaux</u> actuels et passés, je vous invite à parcourir les différents espaces de ce site. <br><br> Je suis ouvert à toute proposition de travail ou de collaboration ! <br> Bonne visite :)",
         type: "",
         date: "",
         spot : 1,
