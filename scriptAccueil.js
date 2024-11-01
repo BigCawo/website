@@ -1,4 +1,16 @@
+// Variables
+var root = document.documentElement;
+var style = getComputedStyle(root);
+let projectValue = -1;
+let center = document.getElementById("center");
+let spawnState = -1;
+let w = projectValue
+let descContainer = document.getElementById("projectInformations")
+let y = 0
 
+let Mq1300 = window.matchMedia("(max-width: 1300px)")
+let Mq900 = window.matchMedia("(max-width: 900px)")
+let Mq480 = window.matchMedia("(max-width: 480px)")
 
 // Navigation Bar //
 
@@ -241,19 +253,8 @@ function navBar() {
 }
 
 
-// Variables
-var root = document.documentElement;
-var style = getComputedStyle(root);
-let projectValue = -1;
-let center = document.getElementById("center");
-let spawnState = -1;
-let w = projectValue
-let descContainer = document.getElementById("projectInformations")
-let y = 0
 
-let Mq1300 = window.matchMedia("(max-width: 1300px)")
-let Mq900 = window.matchMedia("(max-width: 900px)")
-let Mq480 = window.matchMedia("(max-width: 480px)")
+
 
 //project generation
 for (let i = 0 ; i < projectList.length - 2; i++) {
@@ -263,6 +264,10 @@ for (let i = 0 ; i < projectList.length - 2; i++) {
     
     buttonProject.id = buttonId;
     buttonProject.className = "buttonProject";
+    buttonProject.style.left= projPath.offset[0]*center.offsetHeight/hGalerie+"px"
+    buttonProject.style.bottom= projPath.offset[1]*center.offsetHeight/hGalerie+"px"
+    buttonProject.style.width= projPath.size[0]*center.offsetHeight/hGalerie+"px"
+    buttonProject.style.height= projPath.size[1]*center.offsetHeight/hGalerie+"px"
     buttonProject.setAttribute('onclick',`projectSelect(${i+2});`);
    
     document.getElementById("projects").appendChild(buttonProject);
@@ -272,6 +277,8 @@ for (let i = 0 ; i < projectList.length - 2; i++) {
     
     project.className = projPath.class +" project";
     project.id = projPath.id;
+    project.style.left= projPath.offset[0]*center.offsetHeight/hGalerie+"px"
+    project.style.bottom= projPath.offset[1]*center.offsetHeight/hGalerie+"px"
     document.getElementById("projects").appendChild(project);
     
     const Img = document.createElement("img");
@@ -295,6 +302,11 @@ for (let i = 0 ; i < projectList.length - 2; i++) {
 
 }
 
+//centersize change
+
+function centerResize() {
+null
+};
 
 //mediaqueries
 
@@ -315,6 +327,25 @@ Mq480.addEventListener("change", function() {
 
 
 function loadValues() {
+    //reload project positions
+    for (let i = 0 ; i < projectList.length - 2; i++) {
+        let projPath = projectList[i + 2];
+        const buttonProject = document.getElementById("button" + projPath.id.charAt(0).toUpperCase() + projPath.id.slice(1));
+        
+
+
+        buttonProject.style.left= projPath.offset[0]*center.offsetHeight/hGalerie+"px"
+        buttonProject.style.bottom= projPath.offset[1]*center.offsetHeight/hGalerie+"px"
+        buttonProject.style.width= projPath.size[0]*center.offsetHeight/hGalerie+"px"
+        buttonProject.style.height= projPath.size[1]*center.offsetHeight/hGalerie+"px"
+
+        const project = document.getElementById(projPath.id);
+        
+        project.style.left= projPath.offset[0]*center.offsetHeight/hGalerie+"px"
+        project.style.bottom= projPath.offset[1]*center.offsetHeight/hGalerie+"px"
+
+    
+    }    
     navBar();
     projectHilight(projectValue)
     center.style.opacity = "initial"
@@ -489,9 +520,11 @@ function projectSelect(x){
                 window.location.href = "../qui-suis-je/";
             }
             else if (projectList[x].link == "none")
-            shake(document.getElementById(projectList[x].id))
-            
+            {
+            shake(document.getElementById(projectList[x].id));
+            }
             else
+
             window.location.href = "galerie/"+projectList[x].id
             }
         

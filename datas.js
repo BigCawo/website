@@ -1,7 +1,7 @@
 
-const wHome = 12000;
-const hHome = 1084;
-const ratioHome = wHome/hHome;
+const wGalerie = 12000;
+const hGalerie = 1084;
+const ratioGalerie = wGalerie/hGalerie;
 
 let projectList = [
 
@@ -12,8 +12,8 @@ let projectList = [
     },
     // A PROPOS
     {
-        offset : [,],
-        size : [,],
+        offset : [250,0],
+        size : [772,576],
         id : "aPropos",
         name: "Bienvenue !",
         text: "Je m'appelle Eliot, je suis artiste designer diplômé en création industrielle à l'ENSCI - Les Ateliers. Mon approche du design et de la création est à la fois poétique, rêveuse ; et réaliste, consciente des enjeux sociétaux, écologiques et techniques de demain. <br><br>  Pour en savoir plus sur ma <u>pratique</u>, sur les <u>services</u> que je propose ainsi que sur mes <u>travaux</u> actuels et passés, je vous invite à parcourir les différents espaces de ce site. <br><br> Je suis ouvert à toute proposition de travail ou de collaboration ! <br> Bonne visite :)",
@@ -29,10 +29,8 @@ let projectList = [
     },
     // TERRES LOINTAINES
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [100,430],
+        size : [707,208],
         id: "terresLointaines",
         name: "Terres Lointaines",
         text: "Ce court métrage, inspiré du 'Monde d'Edena' écrit et dessiné par Moebius, raconte l'histoire d'un être humanoïde échoué sur une terre inconnue, qu'il va devoir arpenter et découvrir.",
@@ -48,10 +46,8 @@ let projectList = [
     },
     // OLLAS
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [250,287],
+        size : [288,115],
         id: "ollas",
         name: "Ollas",
         text: "Ollas en terre cuite, dessinée dans le cadre de mon stage chez les Transfarmers.",
@@ -67,10 +63,8 @@ let projectList = [
     },
     // POL
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [200,0],
+        size : [401,294],
         id: "pol",
         name: "Pol",
         text: "Issu d’un partenariat avec la galerie d’art Bertrand Grimont, ce projet est une tentative de contrepied à la tendance actuelle des scénographies jetables.",
@@ -86,10 +80,8 @@ let projectList = [
     },
     // LAMPE ICOSAEDRE
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [704,719],
+        size : [302,361],
         id: "lampeIcosaedre",
         name: "Lampe Icosaèdre",
         text: "Fabriquée à partir d'une ancienne maquette de projet. <br>Sa lumière diffuse est idéale pour le travail de bureau !",
@@ -105,10 +97,8 @@ let projectList = [
     },
     // CHAISE ATTACHE
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [851,0],
+        size : [245,350],
         id: "chaiseAttache",
         name: "Chaise Attache",
         text: "Cette assise démontable réutilise le principe d'assemblage de Pol.",
@@ -124,10 +114,8 @@ let projectList = [
     },
     // FABRIQUE A BRAC
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [1255,370],
+        size : [652,481],
         id: "fabriqueABrac",
         name: "Fabrique À Brac",
         text: "Les objets industriels qui nous entourent possèdent des potentiels d’usage intéressants et souvent inexploités.<br><br>A travers mon projet de deeplôme, j'explore différentes pistes de projet pour inciter les gens à regarder les objets industriels avec curiosité et ingéniosité",
@@ -143,10 +131,8 @@ let projectList = [
     },
     // NASA
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [1213,0],
+        size : [670,380],
         id: "nasa",
         name: "NASA",
         text: "C'est un module déployable pour scooter qui permet à un intervenant de proposer des activités scientifiques, créatives et ludiques aux jeunes vivant dans des zones délaissées.<br><br> Réalisé avec Adèle Nyitrai, pour les Petits Débrouillards.",
@@ -162,10 +148,8 @@ let projectList = [
     },
     // LAMPE RESSORT
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [1986,145],
+        size : [234,460],
         id: "lampeRessort",
         name: "Lampe Ressort",
         text: "Ce projet est un objet manifeste, un prototype de lampe d’architecte dont les principes de fonctionnement sont mis en valeur. L’objectif est de rendre l’objet plus compréhensible et tangible pour l’utilisateur.",
@@ -181,10 +165,8 @@ let projectList = [
     },
     // TABLE BASSE
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [1996,0],
+        size : [505,155],
         id: "tableBasse",
         name: "Table Basse",
         text: "Fabriquée à partir d'un vieux meuble",
@@ -200,10 +182,8 @@ let projectList = [
     },
     // LAMPE COLETTE
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [2260,700],
+        size : [189,93],
         id: "lampeColette",
         name: "Lampe Colette",
         text: "Cette applique murale orientable est conçue autour de la pince à dessin, objet industriel que j’ai détourné de son utilisation principale pour en faire une pièce d’assemblage à multiples facettes.",
@@ -219,10 +199,8 @@ let projectList = [
     },
     // CHMUP
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [2329,180],
+        size : [424,386],
         id: "chmupTheDog",
         name: "Chmup The Dog",
         text: "Chmup, chien fidèle aux pouvoirs télékinésiques, part à la recherche de son maitre fait prisonnier dans un repaire de scientifiques.",
@@ -238,10 +216,8 @@ let projectList = [
     },
     // VASE
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [2939,392],
+        size : [257,350],
         id: "vaseSuspendu",
         name: "Vase suspendu",
         text: "Dans ce vase, les fleurs sont placées individuellement, avec attention et conscience du geste, dans les trous du plateau prévus à cet effet. Un autre regard peut alors se poser sur la fleur, à la fois comme objet unique de contemplation ou comme partie intégrante d’une composition.<br><br>Réalisé avec Sidonie Couëdel.",
@@ -257,10 +233,8 @@ let projectList = [
     },
     // MEUBLE A BAZAR
     {
-        offset : [,],
-        size : [,],
-        offsetW : 0,
-        offsetH : 0,
+        offset : [2918,0],
+        size : [420,395],
         id: "meubleBazar",
         name: "Meuble à bazar",
         text: "J'ai fabriqué ce meuble pour ranger efficacement et de manière économe en place mes dessins et les objets que je collecte pour bricoler. Je l'ai essentiellement conçu à partir de matière récupérée, dont je disposais à proximité.",
@@ -276,10 +250,8 @@ let projectList = [
     },
     // PARLERS ESPACE
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [3266,500],
+        size : [837,532],
         id: "parlersEspace",
         name: "Parlers Espace",
         text: "Dans le monde matériel auquel nous appartenons, notre personnalité transparaît à travers nos espaces. Des langages, propres à chacun émergent des aménagements, des objets avec lesquels nous bâtissons nos quotidiens. A travers l'appropriation de ces espaces, nous racontons des histoires.",
@@ -295,10 +267,8 @@ let projectList = [
     },
     // POMME DE TERRE
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [3793,0],
+        size : [653,586],
         id: "pommeDeTerre",
         name: "Pomme de Terre",
         text: "Une pomme de terre nostalgique du passé se réveille dans une caisse. Elle espère être cuisinée comme ses aïeules, mais le monde de la cuisine a bien changé...<br><br>Réalisé avec Théophile Perrot.",
@@ -314,10 +284,8 @@ let projectList = [
     },
     // CARNETS
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [4591,0],
+        size : [238,335],
         id: "carnets",
         name: "Carnets",
         text: "Mes carnets m'accompagnent partout où je vais. En voyage, dans la rue, dans le métro, chez moi, chez mes amis...<br><br>J'y dessine et j'y écrit ce que je vois, pense et imagine, sans but particulier. Ils évoluent avec moi.",
@@ -333,10 +301,8 @@ let projectList = [
     },
     // POLES IMAGES
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [4974,-3],
+        size : [445,589],
         id: "poleImage",
         name: "Qu'est ce qu'un Pôle Image ?",
         text: "Cette pastille mixant plusieurs types d'animation est une réponse de l'entreprise Cinémagraphic à un appel à projet lancé par les Pôles Images.<br><br>J'y ai été assistant à la réalisation, à l'animation et à la prise de vue.",
@@ -352,10 +318,8 @@ let projectList = [
     },
     // ILLUSTRATIONS
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [5524,450],
+        size : [442,450],
         id: "illustrations",
         name: "Illustrations",
         text: "",
@@ -371,10 +335,8 @@ let projectList = [
     },
     // MOBILIER GRILLAGE
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [5624,0],
+        size : [597,386],
         id: "mobilierGrillage",
         name: "Mobilier Grillage",
         text: "Quoi de plus pérenne que de fabriquer les objets qui nous entourent en utilisant des matières réemployées ?<br><br>C’est dans cette optique que j’ai imaginé ce mobilier de jardin, fabriqué à partir d’un gisement de matière récupérée, le panneau grillagé rigide.",
@@ -390,10 +352,8 @@ let projectList = [
     },
     // STELLARIUM
     {
-        offset : [,],
-        size : [,],
-        offsetW : 250,
-        offsetH : 0,
+        offset : [6358,0],
+        size : [882,598],
         id: "stellarium",
         name: "Stellarium",
         text: "Cet observatoire stellaire est un de mes premiers projets.<br><br> J'y propose au spectateur une visite guidée de la voie lactée et des exoplanètes potentiellement habitables proches de la terre.",
@@ -409,10 +369,8 @@ let projectList = [
     },
     // CHARLETTE
     {
-        offset : [,],
-        size : [,],
-        offsetW : 750,
-        offsetH : 0,
+        offset : [7367,0],
+        size : [761,589],
         id: "charlette",
         name: "Charlette",
         text: "Cette remorque permet de transporter facilement une palette aux normes européennes avec n'importe quel vélo.<br><br> Ce projet est à l'initiative de l'association Veloma, que j'ai eu le plaisir d'assister dans la conception et la réalisation de ce premier prototype.",
@@ -428,10 +386,8 @@ let projectList = [
     },
     // // SITE WEB
     // {
-    //     offset : [,],
+    //     offset : [,0],
     //     size : [,],
-    //     offsetW : 750,
-    //     offsetH : 0,
     //     id: "siteWeb",
     //     name: "Site Web",
     //     text: "",
@@ -447,10 +403,8 @@ let projectList = [
     // },
     // // MosquitOS
     // {
-    //     offset : [,],
+    //     offset : [,0],
     //     size : [,],
-    //     offsetW : 750,
-    //     offsetH : 0,
     //     id: "mosquitos",
     //     name: "MosquitOS",
     //     text: "",
