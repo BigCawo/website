@@ -755,7 +755,6 @@ button:hover {
 #parlersEspaceFrame{
     display: flex;
     align-items: center;
-
     height: 100dvh;
 }
 
