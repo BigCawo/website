@@ -284,7 +284,7 @@ let projectList = [
     },
     // CARNETS
     {
-        offset : [4591,0],
+        offset : [4591,400],
         size : [238,335],
         id: "carnets",
         name: "Carnets",
