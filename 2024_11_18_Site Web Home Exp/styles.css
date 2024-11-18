@@ -1,0 +1,180 @@
+*{box-sizing: border-box; margin: 0; padding: 0;}
+
+#center{
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+
+#bottom{
+    margin: auto;
+    width: 95dvw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+#bottom div{
+    background-image: url(assets/sphere-01.png);
+    background-origin: content-box; 
+    background-size:75px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 75px;
+    width: 75px;
+    animation: bottom-animation 0.5s steps(2) forwards; 
+    animation-iteration-count:infinite; 
+    transition: all ease 0.25s;
+
+}
+
+@keyframes bottom-animation {
+  
+    to {
+        background-image: url(assets/sphere-02.png);
+    }
+  
+  }
+/*title*/
+#animatedTitle{
+    background-image: url(assets/title-obj-01.png);
+    background-origin: content-box; 
+    background-size: auto 75px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 75px;
+    width: 750px;
+    margin: auto;
+    animation: title-animation 0.5s steps(2) forwards; 
+    animation-iteration-count:infinite; 
+    transition: all ease 0.25s;
+}
+@keyframes title-animation {
+  
+    to {
+        background-image: url(assets/title-obj-02.png);
+    }
+  
+  }
+
+
+/*01*/
+
+.animatedImage {
+
+    background-image: url(assets/cube-01.png);
+    background-origin: content-box; 
+    background-size: 75px;
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 75px;
+    width: 75px;
+    margin: auto;
+    animation: png-animation 0.5s steps(2) forwards; 
+    animation-iteration-count:infinite; 
+    transition: all ease 0.25s;
+  }
+
+  .animatedImage:hover {
+    background-image: url(assets/cube-L-01.png);
+    animation: png-animation2 0.5s steps(2) forwards; 
+    animation-iteration-count:infinite; 
+    width: 500px;
+  }
+  
+  @keyframes png-animation2 {
+  
+    to {
+        background-image: url(assets/cube-L-02.png);
+    }
+  
+  }
+
+  @keyframes png-animation {
+  
+    to {
+        background-image: url(assets/cube-02.png);
+    }
+  
+  }
+/*02*/
+  
+  .animatedImage2 {
+
+  background-image: url(assets/sphere-01.png);
+  background-origin: content-box; 
+  background-size: 75px;
+  background-position: left;
+  background-repeat: no-repeat;
+  height: 75px;
+  width: 75px;
+  margin: auto;
+  animation: png2-animation 0.5s steps(2) forwards; 
+  animation-iteration-count:infinite; 
+  transition: all ease 0.25s;
+}
+
+.animatedImage2:hover {
+  background-image: url(assets/sphere-L-01.png);
+  animation: png2-animation2 0.5s steps(2) forwards; 
+  animation-iteration-count:infinite; 
+  width: 500px;
+}
+
+@keyframes png2-animation {
+
+  to {
+      background-image: url(assets/sphere-02.png);
+  }
+
+}
+
+@keyframes png2-animation2 {
+
+  to {
+      background-image: url(assets/sphere-L-02.png);
+  }
+
+}
+/*03*/
+  .animatedImage3 {
+
+    background-image: url(assets/cylinder-01.png);
+    background-origin: content-box; 
+    background-size: 75px;
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 75px;
+    width: 75px;
+    margin: auto;
+    animation: png3-animation 0.5s steps(2) forwards; 
+    animation-iteration-count:infinite; 
+    transition: all ease 0.25s;
+  }
+  
+  .animatedImage3:hover {
+    background-image: url(assets/cylinder-L-01.png);
+    animation: png3-animation2 0.5s steps(2) forwards; 
+    animation-iteration-count:infinite; 
+    width: 500px;
+  }
+  
+  @keyframes png3-animation {
+  
+    to {
+        background-image: url(assets/cylinder-02.png);
+    }
+  
+  }
+  
+  @keyframes png3-animation2 {
+  
+    to {
+        background-image: url(assets/cylinder-L-02.png);
+    }
+
+}
