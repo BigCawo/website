@@ -1,24 +1,54 @@
 *{box-sizing: border-box; margin: 0; padding: 0;}
 
 #center{
-    height: 100dvh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100dvh;
+}
+
+
+#header{
+  display: none;
+  position: fixed; 
+  background-color: aqua; 
+  width: 100dvw; 
+  height: 5dvw;
+}
+
+#introduction{
+  scroll-snap-align: start;
+  margin: auto;
+  height: 150dvh;
+  width: 100dvh;
+  background-color: aqua;
+}
+
+#menuPrincipal{
+  scroll-snap-align: start;
+    height: 90dvh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding-bottom: 10dvh;
 
 }
 
 
-#bottom{
+
+
+#footer{
+  border-top: solid black 3px;
+  height: 10dvh;
     margin: auto;
-    width: 95dvw;
+    width: 100dvw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     
 }
 
-#bottom div{
+#footer div{
     background-image: url(assets/sphere-01.png);
     background-origin: content-box; 
     background-size:75px;
@@ -39,6 +69,54 @@
     }
   
   }
+
+/*mainTitle*/
+
+#title{
+  height: 35dvh;
+}
+
+#name{
+  background-image: url(assets/name-01.png);
+  background-origin: content-box; 
+  background-size: auto 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 15dvh;
+  width: auto;
+  margin: auto;
+  margin-top: 3dvh;
+  animation: mainTitle-animation 0.5s steps(2) forwards; 
+  animation-iteration-count:infinite; 
+  transition: all ease 0.25s;
+}
+@keyframes mainTitle-animation {
+  
+  to {
+      background-image: url(assets/name-02.png);
+  }
+
+}
+#subTitle{
+  background-image: url(assets/subname-01.png);
+  background-origin: content-box; 
+  background-size: auto 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 10dvh;
+  width: auto;
+  margin: auto;
+  animation: mainSubTitle-animation 0.5s steps(2) forwards; 
+  animation-iteration-count:infinite; 
+  transition: all ease 0.25s;
+}
+@keyframes mainSubTitle-animation {
+  
+  to {
+      background-image: url(assets/subname-02.png);
+  }
+
+}
 /*title*/
 #animatedTitle{
     background-image: url(assets/title-obj-01.png);
@@ -47,7 +125,7 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 75px;
-    width: 750px;
+    width: auto;;
     margin: auto;
     animation: title-animation 0.5s steps(2) forwards; 
     animation-iteration-count:infinite; 
@@ -74,6 +152,7 @@
     height: 75px;
     width: 75px;
     margin: auto;
+    z-index: 50;
     animation: png-animation 0.5s steps(2) forwards; 
     animation-iteration-count:infinite; 
     transition: all ease 0.25s;
