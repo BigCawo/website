@@ -85,6 +85,13 @@
     animation-iteration-count:infinite; 
     width: 500px;
   }
+
+  .animatedImage:active {
+    background-image: url(assets/cube-L-01.png);
+    animation: png-animation2 0.5s steps(2) forwards; 
+    animation-iteration-count:infinite; 
+    width: 500px;
+  }
   
   @keyframes png-animation2 {
   
