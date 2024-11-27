@@ -199,7 +199,7 @@ background-repeat: no-repeat;
 height: calc(var(--scaleRatio)*10vmin);
 width: calc(var(--scaleRatio)*10vmin);
 z-index: 50;
-animation-iteration-count:infinite; 
+
 transition: all ease 0.25s;
 }
 
@@ -234,6 +234,7 @@ transition: all ease 0.25s;
 .animatedImage {
     background-image: url(assets/cube-01.png);
     animation: png-animation 0.5s steps(2) forwards; 
+    animation-iteration-count:infinite; 
   }
 
   .animatedImage:hover {
@@ -270,6 +271,8 @@ transition: all ease 0.25s;
   .animatedImage2 {
     background-image: url(assets/sphere-01.png);
     animation: png2-animation 0.5s steps(2) forwards; 
+    animation-iteration-count:infinite; 
+
 }
 
 .animatedImage2:hover {
@@ -298,6 +301,8 @@ transition: all ease 0.25s;
   .animatedImage3 {
     background-image: url(assets/cylinder-01.png);
     animation: png3-animation 0.5s steps(2) forwards; 
+    animation-iteration-count:infinite; 
+
   }
   
   .animatedImage3:hover {
