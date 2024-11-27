@@ -122,10 +122,10 @@ body{
 #name{
   background-image: url(assets/name-01.png);
   background-origin: content-box; 
-  background-size: auto 13vmin;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  height: 15dvh;
+  height: calc(var(--scaleRatio)*13vmin);
   width: auto;
   margin: auto;
   margin-top: 3dvh;
@@ -146,7 +146,7 @@ body{
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  height: 8.5vmin;
+  height: calc(var(--scaleRatio)*8.5vmin);
   width: auto;
   margin: auto;
   animation: mainSubTitle-animation 0.5s steps(2) forwards; 
