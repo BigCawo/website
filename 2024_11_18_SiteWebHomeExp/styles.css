@@ -47,7 +47,7 @@ body{
 #introText p{
 
   font-family: fababrac;
-  font-size: 4vmin;
+  font-size: calc(var(--scaleRatio)*4vmin);
   text-align: center;
 
 }
@@ -117,6 +117,9 @@ body{
 
 #title{
   height: 30dvh;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-around;
 }
 
 #name{
@@ -126,7 +129,7 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   height: calc(var(--scaleRatio)*13vmin);
-  width: auto;
+  width: 100dvw;
   margin: auto;
   margin-top: 3dvh;
   animation: mainTitle-animation 0.5s steps(2) forwards; 
@@ -147,7 +150,7 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   height: calc(var(--scaleRatio)*8.5vmin);
-  width: auto;
+  width: 100dvw;
   margin: auto;
   animation: mainSubTitle-animation 0.5s steps(2) forwards; 
   animation-iteration-count:infinite; 
@@ -316,6 +319,12 @@ body{
 
     --scaleRatio : 1.5
     
+}
+
+#introduction{
+
+  max-height: 65dvh;
+  max-width: 90dvw;
 }
   
 }
