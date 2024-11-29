@@ -138,8 +138,8 @@ body{
 
 #introduction{
 
-  display: none;
-  /* display: flex; */
+
+  display: flex;
   position: relative;
   margin: auto;
   max-height: 55dvh;
@@ -191,9 +191,8 @@ body{
 /* services */
 
 .services{
-  /* display: none; */
+  display: none;
   transition: all ease 0.25s;
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: calc(var(--scaleRatio)*10vmin);
