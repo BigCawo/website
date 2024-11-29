@@ -11,15 +11,14 @@ function oui(){
 
 }
 
-function serviceSelected(x){
-    if (Mq480.matches){
-        if (x=0){}
-        if (x=1){}
-        if (x=2){}
-        null;
-        }
-        else
-        window.location.href = "../"; 
+function serviceSelected(){
+        document.getElementById("principal").style.transition ="all ease 0.75s"
+        document.getElementById("principal").style.opacity ="0"
+        document.getElementById("principal").style.bottom ="90dvh"
+        setTimeout(()=> {        
+            window.location.href = "../";
+        },750);
+         
     
 }
 
