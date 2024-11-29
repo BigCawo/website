@@ -11,15 +11,24 @@ function oui(){
 
 }
 
-function serviceSelected(){
-        document.getElementById("principal").style.transition ="all ease 0.75s"
-        document.getElementById("principal").style.opacity ="0"
-        document.getElementById("principal").style.bottom ="90dvh"
-        setTimeout(()=> {        
-            window.location.href = "../";
-        },750);
+function serviceSelected(x){
+        let arrayServices = ["designObjet","designMultimedia","Illustration"]
+        if(Mq480.matches){
+            if(document.getElementById(arrayServices[x]).getElementsByTagName("div")[2].offsetWidth > 0){goToService();}
+        }
+        else
+        goToService();
          
     
+}
+
+function goToService(x){
+    document.getElementById("principal").style.transition ="all ease 0.75s"
+    document.getElementById("principal").style.opacity ="0"
+    document.getElementById("principal").style.bottom ="90dvh"
+    setTimeout(()=> {        
+        window.location.href = "../";
+    },750);
 }
 
 const buttonServices = document.getElementsByClassName("servicesButton")
