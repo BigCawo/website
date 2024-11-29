@@ -31,29 +31,86 @@ body{
 #footer{
   border-top: solid black 3px;
   height: 10dvh;
-    margin: auto;
-    width: 100dvw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  margin: auto;
+  width: 100dvw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
     
 }
 
 #footer div{
-    background-image: url(assets/cylinder-01.png);
-    background-origin: content-box; 
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: calc(var(--scaleRatio)*10vmin);
-    width: calc(var(--scaleRatio)*10vmin);
-    animation: bottom-animation 0.5s steps(2) forwards; 
-    animation-iteration-count:infinite; 
-    transition: all ease 0.25s;
+  display: none;
+  justify-content: center;
+  position: relative;
+  
+}
+
+#galerie{
+  flex-direction: row-reverse;
+}
+
+
+.cone{
+  background-image: url(assets/cone-01.png);
+  background-origin: content-box; 
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(var(--scaleRatio)*10vmin);
+  width: calc(var(--scaleRatio)*8vmin);
+  animation: bottom-animation 0.5s steps(2) forwards; 
+  animation-iteration-count:infinite; 
+  transition: all ease 0.25s;
 
 }
 
+@keyframes bottom-animation {to {background-image: url(assets/cone-02.png);}}
+
+#footer div .animatedTitle{
+
+  background-origin: content-box; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(var(--scaleRatio)*10vmin);
+  width: 0;
+  transition: all ease 0.25s;
+}
+
+#aPropos .bottomTitle{
+  background-position: left;
+  background-image: url(assets/title-apropos-01.png);
+  animation: animApropos 0.5s steps(2) forwards; 
+  animation-iteration-count:infinite; 
+}
+
+@keyframes animApropos {to {background-image: url(assets/title-apropos-02.png);}}
+
+#galerie .bottomTitle{
+  background-position: right;
+  background-image: url(assets/title-galerie-01.png);
+  animation: animGalerie 0.5s steps(2) forwards; 
+  animation-iteration-count:infinite; 
+}
+
+@keyframes animGalerie {to {background-image: url(assets/title-galerie-02.png);}}
+
+#footer div .animatedTitle:hover{
+  width: calc(var(--scaleRatio)*20vmin);
+}
+
+#galerie .cone{
+  scale: -1 1;
+}
+
+.bottomButton{
+  position: absolute; 
+  opacity: 0;
+  width: 100%; 
+  height: 100%; 
+  z-index: 50
+}
 
 #principal{
     position: relative;
@@ -180,13 +237,6 @@ body{
 }
 
 
-@keyframes bottom-animation {
-  
-    to {
-        background-image: url(assets/cylinder-02.png);
-    }
-  
-  }
 
 /* services */
 
@@ -280,11 +330,11 @@ z-index: 35;
 /*designMultimedia*/
 
 #designMultimedia .title{
-  background-image: url(assets/title-obj-01.png);
-  animation: animObjet 0.5s steps(2) forwards; 
+  background-image: url(assets/title-multimedia-01.png);
+  animation: animMultimedia 0.5s steps(2) forwards; 
   animation-iteration-count:infinite; 
 }
-@keyframes animObjet {to {background-image: url(assets/title-obj-02.png)}}
+@keyframes animMultimedia {to {background-image: url(assets/title-multimedia-02.png)}}
 
 #designMultimedia .base{
   background-image: url(assets/sphere-01.png);
@@ -311,11 +361,11 @@ z-index: 35;
 /*Illustration*/
 
 #Illustration .title{
-  background-image: url(assets/title-obj-01.png);
-  animation: animObjet 0.5s steps(2) forwards; 
+  background-image: url(assets/title-illustration-01.png);
+  animation: animIllustration 0.5s steps(2) forwards; 
   animation-iteration-count:infinite; 
 }
-@keyframes animObjet {to {background-image: url(assets/title-obj-02.png)}}
+@keyframes animIllustration {to {background-image: url(assets/title-illustration-02.png)}}
 
 #Illustration .base{
   background-image: url(assets/cylinder-01.png);
