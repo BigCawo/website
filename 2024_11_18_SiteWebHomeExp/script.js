@@ -1,20 +1,32 @@
 let Mq480 = window.matchMedia("(max-width: 480px)")
 
 function oui(){
-    document.getElementById("introText").style.display ="none"
-        document.getElementById("genButton").style.display ="none"
-    const animatedTitles = document.getElementsByClassName("services")
+
+    
+    document.getElementById("introText").style.opacity ="0"
+
+    setTimeout(()=> {        
+        document.getElementById("introText").style.display ="none"
+        document.getElementById("genButton").style.display ="none" 
+
+        const animatedTitles = document.getElementsByClassName("services")
         for (let i = 0; i < animatedTitles.length; i++) {
             animatedTitles[i].style.display ="flex"
+            animatedTitles[i].style.opacity ="1"
         }
 
         const bottomTitles = document.getElementById("footer").getElementsByTagName("div")
         for (let i = 0; i < bottomTitles.length; i++) {
             bottomTitles[i].style.display ="flex"
-        }
+            bottomTitles[i].style.opacity ="1"
+        } 
+    },500);
+    
+
 
 }
 
+// boutons principaux
 function serviceSelected(x){
         let arrayServices = ["designObjet","designMultimedia","Illustration"]
         if(Mq480.matches){
@@ -35,6 +47,7 @@ function goToService(x){
     },750);
 }
 
+// boutons footer
 function bottomSelected(x){
     let arrayBottom = ["aPropos","galerie"]
     if(Mq480.matches){

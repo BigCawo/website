@@ -11,20 +11,74 @@
 @font-face { font-family: Fababrac-soustitre; src: url('../assets/fonts/Fababrac-Soustitre.otf'); } 
 body{
   overflow: hidden;
+  animation: fadeIn 2s ease;
+  animation-iteration-count: unset;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  25% {opacity: 0;}
+  100% {opacity: 1;}
 }
 #center{
-
   height: 90dvh;
 }
 
 
 #header{
-  display: none;
   position: fixed; 
-  background-color: aqua; 
   width: 100dvw; 
   height: 5dvw;
 }
+
+body::after{
+
+  opacity: 0;
+  width:0; 
+  height:0; 
+  overflow: hidden;
+
+content:  
+url(assets/name-01.png)
+url(assets/name-02.png) 
+url(assets/subname-01.png)
+url(assets/subname-02.png) 
+
+url(assets/sphere-L-01.png) 
+url(assets/sphere-L-02.png) 
+url(assets/sphere-R-01.png) 
+url(assets/sphere-R-02.png) 
+url(assets/title-multimedia-01.png) 
+url(assets/title-multimedia-02.png) 
+url(assets/sphere-01.png) 
+url(assets/sphere-02.png)
+
+url(assets/cube-L-01.png) 
+url(assets/cube-L-02.png) 
+url(assets/cube-R-01.png) 
+url(assets/cube-R-02.png) 
+url(assets/title-obj-01.png) 
+url(assets/title-obj-02.png) 
+url(assets/cube-01.png) 
+url(assets/cube-02.png)
+
+url(assets/cylinder-L-01.png) 
+url(assets/cylinder-L-02.png) 
+url(assets/cylinder-R-01.png) 
+url(assets/cylinder-R-02.png) 
+url(assets/title-illustration-01.png) 
+url(assets/title-illustration-02.png) 
+url(assets/cylinder-01.png) 
+url(assets/cylinder-02.png)
+
+url(assets/title-apropos-01.png) 
+url(assets/title-apropos-02.png) 
+url(assets/title-galerie-01.png) 
+url(assets/title-galerie-02.png) 
+url(assets/cone-01.png) 
+url(assets/cone-02.png)
+}
+
 
 /*footer*/
 
@@ -44,6 +98,8 @@ body{
   display: none;
   justify-content: center;
   position: relative;
+  opacity: 0;
+  transition: all ease 1s;
   
 }
 
@@ -206,13 +262,13 @@ body{
 #introText{
 
   overflow-y: scroll;
-
   max-height: 55dvh;
   padding: 0.5dvh;
   margin-left: 1dvh;
   margin-right: 1dvh;
   border-radius: 2dvh;
   border: solid black 3px;
+  transition: all ease 0.5s;
 }
 #introText p{
   font-family: fababrac;
@@ -242,6 +298,7 @@ body{
 
 .services{
   display: none;
+  opacity: 0;
   transition: all ease 0.25s;
   flex-direction: row;
   justify-content: space-between;
