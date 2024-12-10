@@ -1,4 +1,5 @@
 let Mq480 = window.matchMedia("(max-width: 480px)")
+let arrayServices = ["designObjet","designMultimedia","Illustration","aPropos","galerie"]
 
 function oui(){
 
@@ -28,33 +29,31 @@ function oui(){
 
 // boutons principaux
 function serviceSelected(x){
-        let arrayServices = ["designObjet","designMultimedia","Illustration"]
+        
         if(Mq480.matches){
-            if(document.getElementById(arrayServices[x]).getElementsByTagName("div")[2].offsetWidth > 0){goToService();}
+            if(document.getElementById(arrayServices[x]).getElementsByTagName("div")[2].offsetWidth > 0){goToService(x);}
         }
         else
-        goToService();
+        goToService(x);
          
     
 }
-
 function goToService(x){
     document.getElementById("principal").style.transition ="all ease 0.75s"
     document.getElementById("principal").style.opacity ="0"
     document.getElementById("principal").style.bottom ="90dvh"
-    setTimeout(()=> {        
-        window.location.href = "../";
+    setTimeout(()=> {       
+        window.location.href = arrayServices[x];
     },750);
 }
 
 // boutons footer
 function bottomSelected(x){
-    let arrayBottom = ["aPropos","galerie"]
     if(Mq480.matches){
-        if(document.getElementById(arrayBottom[x]).getElementsByTagName("div")[1].offsetWidth > 0){goToBottom(x);}
+        if(document.getElementById(arrayServices[x]).getElementsByTagName("div")[1].offsetWidth > 0){goToBottom(x);}
     }
     else
-    goToBottom();
+    goToBottom(x);
      
 
 }
@@ -64,7 +63,7 @@ function goToBottom(x){
     document.getElementById("principal").style.opacity ="0"
     document.getElementById("principal").style.bottom ="90dvh"
     setTimeout(()=> {        
-        window.location.href = "../";
+        window.location.href = arrayServices[x];
     },750);
 }
 
