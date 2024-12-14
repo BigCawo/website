@@ -1,0 +1,74 @@
+let arrayPages = ["designObjet","designMultimedia","Illustration","aPropos","galerie","galerieObjets","galerieMultimedia","galerieIllustration","accueil"]
+let currPage = ""
+
+// home buttons
+
+const buttonServices = document.getElementsByClassName("servicesButton")
+const services = document.getElementsByClassName("services")
+
+for (let i = 0; i<buttonServices.length; i++){
+buttonServices[i].addEventListener("mousemove",function(e){ 
+services[i].style.transition = "all ease 0.25"
+services[i].style.width = "calc(var(--scaleRatio)*54vmin)"
+services[i].getElementsByTagName("div")[0].style.display = "none"
+services[i].getElementsByTagName("div")[1].style.width = "calc(var(--scaleRatio)*7vmin)"
+services[i].getElementsByTagName("div")[2].style.width = "calc(var(--scaleRatio)*40vmin)"
+services[i].getElementsByTagName("div")[3].style.width = "calc(var(--scaleRatio)*7vmin)" 
+})
+
+buttonServices[i].addEventListener("mouseout",function(e){
+    
+services[i].style.width = "calc(var(--scaleRatio)*10vmin)"
+services[i].getElementsByTagName("div")[2].style.width = "0"
+
+setTimeout(()=> {        
+    services[i].getElementsByTagName("div")[0].style.display = "initial";
+    services[i].getElementsByTagName("div")[1].style.width = "0";
+    services[i].getElementsByTagName("div")[3].style.width = "0" 
+},240);
+}
+)
+}
+
+// bottom buttons
+
+const bottom = document.getElementsByClassName("bottomTitle")
+const buttonBottom = document.getElementsByClassName("bottomButton")
+
+for (let i = 0; i<buttonBottom.length; i++){
+    buttonBottom[i].addEventListener("mousemove",function(e){ 
+    bottom[i].style.transition = "all ease 0.25"
+    bottom[i].style.width = "calc(var(--scaleRatio)*16vmin)"
+    })
+
+    buttonBottom[i].addEventListener("mouseout",function(e){   
+    bottom[i].style.width = "0"
+    }
+    )
+}
+
+
+// page change
+
+function serviceSelected(x){
+        
+    if(Mq480.matches){
+        if(document.getElementById(arrayPages[x]).getElementsByTagName("div")[2].offsetWidth > 0){goToService(x);} 
+    }
+    else goToService(x);
+     
+}
+
+function goToService(x){
+    document.getElementById("center").style.transition ="all ease 0.75s"
+    document.getElementById("center").style.opacity ="0"
+    document.getElementById("center").style.bottom ="90dvh"
+    setTimeout(()=> {      
+        for(let i= 0; i < arrayPages.length; i++){
+           if (window.location.href.includes(arrayPages[i])){   currPage = arrayPages[i].length+1   }
+        }
+        if(x == 8){window.location.href = window.location.href.slice(0,-currPage);}
+        else{window.location.href = window.location.href.slice(0,-currPage)+arrayPages[x];}
+    },250);
+
+    }

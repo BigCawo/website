@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <script src="/2024_11_18_SiteWebHomeExp/global.js" defer></script>
+    <script src="/2024_11_18_SiteWebHomeExp/animatedImages.js" defer></script>
+    <script src="/2024_11_18_SiteWebHomeExp/buttonsBehavior.js" defer></script>
+    <script src="/2024_11_18_SiteWebHomeExp/homePage.js" defer></script>
+
 </head>
 <body>
 
     <div id="header" >
         <div id="preload">
-
         </div>
     </div>
 
@@ -25,13 +28,13 @@
         <button id="genButton" onclick="oui()"></button>
 
         <div id="principal">
+            <!-- <iframe src="homePage.html" style="width:100%; height: 100%; background-color: rgba(0, 255, 255, 0.119);" frameborder="0"></iframe> -->
             <div id="title">
                 <div>
-                    <div id="name"></div>
-                    <div id="subTitle"></div>
+                    <div animation="name" id="name" class="animated"></div>
+                    <div animation="subname" id="subTitle" class="animated"></div>
                 </div>
             </div> 
-            <!-- <div id="animatedTitle"></div> -->
             <div id="menu">
 
                 <div id="introduction">
@@ -46,24 +49,24 @@
                 </div>
                 <div id="designObjet" class="services">
                     <button class="servicesButton" onclick="serviceSelected(0);"></button>
-                    <div class="base animated" ></div>
-                    <div class="left animated"></div>
-                    <div class="title animatedTitle"></div>
-                    <div class="right animated"></div>
+                    <div animation="cube" class="animated base animatedContent" ></div>
+                    <div animation="cube-L" class="animated left animatedContent"></div>
+                    <div animation="title-obj" class="animated title animatedTitle"></div>
+                    <div animation="cube-R" class="animated right animatedContent"></div>
                 </div>
                 <div id="designMultimedia" class="services">
                     <button class="servicesButton" onclick="serviceSelected(1);"></button>
-                    <div class="base animated" ></div>
-                    <div class="left animated"></div>
-                    <div class="title animatedTitle"></div>
-                    <div class="right animated"></div>
+                    <div animation="sphere" class="animated base animatedContent" ></div>
+                    <div animation="sphere-L" class="animated left animatedContent"></div>
+                    <div animation="title-multimedia" class="animated title animatedTitle"></div>
+                    <div animation="sphere-R" class="animated right animatedContent"></div>
                 </div>
                 <div id="Illustration" class="services">
                     <button class="servicesButton" onclick="serviceSelected(2);"></button>
-                    <div class="base animated" ></div>
-                    <div class="left animated"></div>
-                    <div class="title animatedTitle"></div>
-                    <div class="right animated"></div>
+                    <div animation="cylinder" class="animated base animatedContent"></div>
+                    <div animation="cylinder-L" class="animated left animatedContent"></div>
+                    <div animation="title-illustration" class="animated title animatedTitle"></div>
+                    <div animation="cylinder-R" class="animated right animatedContent"></div>
                 </div>
             </div>
         </div>
@@ -71,14 +74,18 @@
     </div>
     <div id="footer">
         <div id="aPropos">
-            <button class="bottomButton" onclick="bottomSelected(3)"></button>
-            <div class="cone animated"></div>
-            <div class="bottomTitle animatedTitle"></div>
+            <button class="bottomButton" onclick="serviceSelected(3)"></button>
+
+            <div animation="cone" class="animated animatedContent"></div>
+            <div style="display: none;"></div>
+            <div animation="title-apropos" class="animated bottomTitle animatedTitle"></div>
         </div>
         <div id="galerie">
-            <button class="bottomButton" onclick="bottomSelected(4)"></button>
-            <div class="cone animated"></div>
-            <div class="bottomTitle animatedTitle"></div>
+            <button  class="bottomButton" onclick="serviceSelected(4)"></button>
+            
+            <div animation="cone" class="animated cone animatedContent"></div>
+            <div style="display: none;"></div>
+            <div animation="title-galerie" class="animated bottomTitle animatedTitle"></div>
         </div>
     </div>
     

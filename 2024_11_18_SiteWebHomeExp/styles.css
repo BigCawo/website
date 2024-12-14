@@ -127,68 +127,60 @@ overflow: hidden;
 }
 
 #footer div{
-  display: none;
+  display: flex;
   justify-content: center;
   position: relative;
-  opacity: 0;
   transition: all ease 1s;
-  
 }
 
 #galerie{
+  height: 10dvh;
   flex-direction: row-reverse;
 }
 
 
-.cone{
-  background-image: url(assets/cone-01.png);
+/* .cone{
+  visibility: hidden;
   background-origin: content-box; 
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: calc(var(--scaleRatio)*10vmin);
   width: calc(var(--scaleRatio)*8vmin);
-  animation: bottom-animation 0.5s steps(2) forwards; 
-  animation-iteration-count:infinite; 
   transition: all ease 0.25s;
 
-}
-
-@keyframes bottom-animation {to {background-image: url(assets/cone-02.png);}}
+} */
 
 #footer div .animatedTitle{
 
+  width: 0;
+  transition: all ease 0.25s;
+}
+
+.animatedTitle{
+
   background-origin: content-box; 
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat; 
   height: calc(var(--scaleRatio)*10vmin);
   width: 0;
+  margin: auto;
   transition: all ease 0.25s;
 }
 
 #aPropos .bottomTitle{
   background-position: left;
-  background-image: url(assets/title-apropos-01.png);
-  animation: animApropos 0.5s steps(2) forwards; 
-  animation-iteration-count:infinite; 
 }
 
-@keyframes animApropos {to {background-image: url(assets/title-apropos-02.png);}}
 
 #galerie .bottomTitle{
   background-position: right;
-  background-image: url(assets/title-galerie-01.png);
-  animation: animGalerie 0.5s steps(2) forwards; 
-  animation-iteration-count:infinite; 
 }
 
-@keyframes animGalerie {to {background-image: url(assets/title-galerie-02.png);}}
 
-#footer div .animatedTitle:hover{
-  width: calc(var(--scaleRatio)*20vmin);
-}
 
-#galerie .cone{
+#galerie div:first-of-type{
   scale: -1 1;
 }
 
@@ -222,7 +214,6 @@ overflow: hidden;
 
 
 #name{
-  background-image: url(assets/name-01.png);
   background-origin: content-box; 
   background-size: contain;
   background-position: center;
@@ -231,19 +222,10 @@ overflow: hidden;
   width: 100dvw;
   margin: auto;
   margin-top: 3dvh;
-  animation: mainTitle-animation 0.5s steps(2) forwards; 
-  animation-iteration-count:infinite; 
   transition: all ease 0.25s;
 }
-@keyframes mainTitle-animation {
-  
-  to {
-      background-image: url(assets/name-02.png);
-  }
 
-}
 #subTitle{
-  background-image: url(assets/subname-01.png);
   background-origin: content-box; 
   background-size: contain;
   background-position: center;
@@ -251,17 +233,9 @@ overflow: hidden;
   height: calc(var(--scaleRatio)*8.5vmin);
   width: 100dvw;
   margin: auto;
-  animation: mainSubTitle-animation 0.5s steps(2) forwards; 
-  animation-iteration-count:infinite; 
   transition: all ease 0.25s;
 }
-@keyframes mainSubTitle-animation {
-  
-  to {
-      background-image: url(assets/subname-02.png);
-  }
 
-}
 
 
 /* menu services */
@@ -301,6 +275,7 @@ overflow: hidden;
   border-radius: 2dvh;
   border: solid black 3px;
   transition: all ease 0.5s;
+  background-color: white;
 }
 #introText p{
   font-family: fababrac;
@@ -348,7 +323,7 @@ overflow: hidden;
   height: 100%; 
   z-index: 50
 }
-.animated{
+.animatedContent{
 position: relative;
 background-origin: content-box; 
 background-size: cover;
@@ -382,101 +357,9 @@ z-index: 35;
     width: 0;
     /* width: calc(var(--scaleRatio)*35vmin); */
     margin: auto;
-
     transition: all ease 0.25s;
 }
 
-/*designObjet*/
-#designObjet .title{
-  background-image: url(assets/title-obj-01.png);
-  animation: animObjet 0.5s steps(2) forwards; 
-  animation-iteration-count:infinite; 
-}
-@keyframes animObjet {to {background-image: url(assets/title-obj-02.png)}}
-
-#designObjet .base{
-  background-image: url(assets/cube-01.png);
-  animation: animCube 0.5s steps(2) forwards; 
-  animation-iteration-count:infinite; 
-}
-@keyframes animCube {to {background-image: url(assets/cube-02.png);}}
-
-#designObjet .left{
-  background-image: url(assets/cube-L-01.png);
-  animation: animCubeL 0.5s steps(2) forwards; 
-  animation-iteration-count:infinite;  
-}
-@keyframes animCubeL {to {background-image: url(assets/cube-L-02.png);}}
-
-#designObjet .right{
-
-  background-image: url(assets/cube-R-01.png);
-  animation: animCubeR 0.5s steps(2) forwards; 
-  animation-iteration-count:infinite;  
-}
-@keyframes animCubeR {to {background-image: url(assets/cube-R-02.png);}}
-
-/*designMultimedia*/
-
-#designMultimedia .title{
-  background-image: url(assets/title-multimedia-01.png);
-  animation: animMultimedia 0.5s steps(2) forwards; 
-  animation-iteration-count:infinite; 
-}
-@keyframes animMultimedia {to {background-image: url(assets/title-multimedia-02.png)}}
-
-#designMultimedia .base{
-  background-image: url(assets/sphere-01.png);
-  animation: animsphere 0.5s steps(2) forwards; 
-  animation-iteration-count:infinite; 
-}
-@keyframes animsphere {to {background-image: url(assets/sphere-02.png);}}
-
-#designMultimedia .left{
-  background-image: url(assets/sphere-L-01.png);
-  animation: animsphereL 0.5s steps(2) forwards; 
-  animation-iteration-count:infinite;  
-}
-@keyframes animsphereL {to {background-image: url(assets/sphere-L-02.png);}}
-
-#designMultimedia .right{
-
-  background-image: url(assets/sphere-R-01.png);
-  animation: animsphereR 0.5s steps(2) forwards; 
-  animation-iteration-count:infinite;  
-}
-@keyframes animsphereR {to {background-image: url(assets/sphere-R-02.png);}}
-
-/*Illustration*/
-
-#Illustration .title{
-  background-image: url(assets/title-illustration-01.png);
-  animation: animIllustration 0.5s steps(2) forwards; 
-  animation-iteration-count:infinite; 
-}
-@keyframes animIllustration {to {background-image: url(assets/title-illustration-02.png)}}
-
-#Illustration .base{
-  background-image: url(assets/cylinder-01.png);
-  animation: animcylinder 0.5s steps(2) forwards; 
-  animation-iteration-count:infinite; 
-}
-@keyframes animcylinder {to {background-image: url(assets/cylinder-02.png);}}
-
-#Illustration .left{
-  background-image: url(assets/cylinder-L-01.png);
-  animation: animcylinderL 0.5s steps(2) forwards; 
-  animation-iteration-count:infinite;  
-}
-@keyframes animcylinderL {to {background-image: url(assets/cylinder-L-02.png);}}
-
-#Illustration .right{
-
-  background-image: url(assets/cylinder-R-01.png);
-  animation: animcylinderR 0.5s steps(2) forwards; 
-  animation-iteration-count:infinite;  
-}
-@keyframes animcylinderR {to {background-image: url(assets/cylinder-R-02.png);}}
 
 @media screen and (max-width: 480px){
 
