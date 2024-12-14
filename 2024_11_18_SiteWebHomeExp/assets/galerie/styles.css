@@ -151,7 +151,7 @@ h3{
 }
 #footer{
 
-    background-color: rgba(0, 0, 0, 0.35) ;
+    background-color: rgba(0, 0, 0, 0) ;
     position: relative;
     z-index: 5;
     height: calc(100dvh - var(--h-header) - var(--h-center) ) ;
@@ -445,12 +445,14 @@ h3{
 
 
 #categories {
-
+    width: 50dvw;
+    margin: auto;
     height: 100%;
     align-items: center;
     z-index: 10;
     overflow: hidden;
     display: flex;
+    justify-content: space-around;
     flex-wrap: nowrap;
     overflow-x: auto ;
     opacity: 1;
@@ -558,13 +560,7 @@ p{
     right: 0;
 }
 
-#categories{
-    display: flex;
-    flex-direction: row;
-    overflow: scroll;
-    justify-content: space-around;
 
-}
 
 #categories li{
     margin-left: initial;
