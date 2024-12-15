@@ -5,16 +5,14 @@
 
 // localStorage.setItem("explored", 0);
 let name = localStorage.getItem("explored")
-console.log(name)
+
 if (name == 1){
     oui();
 }
 
 function oui(){
 
-    
     document.getElementById("introText").style.opacity ="0"
-
     setTimeout(()=> {        
         document.getElementById("introText").style.display ="none"
         document.getElementById("genButton").style.display ="none" 
@@ -31,7 +29,7 @@ function oui(){
             bottomTitles[i].style.opacity ="1"
         } 
         localStorage.setItem("explored", 1);
-    },500);
+    },0);
 
 }
 
