@@ -8,9 +8,6 @@ let w = projectValue
 let descContainer = document.getElementById("projectInformations")
 let y = 0
 
-let Mq1300 = window.matchMedia("(max-width: 1300px)")
-let Mq900 = window.matchMedia("(max-width: 900px)")
-let Mq480 = window.matchMedia("(max-width: 480px)")
 
 // Navigation Bar //
 

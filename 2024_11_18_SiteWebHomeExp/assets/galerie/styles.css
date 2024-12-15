@@ -149,17 +149,17 @@ h3{
     overflow-x: scroll; 
     overflow-y: hidden;
 }
-#footer{
-
-    background-color: rgba(0, 0, 0, 0) ;
-    position: relative;
-    z-index: 5;
-    height: calc(100dvh - var(--h-header) - var(--h-center) ) ;
-    /* max-height:  calc((96dvh - var(--h-center)) - var(--h-header)); */
-    /* overflow: hidden; */
-    /* margin: 1dvh; */
-    border-top: 2px solid black;
-}
+/* #footer{
+    border-top: solid black 0vmin;
+    height: 10dvh;
+    margin: auto;
+    width: 100dvw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+      
+  } */
 /**/
 
 /* ~~~~~~~~ CENTER ~~~~~~~~ */
@@ -355,23 +355,6 @@ h3{
 
 /* ~~~~ accueil ~~~~ */
 
-#accueil{
-    position: relative;
-    display: inline-block;
-    z-index: 0;
-    height: 100%; 
-    max-width: 100dvw;
-}
-#aPropos{
-    display: inline-block;
-    position: absolute;
-    height: var(--h-center); 
-    width: auto;
-    z-index: 5;
-    transition: opacity 0.35s ease;
-    bottom: 0;
-    left: calc((var(--p-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
-}
 
 #buttonAPropos{
     left : calc((var(--p-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
@@ -379,13 +362,6 @@ h3{
     width: calc((var(--w-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
     height: calc((var(--h-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
 }
-#aPropos img{
-    height: 50%; 
-    position: absolute;
-    bottom: 0;
-    z-index: 5;
-}
-
 /* ~~~~ projets ~~~~ */
 
 #projects{
@@ -445,19 +421,17 @@ h3{
 
 
 #categories {
-    width: 50dvw;
-    margin: auto;
+    width: 80dvw;
     height: 100%;
     align-items: center;
     z-index: 10;
-    overflow: hidden;
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
-    overflow-x: auto ;
+    overflow-x: scroll ;
     opacity: 1;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    /* scrollbar-width: none;
+    -ms-overflow-style: none; */
     list-style-type: none;
     transition: all 0.5s ease;
     
@@ -503,7 +477,7 @@ h3{
     /* --scaleFactor : 0.66; */
     --w-desc : 98dvw;
     --h-center : 50dvh;
-    --h-header : 44dvh;
+    --h-header : 40dvh;
     --p-APropos: 20 ;
     
 }

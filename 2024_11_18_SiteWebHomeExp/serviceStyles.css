@@ -1,6 +1,9 @@
 
 p, li{
     font-family: Fababrac;
+
+    font-size: calc(var(--scaleRatio)*2.5vmin);
+
 }
 
 h1 {
@@ -18,10 +21,11 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: rgba(0, 255, 255, 0.05);
+  /* background-color: rgba(0, 255, 255, 0.05); */
   height: 100%;
   width: 80dvw;
   margin-left: 10dvw;
+  
   }
 
 #mainContainer div{
@@ -30,10 +34,11 @@ h1 {
 }
 
 #textContainer{
-    background-color: rgba(0, 0, 255, 0.05);
+    /* background-color: rgba(0, 0, 255, 0.05); */
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    padding: 0 1.5dvw 0 1.5dvw;
 
 }
 
@@ -46,9 +51,10 @@ h1 {
     justify-content: center;
 }
 
-#imgContainer{
+
+/* #imgContainer{
     background-color: rgba(0, 0, 255, 0.05);
-}
+} */
 
 
 /*footer*/

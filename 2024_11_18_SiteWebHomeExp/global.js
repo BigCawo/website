@@ -5,3 +5,5 @@ if (localStorage.getItem("explored") == 1){
 if(performance.navigation.type == 2){
     location.reload(true);
  }
+
+

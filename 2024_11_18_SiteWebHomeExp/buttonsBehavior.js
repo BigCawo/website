@@ -32,13 +32,14 @@ setTimeout(()=> {
 
 // bottom buttons
 
-const bottom = document.getElementsByClassName("bottomTitle")
+const bottom = document.getElementById("footer").getElementsByClassName("animatedTitle")
+// const bottom = document.getElementById("footer").querySelectorAll('[buttonBottom]')
 const buttonBottom = document.getElementsByClassName("bottomButton")
 
 for (let i = 0; i<buttonBottom.length; i++){
     buttonBottom[i].addEventListener("mousemove",function(e){ 
-    bottom[i].style.transition = "all ease 0.25"
-    bottom[i].style.width = "calc(var(--scaleRatio)*16vmin)"
+    bottom[i].style.transition = "all ease 0.35s"
+    bottom[i].style.width = "calc(var(--scaleRatio)*25vmin)"
     })
 
     buttonBottom[i].addEventListener("mouseout",function(e){   
@@ -60,9 +61,7 @@ function serviceSelected(x){
 }
 
 function goToService(x){
-    document.getElementById("center").style.transition ="all ease 0.75s"
-    document.getElementById("center").style.opacity ="0"
-    document.getElementById("center").style.bottom ="90dvh"
+
     setTimeout(()=> {      
         for(let i= 0; i < arrayPages.length; i++){
            if (window.location.href.includes(arrayPages[i])){   currPage = arrayPages[i].length+1   }

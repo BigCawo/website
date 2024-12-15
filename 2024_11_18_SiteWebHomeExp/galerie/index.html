@@ -5,9 +5,11 @@
     <link rel="shortcut icon" href="assets/course.gif" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/galerie/styles.css" />
+    <link rel="stylesheet" href="/2024_11_18_SiteWebHomeExp/styles.css">
     
     <script src="/2024_11_18_SiteWebHomeExp/animatedImages.js" defer></script>
     <script src="/2024_11_18_SiteWebHomeExp/buttonsBehavior.js" defer></script>
+    <script src="/2024_11_18_SiteWebHomeExp/global.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Roboto:wght@400&display=swap" rel="stylesheet" />
     <title>Eliot Bernaud - Design ; Médiation graphique ; Illustration ; Multimédia</title>
@@ -65,8 +67,14 @@
     </div>
 
     <div id="footer">
- 
-      <ul id="categories">
+
+      <div id="accueil">
+        <button class="bottomButton" onclick="serviceSelected(8)"></button>
+        <div  animation="cone" class="animatedContent"></div>
+        <div style="display: none;"></div>
+        <div  animation="title-galerie" class="animatedTitle"></div>
+    </div>
+      <div id="categories">
         <li>
           <button id="buttonObjet" class="button" onclick="projectSort(1)" value="off">Produit</button>
         </li>
@@ -82,7 +90,7 @@
         <li>
           <button class="buttonReset" onclick="shutDownBaaaa()" value="off">X</button>
         </li>
-      </ul>
+      </div>
     </div>
   </body>
 </html>
