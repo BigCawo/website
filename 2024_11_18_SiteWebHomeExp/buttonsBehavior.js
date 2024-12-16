@@ -1,5 +1,7 @@
-let arrayPages = ["designObjet","designMultimedia","Illustration","aPropos","galerie","galerieObjets","galerieMultimedia","galerieIllustration","accueil"]
+let arrayPages = ["designObjet","designMultimedia","Illustration","aPropos","galerie","galerieObjets","galerieMultimedia","galerieIllustration","accueil","return"]
 let currPage = ""
+let currPageLength = ""
+let buttonClicked = ""
 
 // home buttons
 
@@ -39,7 +41,7 @@ const buttonBottom = document.getElementsByClassName("bottomButton")
 for (let i = 0; i<buttonBottom.length; i++){
     buttonBottom[i].addEventListener("mousemove",function(e){ 
     bottom[i].style.transition = "all ease 0.35s"
-    bottom[i].style.width = "calc(var(--scaleRatio)*25vmin)"
+    bottom[i].style.width = "calc(var(--scaleRatio)*23vmin)"
     })
 
     buttonBottom[i].addEventListener("mouseout",function(e){   
@@ -54,20 +56,38 @@ for (let i = 0; i<buttonBottom.length; i++){
 function serviceSelected(x){
         
     if(Mq480.matches){
-        if(document.getElementById(arrayPages[x]).getElementsByTagName("div")[2].offsetWidth > 0){goToService(x);} 
+        // document.getElementById(arrayPages[x]).getElementsByTagName("div")[2].offsetWidth > 0
+        if(currPage == arrayPages[x] ||  ["accueil","aPropos","galerieObjets","galerieMultimedia","galerieIllustration","galerie","return"].includes(arrayPages[x])){goToService(x);} 
+        currPage = arrayPages[x]
     }
     else goToService(x);
      
 }
 
 function goToService(x){
-
+    // localStorage.setItem("Page", arrayPages[x])
     setTimeout(()=> {      
+
         for(let i= 0; i < arrayPages.length; i++){
-           if (window.location.href.includes(arrayPages[i])){   currPage = arrayPages[i].length+1   }
+           if (window.location.href.includes(arrayPages[i])){
+            currPageLength = arrayPages[i].length+1}
         }
-        if(x == 8){window.location.href = window.location.href.slice(0,-currPage);}
-        else{window.location.href = window.location.href.slice(0,-currPage)+arrayPages[x];}
+        
+
+        if(arrayPages[x].includes("galerie")){
+                window.location.href = window.location.href.slice(0,-currPageLength)+"galerie";}
+
+        else{
+            if(x == 8){
+                window.location.href = window.location.href.slice(0,-currPageLength);}
+            else{
+                if(x == 9){
+                    history.back();
+                }
+                else{
+                    window.location.href = window.location.href.slice(0,-currPageLength)+arrayPages[x];}
+                }
+        }
     },250);
 
     }

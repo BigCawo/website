@@ -131,7 +131,7 @@ overflow: hidden;
 
 #footer div{
   display: flex;
-  justify-content: center;
+  justify-content: left;
   position: relative;
   /* transition: all ease 1s; */
 }
@@ -278,6 +278,11 @@ z-index: 35;
 
 #introText p{
   line-height: 135%;
+}
+
+#footer .animatedTitle{
+  max-height: calc(var(--scaleRatio)*9vmin);
+  width: calc(var(--scaleRatio)*23vmin);
 }
   
 }

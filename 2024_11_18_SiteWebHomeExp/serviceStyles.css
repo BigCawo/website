@@ -2,7 +2,7 @@
 p, li{
     font-family: Fababrac;
 
-    font-size: calc(var(--scaleRatio)*2.5vmin);
+    font-size: calc(var(--scaleRatio)*3.5vmin);
 
 }
 
@@ -10,6 +10,8 @@ h1 {
     padding-left: 5dvh;
     padding-bottom: 5dvh;
     font-family: Fababrac-titre;
+
+    font-size: calc(var(--scaleRatio)*5vmin);
 }
 
 

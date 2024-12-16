@@ -11,8 +11,6 @@ let y = 0
 
 // Navigation Bar //
 
-
-
 function shutDownBaaaa() {
     descSpawn(0);
 
@@ -238,16 +236,16 @@ function projectSort(x) {
 
 }
 
-function navBar() {
-    const blehh = document.getElementById("categories");
-    if (Mq480.matches){
+// function navBar() {
+//     const blehh = document.getElementById("categories");
+//     if (Mq480.matches){
     
-    document.getElementById("footer").appendChild(blehh); 
-    }
-    else
-    document.getElementById("footer").appendChild(blehh); 
+//     document.getElementById("footer").appendChild(blehh); 
+//     }
+//     else
+//     document.getElementById("footer").appendChild(blehh); 
 
-}
+// }
 
 
 
@@ -307,17 +305,11 @@ null
 
 //mediaqueries
 
-Mq1300.addEventListener("change", function() {
-    null;
-}); 
 
-Mq900.addEventListener("change", function() {
-    null;
-}); 
 
 Mq480.addEventListener("change", function() {
     // introElemPos(Mq480)
-    navBar();
+    // navBar();
     descSpawn(0);
 }); 
 
@@ -343,7 +335,7 @@ function loadValues() {
 
     
     }    
-    navBar();
+
     projectHilight(projectValue)
     center.style.opacity = "initial"
     document.getElementById("header").style.opacity = "initial"
@@ -706,6 +698,7 @@ var shake = function (element, magnitude = 16) {
 };
 
 
-
-
+if(prevPage == "Illustration"){projectSort(0);}
+if(prevPage == "designObjet"){projectSort(1);}
+if(prevPage == "designMultimedia"){projectSort(3);}
 

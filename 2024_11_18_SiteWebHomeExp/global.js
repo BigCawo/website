@@ -7,3 +7,11 @@ if(performance.navigation.type == 2){
  }
 
 
+
+let prevPage = localStorage.getItem("Page")
+// console.log(localStorage.getItem("Page"))
+let urlEnd = window.location.href.replace(/\/$/, '').substring(window.location.href.replace(/\/$/, '').lastIndexOf('/') + 1)
+if (urlEnd.includes("2024")){urlEnd = "accueil"}
+localStorage.setItem("Page",urlEnd)
+
+// console.log(urlEnd);
