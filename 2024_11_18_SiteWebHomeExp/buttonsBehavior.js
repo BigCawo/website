@@ -34,18 +34,18 @@ setTimeout(()=> {
 
 // bottom buttons
 
-const bottom = document.getElementById("footer").getElementsByClassName("animatedTitle")
+// const bottom = document.getElementById("footer").getElementsByClassName("animatedTitle")
 // const bottom = document.getElementById("footer").querySelectorAll('[buttonBottom]')
 const buttonBottom = document.getElementsByClassName("bottomButton")
 
 for (let i = 0; i<buttonBottom.length; i++){
     buttonBottom[i].addEventListener("mousemove",function(e){ 
-    bottom[i].style.transition = "all ease 0.35s"
-    bottom[i].style.width = "calc(var(--scaleRatio)*23vmin)"
+    // bottom[i].style.transition = "all ease 0.35s"
+    // bottom[i].style.width = "calc(var(--scaleRatio)*23vmin)"
     })
 
     buttonBottom[i].addEventListener("mouseout",function(e){   
-    bottom[i].style.width = "0"
+    // bottom[i].style.width = "0"
     }
     )
 }

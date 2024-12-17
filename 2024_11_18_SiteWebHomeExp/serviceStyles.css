@@ -12,6 +12,7 @@ h1 {
     font-family: Fababrac-titre;
 
     font-size: calc(var(--scaleRatio)*5vmin);
+    
 }
 
 

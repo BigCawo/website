@@ -22,7 +22,6 @@ function shutDownBaaaa() {
     if ( aa == "on" ){
         y = "illustration"
         z = "buttonIllustration"
-        a = "descIllustration"
 
 
     }
@@ -30,21 +29,18 @@ function shutDownBaaaa() {
     if ( bb == "on"){
         y = "objet"
         z = "buttonObjet"
-        a = "descObjet"
 
     }
 
     if ( cc == "on"){
         y = "mediation"
         z = "buttonMediation"
-        a = "descMediation"
         
     }
    
     if ( dd == "on"){
         y = "multimedia"
         z = "buttonMultimedia"
-        a = "descMultimedia"
         
     }
 
@@ -63,7 +59,7 @@ function shutDownBaaaa() {
     const resett = document.getElementsByClassName("buttonReset");            
     for (let i = 0; i < resett.length; i++) {
         resett[i].value = "off"
-        resett[i].style.opacity = 0.25
+        resett[i].style.opacity = 0.4
     }
 
     const icons = document.getElementsByClassName("project");
@@ -88,7 +84,6 @@ function shutDownBaaaa() {
         resetDesc[i].style.maxHeight = "0"
     }
 
-    document.getElementById(a).style.opacity = "100%"
 
     
     //descriptions
@@ -136,7 +131,7 @@ function projectSort(x) {
             const reset = document.getElementsByClassName("button");       
             for (let i = 0; i < reset.length; i++) {
                 reset[i].value = "off"
-                reset[i].style.opacity = 0.25
+                reset[i].style.opacity = 0.4
             }
 
                         
@@ -153,7 +148,7 @@ function projectSort(x) {
                 // document.getElementById("categories").style.height = "calc( var(--h-sidebar) * 1.5 )"
             const icons = document.getElementsByClassName("project");
             for (let i = 0; i < icons.length; i++) {
-                icons[i].style.opacity = 0.25;
+                icons[i].style.opacity = 0.4;
                 // icons[i].style.zIndex = 51;
             }
             //descriptions
@@ -161,7 +156,7 @@ function projectSort(x) {
             // const resetDesc = document.getElementsByClassName("desc");
 
             // for (let i = 0; i < resetDesc.length; i++) {
-            //     resetDesc[i].style.opacity = 0.25
+            //     resetDesc[i].style.opacity = 0.4
             //     resetDesc[i].style.opacity = "100%"
 
                 
@@ -201,7 +196,7 @@ function projectSort(x) {
             const resett = document.getElementsByClassName("buttonReset");            
             for (let i = 0; i < resett.length; i++) {
                 resett[i].value = "off"
-                resett[i].style.opacity = 0.25
+                resett[i].style.opacity = 0.4
             }
             
             const icons = document.getElementsByClassName("project");
@@ -276,11 +271,11 @@ for (let i = 0 ; i < projectList.length - 2; i++) {
     project.style.bottom= projPath.offset[1]*center.offsetHeight/hGalerie+"px"
     document.getElementById("projects").appendChild(project);
     
-    const Img = document.createElement("img");
-    Img.src = "../assets/galerie/"+projPath.id+".png";
-    Img.className = "background shake"
-    Img.alt =""
-    document.getElementById(projPath.id).appendChild(Img);
+    // const Img = document.createElement("img");
+    // Img.src = "../assets/galerie/"+projPath.id+".png";
+    // Img.className = "background shake"
+    // Img.alt =""
+    // document.getElementById(projPath.id).appendChild(Img);
 
     const Img2 = document.createElement("img");
     Img2.src = "../assets/galerie/"+projPath.id+"Color.png";
@@ -626,11 +621,15 @@ for (let i = 1; i<buttonProject.length; i++){
         
 
         popup.getElementsByTagName("h2")[0].innerHTML = projectList[i+1].name
-        document.getElementById(projectList[i+1].id).getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+        if(Mq480.matches){pass}
+        else{
+        document.getElementById(projectList[i+1].id).getElementsByClassName("backgroundColor")[0].style.filter = "grayscale(0) brightness(1)";}
     })
     buttonProject[i-1].addEventListener("mouseout",function(e){
         popup.style.visibility = "hidden"
-        document.getElementById(projectList[i+1].id).getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+        if(Mq480.matches){pass}
+        else{
+        document.getElementById(projectList[i+1].id).getElementsByClassName("backgroundColor")[0].style.filter = "grayscale(1)  brightness(1.5)";}
         
     }
     )
