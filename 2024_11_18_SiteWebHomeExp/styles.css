@@ -1,7 +1,8 @@
 *{box-sizing: border-box; margin: 0; padding: 0;}
 
 :root{
-  --scaleRatio : 1  
+  --scaleRatio : 1;
+  --scaleWText : 1;
 }
 
 @font-face { font-family: Fababrac-titre; src: url('../assets/fonts/Fababrac-GTitre.otf'); } 
@@ -266,7 +267,8 @@ z-index: 35;
 
 :root{
 
-    --scaleRatio : 1.5
+    --scaleRatio : 1.5;
+    --scaleWText : 3;
     
 }
 

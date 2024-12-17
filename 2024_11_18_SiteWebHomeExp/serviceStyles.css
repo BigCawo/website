@@ -1,12 +1,14 @@
+body{
+    font-size: 1.5dvw
+}
 
 p, li{
     font-family: Fababrac;
-
-    font-size: calc(var(--scaleRatio)*3.5vmin);
+    font-size: calc(var(--scaleWText) * 120%);
 
 }
 
-#textContainer p{
+#textContainer p    {
     background-color: rgba(255, 255, 255, 0.6); 
     padding: 2vmin; 
     border: solid rgba(0, 0, 0, 0.8  ) 0.5vh; 
@@ -22,8 +24,7 @@ h1 {
     padding-left: 5dvh;
     padding-bottom: 5dvh;
     font-family: Fababrac-titre;
-
-    font-size: calc(var(--scaleRatio)*5vmin);
+    font-size: calc(var(--scaleWText)*300%);
     
 }
 
