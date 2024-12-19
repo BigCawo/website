@@ -44,7 +44,7 @@ h1 {
   
   }
 
-#mainContainer div{
+#mainContainer > div{
     width: 48%;
     height: 100%;
 }
@@ -56,6 +56,9 @@ h1 {
     scroll-behavior: smooth;
     padding: 0 1.5dvw 0 1.5dvw;
 
+}
+#textcontainer .animService{
+    display: none;
 }
 
 #textContainer img{
@@ -84,15 +87,39 @@ h1 {
 } */
 
 
-/* #imgContainer{
-    background-color: rgba(0, 0, 255, 0.05);
-} */
+#imgContainer{
+    position: relative;
+}
+
+.animService{
+    background-image: url(/2024_11_18_SiteWebHomeExp/assets/services/animObjet_1.png); 
+    background-position: bottom; 
+    width: 100%; 
+    background-repeat: no-repeat; 
+    background-size: contain; 
+    bottom: 0; 
+}
+
+#textContainer .animService{
+    position: relative; 
+    height: 30dvh;
+    display: none;
+}
+
+#imgContainer .animService{
+    position: absolute; 
+    height: 50%; 
+}
+
+
 
 
 /*footer*/
 
 
   @media screen and (max-width: 480px){
+
+
 
     #mainContainer{
         
@@ -111,9 +138,13 @@ h1 {
     
     }
 
-    #textContainer img{
+    #textContainer .animService{
+        position: relative; 
+        height: 30dvh;
         display: block;
     }
+    
+
     #imgContainer{
         display: none;
         width: 100%;
