@@ -507,7 +507,7 @@ function projectSelect(x){
             }
             else
 
-            window.location.href = "galerie/"+projectList[x].id
+            window.location.href = projectList[x].id
             }
         
         else
