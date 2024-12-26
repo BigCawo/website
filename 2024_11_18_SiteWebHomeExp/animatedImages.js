@@ -26,7 +26,7 @@ for(let i = 0 ; i < hoverableImage.length; i++){
     })
     hoverableImage[i].addEventListener("mouseout",function(e){
         hoverableImage[i].getElementsByTagName("img")[0].style.transition = "filter ease 0.25s"     
-        hoverableImage[i].getElementsByTagName("img")[0].style.filter = "grayscale(1)"
+        hoverableImage[i].getElementsByTagName("img")[0].style.filter = "grayscale(0.7)"
         
     }
     )
@@ -35,7 +35,9 @@ const blouc = document.getElementsByClassName("animService")
 let n = 0
 intervalTest = 100
 
+if(window.location.href.includes("designObjet")){
 startInterval(intervalTest);
+}
 function startInterval(intervalTest){
     intervalId = setInterval(function(){animObjet(blouc)},intervalTest)
 }

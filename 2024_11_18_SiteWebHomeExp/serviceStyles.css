@@ -62,7 +62,7 @@ h1 {
 }
 
 #textContainer img{
-    display: none; height: 15dvh; margin: auto; position: relative; bottom: 0; padding-top: 1.5dvw;
+    margin: auto; position: relative;
 }
 
 #textContainer div{
@@ -92,27 +92,46 @@ h1 {
 }
 
 .animService{
-    background-image: url(/2024_11_18_SiteWebHomeExp/assets/services/animObjet_1.png); 
     background-position: bottom; 
     width: 100%; 
     background-repeat: no-repeat; 
     background-size: contain; 
-    bottom: 0; 
+    bottom: 0;
 }
 
 #textContainer .animService{
     position: relative; 
-    height: 30dvh;
     display: none;
 }
 
 #imgContainer .animService{
     position: absolute; 
     height: 50%; 
+    
+}
+
+.animIllustration{
+    background-image: url(/2024_11_18_SiteWebHomeExp/assets/services/animMultimedia.gif);
+    image-rendering: pixelated;
+    
+}
+
+#textContainer .animObjet{
+    height: 30dvh;
 }
 
 
+#textContainer .animIllustration{
+    position: relative; 
+    height: 45dvw;
+    display: none;
+}
 
+#textContainer .animMultimedia{
+    position: relative; 
+    height: 45dvw;
+    display: none;
+}
 
 /*footer*/
 
@@ -140,7 +159,6 @@ h1 {
 
     #textContainer .animService{
         position: relative; 
-        height: 30dvh;
         display: block;
     }
     
