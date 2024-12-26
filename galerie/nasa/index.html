@@ -5,31 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eliot Bernaud Design Dessin Bricolage</title>
-    <link rel="shortcut icon" href="../../assets/course.gif">
-    <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="../../tests/test.css">
+    <link rel="shortcut icon" href="/assets/course.gif">
+    <link rel="stylesheet" href="/galerie/styles.css">
+    <link rel="stylesheet" href="/footerStyles.css">
+    <link rel="stylesheet" href="/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Roboto:wght@400&display=swap" rel="stylesheet"> 
+
+    <script src="/global.js" defer></script>
+    <script src="/animatedImages.js" defer></script>
+    <script src="/buttonsBehavior.js" defer></script>
+    <script src="/galerie/scriptSidebar.js" defer></script>
+    <script src="/galerie/scriptIntro.js" defer> </script>
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M96FE4SJY3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-M96FE4SJY3');
-</script>
-
 <body>
+
     <div class="endGradient"></div>
     
-    <div id = sidebar>
-        <div id="categories">
-            <p> <a href="../../">Accueil</a> </p>
-            <p><a href="../../qui-suis-je/">Qui&nbsp;suis-je&nbsp;?</a></p>   
+    <div id="footer">
+        
+        <div buttonBottom="aPropos" id="aPropos">
+            <button class="bottomButton" onclick="serviceSelected(9)"></button>
+            <div animation="cone" class="animatedContent"></div>
+            <div style="visibility: hidden;" animation="title-apropos" class="bottomTitle animatedTitle"></div>
+        </div>
+        <div buttonBottom="galerie" id="galerie">
+            <button  class="bottomButton"> <a href="/aPropos/" style="display: inline-block; width: 100%; height: 100%;"></a></button>
+            <div animation="apropos" class="cone animatedContent"></div>
+            <div style="display: none;"></div>
+            <div animation="title-apropos" class="bottomTitle animatedTitle"></div>
         </div>
     </div>
 
@@ -43,7 +49,7 @@
                 <p>Les Petits débrouillards, un réseau participant au renouveau permanent de l’éducation populaire, a consulté l’ENSCI pour réfléchir sur la création d’un module pour scooter. Celui-ci permettrait aux intervenants du réseau de proposer des activités scientifiques, créatives et ludiques aux les jeunes vivant dans des zones délaissées.
                 <br><br>Avec Adèle Nyitrai, nous avons proposé un module déployable, servant à la fois de contenant au matériel nécessaire aux activités et de plan de travail pour les effectuer.</p>
             </div>
-            <img id="imgIntro" loading="lazy" style="margin : auto unset; max-height: 90vh; max-width: 100%;" src="../../assets/nasa.png" alt="e">
+            <img id="imgIntro" loading="lazy" style="margin : auto unset; max-height: 90vh; max-width: 100%;" src="/assets/projets/nasa.png" alt="e">
             <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
         </div>
              
@@ -55,7 +61,7 @@
                 <br>Les pieds peuvent s'ajuster en fonction de la taille des enfants et des aspérités du terrain 
             </p>
             
-            <img loading="lazy"  style="max-height: 90vh; width: auto; max-width: 100%; margin: auto;" class ="b " src="../../assets/nasa-animation-deploiement.gif" alt="animtion de déploiement du module">
+            <img loading="lazy"  style="max-height: 90vh; width: auto; max-width: 100%; margin: auto;" class ="b " src="/assets/projets/nasa-animation-deploiement.gif" alt="animtion de déploiement du module">
        
         </div>
 
@@ -65,7 +71,7 @@
         <div class="flexcontainer">
             <div style="padding-left: 2dvw; padding-right: 2dvw;">
             <p style="position: absolute; padding-top: 0; padding-left: 6px; line-height: 0;"> <i> recherches</i></p>
-            <img loading="lazy"  src="../../assets/nasa-recherches-01.png" alt="">
+            <img loading="lazy"  src="/assets/projets/nasa-recherches-01.png" alt="">
             </div>
 
             <div class="espaceImg" style="    max-width: 0;
@@ -74,7 +80,7 @@
             min-width: 0;"></div>
 
             <div style="padding-left: 2dvw; padding-right: 2dvw;">
-            <img loading="lazy"  src="../../assets/nasa-recherches-02.png" alt="">
+            <img loading="lazy"  src="/assets/projets/nasa-recherches-02.png" alt="">
             </div>
 
         </div>
@@ -85,7 +91,7 @@
         <div class="flexcontainer">
             <div style="padding-left: 1dvw; padding-right: 1dvw;">
             <p style="position: absolute; padding-top: 10px; padding-left: 6px; line-height: 0;"> <i> scénario d'usage de la V0</i></p>
-            <img loading="lazy"  src="../../assets/nasa-_scenar-old.jpg" alt="">
+            <img loading="lazy"  src="/assets/projets/nasa-_scenar-old.jpg" alt="">
             </div>
 
             <div class="espaceImg" style="    max-width: 0;
@@ -95,7 +101,7 @@
 
             <div style="padding-left: 1dvw; padding-right: 1dvw;">
             <p style="position: absolute;  padding-top: 10px; padding-left: 6px; line-height: 0; color: white;"> <i> maquette d'encombrement</i></p>
-            <img loading="lazy"  src="../../assets/nasa-maquette.jpg" alt="">
+            <img loading="lazy"  src="/assets/projets/nasa-maquette.jpg" alt="">
             </div>
 
         </div>
@@ -105,8 +111,5 @@
     </div>
 </body>
 
-    <script src="../../script.js"> </script>
-    <script src="../../scriptSidebar.js"></script>
-    <script src="../../scriptIntro.js"> </script>
     
 </html>

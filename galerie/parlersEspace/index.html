@@ -5,23 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eliot Bernaud Design Dessin Bricolage</title>
-    <link rel="shortcut icon" href="../../assets/course.gif">
-    <link rel="stylesheet" href="../../styles.css">
-    
+    <link rel="shortcut icon" href="/assets/course.gif">
+    <link rel="stylesheet" href="/galerie/styles.css">
+    <link rel="stylesheet" href="/footerStyles.css">
+    <link rel="stylesheet" href="/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Roboto:wght@400&display=swap" rel="stylesheet"> 
-    <script src="script.js" defer></script>
+
+    <script src="/global.js" defer></script>
+    <script src="/animatedImages.js" defer></script>
+    <script src="/buttonsBehavior.js" defer></script>
+    <script src="/galerie/scriptSidebar.js" defer></script>
+    <script src="/galerie/scriptIntro.js" defer> </script>
 </head>
 
+<body>
 
-<body id="body">
     <div class="endGradient"></div>
-
-    <div id = sidebar>
-        <div id="categories">
-            <p> <a href="../../">Accueil</a> </p>
-            <p><a href="../../qui-suis-je/">Qui&nbsp;suis-je&nbsp;?</a></p>   
+    
+    <div id="footer">
+        
+        <div buttonBottom="aPropos" id="aPropos">
+            <button class="bottomButton" onclick="serviceSelected(9)"></button>
+            <div animation="cone" class="animatedContent"></div>
+            <div style="visibility: hidden;" animation="title-apropos" class="bottomTitle animatedTitle"></div>
+        </div>
+        <div buttonBottom="galerie" id="galerie">
+            <button  class="bottomButton"> <a href="/aPropos/" style="display: inline-block; width: 100%; height: 100%;"></a></button>
+            <div animation="apropos" class="cone animatedContent"></div>
+            <div style="display: none;"></div>
+            <div animation="title-apropos" class="bottomTitle animatedTitle"></div>
         </div>
     </div>
 
@@ -42,7 +56,7 @@
 
                 </p>
             </div>
-            <img id="imgIntro" loading="lazy" style=" padding: 3%;" src="../../assets/parlersespace.gif" alt="e">
+            <img id="imgIntro" loading="lazy" style=" padding: 3%;" src="/assets/projets/parlersespace.gif" alt="e">
 
         </div>
 
@@ -59,7 +73,5 @@
     </div>
 </body>
 
-    <script src="../../scriptSidebar.js"></script>
-    <script src="../../scriptIntro.js"> </script>
     
 </html>

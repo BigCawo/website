@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/footerStyles.css">
+        <link rel="stylesheet" href="/serviceStyles.css">
+        <script src="/global.js" defer></script>
+        <script src="/animatedImages.js" defer></script>
+        <script src="/buttonsBehavior.js" defer></script>
+
+    </head>
+<body>
+    <div id="header">
+
+    </div>
+    <div id="center">
+        <div id="centerBackground">
+        </div>  
+        <div id="mainContainer">
+
+            <div id="textContainer">
+                <div >
+                    
+                    <p> 
+                        Je suis un artiste designer polyvalent diplômé depuis 2023 en création industrielle à l'ENSCI Les Ateliers.
+                        <br><br>
+                        Je suis aussi dessinateur autodidacte et passionné de sciences, de technique et de recherche.
+                        <br><br>
+
+                        À l'instar de Gaston Bachelard et Gaston Lagaffe, j’ai un amour inconditionnel pour les objets et espaces du quotidien, pour tous les petits riens matériels qui façonnent nos existences et à travers lesquels nos personnalités s’expriment.
+                        
+                        <span class="animService animAPropos" hover="bureau" style="height: 30dvh; width: auto;">
+                            <img src="/assets/galerie/aProposColor.png" style="width: 90%; bottom: 0; position: absolute;"/>
+                        </span>
+
+                    </p>
+
+
+                </div>
+                <div>
+                    <p>
+                        Les questions environnementales et sociales font partie intégrante de ma pratique. 
+                        <br>J'y ai d'abord été sensibilisé à travers mon enfance passée à la campagne dans un habitat autonome et en évolution permanente, par des rencontres autour de projets alternatifs, constructifs comme sociaux, 
+                        puis par ma confrontation avec la vie en ville, avec le monde effréné d’aujourd’hui et la réalité productive et consommatrice de la création industrielle moderne.
+
+                        <br><br>
+                        Mon approche du design et de la création est à la fois poétique, rêveuse ; et réaliste, consciente des enjeux sociétaux, écologiques et techniques de demain.
+                    </p>
+                </div>
+
+                
+
+            </div>
+            <div id="imgContainer">
+                <div hover="bureau" style="background-color: rgba(250, 0, 0, 0.753);">
+                    <img style="position: absolute; bottom: 0; width: 70%; height: auto; z-index: 0; filter: grayscale(0.7);" src="/assets/galerie/aProposColor.png"/>
+                </div>                
+            </div>
+        </div>
+
+    </div>
+    <div id="footer">
+        <div id="accueil">
+            <button class="bottomButton" onclick="serviceSelected(8)"></button>
+            <div  animation="cone" class="animatedContent"></div>
+            <div style="display: none;" class="animatedTitle"></div>
+        </div>
+
+        <div id="menuBar"> 
+            <div>
+                <button class="anyButton" onclick="window.open('/assets/services/CV.pdf', '_blank');"></button>
+                <div animation="cv" class="animatedContent"></div>
+            </div>
+            <div>
+                <button class="anyButton" onclick="instagram()"></button>
+                <script> function instagram(){window.open('https://www.instagram.com/eliot_bernaud/', '_blank');}</script>
+                <div animation="insta" class="animatedContent"></div>
+            </div>
+            <div>
+                <button class="anyButton" onclick="window.open('mailto:bernaud.eliot@gmail.com', '_blank');"></button>
+                <div animation="mail" class="animatedContent"></div>
+            </div>
+        </div>
+        
+        <div style="visibility: hidden; width: 0;">
+            <div  animation="cone" class="animatedContent"></div>   
+        </div>
+    </div>
+
+</body>
+</html>

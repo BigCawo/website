@@ -53,7 +53,7 @@ document.body.onload=function(){
         
         div = document.createElement("div");
         div.className="carouselPhotoA"
-        div.style.backgroundImage="url('../../assets/carnets/2023_10_A4/"+ (i-1) +".jpg')";
+        div.style.backgroundImage="url('/assets/projets/carnets/2023_10_A4/"+ (i-1) +".jpg')";
         div.style.scrollSnapAlign = "start"
         carouselContainer.appendChild(div);
     }

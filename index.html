@@ -1,111 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="shortcut icon" href="assets/course.gif" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/accueil/styles.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Roboto:wght@400&display=swap" rel="stylesheet" />
-    <title>Eliot Bernaud - Design ; Médiation graphique ; Illustration ; Multimédia</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/footerStyles.css">
+    <link rel="stylesheet" href="/homeStyles.css">
+    <script src="/global.js" defer></script>
+    <script src="/animatedImages.js" defer></script>
+    <script src="/buttonsBehavior.js" defer></script>
+    <script src="/homePage.js" defer></script>
 
-    <script src="datas.js"></script>
-    <script src="scriptAccueil.js" defer></script>
-  </head>
+</head>
+<body>
 
-
-
-  <body id="corps" onresize="loadValues(); " onload="loadValues()">
-    <div id="header">
-      <ul id="categories">
-        <li>
-          <button id="buttonObjet" class="button" onclick="projectSort(1)" value="off">Produit</button>
-        </li>
-        <li>
-          <button id="buttonMediation" class="button" onclick="projectSort(2)" value="off">médiation</button>
-        </li>
-        <li>
-          <button id="buttonIllustration" class="button" onclick="projectSort(0)" value="off">illustration</button>
-        </li>
-        <li>
-          <button id="buttonMultimedia" class="button" onclick="projectSort(3)" value="off">multimédia</button>
-        </li>
-        <li>
-          <button class="buttonReset" onclick="shutDownBaaaa()" value="off">X</button>
-        </li>
-      </ul>
-    </div>
-
-    <div id="projectInformations">
-      <div id="descContainer">
-        <button id="descButton" onclick="projectSelect(projectValue)"></button>
-        <div id="projectIntro">
-          <h1 id="projectName"></h1>
-          <h2 id="projectType"></h2>
+    <div id="header" >
+        <div id="preload">
         </div>
-        <p id="projectText"></p>
-        <img id="projectImg" src="" alt="">
-      </div>
     </div>
 
     <div id="center">
-
-
-      <div id="maison">
-        <div id="popup">
-          <h2></h2>
-        </div>
-        <div id="arrierePlan" >     
-          <img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt=""><img src="assets/accueil/plinthe.png" alt="">  
-        </div>
-        <div id="accueil" style="position: relative; z-index: 5;">
-          <div id="entete">
-            <div id="TitreSite">
-              <h3>ELIOT BERNAUD</h3>
-              <p>Design produit - Médiation graphique - Illustration - Multimédia</p>
-            </div>
-            <button onclick="goToProject()" id="flecheProjet">
-              <p>TRAVAUX</p>
-              <img src="assets/accueil/fleche2.png" alt="" />
-            </button>
-            <div id="help">
-              <p>
-                1 clic = aperçu <br />
-                2 clics = travail complet
-              </p>
-            </div>
-          </div>
-          <!-- aPropos -->
-
-          <button class="buttonProject" id="buttonAPropos" onclick="projectSelect(1)" ></button>
-
-          <div id="aPropos" class="Mediation Objet Illustration " >
-            <img class="background" src="assets/accueil/aPropos.png" alt="" />
-            <img class="backgroundColor" src="assets/accueil/aProposColor.png" alt="" />
-            <img class="backgroundColor2" src="assets/accueil/aProposColor.png" alt="" />
-          </div>
-        </div>
-        <div id="projects">
-          <button id="buttonDesc" onclick="descSpawn(0)"></button>
-
-          <div id="spot">
-            <div id="spotRight">
-              <img src="assets/accueil/spot_0000_Calque-12.png" alt="" />
-            </div>
-            <div id="spotMiddle">
-            </div>
-            <div id="spotLeft">
-              <img src="assets/accueil/spot_0000_Calque-12.png" alt="" />
-            </div>
-          </div>
-
+        <!-- <div id="test">
+            <img src="assets/animationDesignObjet.gif" alt="">
+        </div> -->
+        <div id="centerBackground">
+            
 
         </div>
-      </div>
+        <button id="genButton" onclick="oui()"></button>
+
+        <div id="principal">
+            <!-- <iframe src="homePage.html" style="width:100%; height: 100%; background-color: rgba(0, 255, 255, 0.119);" frameborder="0"></iframe> -->
+            <div id="title">
+                <div>
+                    <div animation="name" id="name"></div>
+                    <div animation="subname" id="subTitle"></div>
+                </div>
+            </div> 
+            <div id="menu">
+
+                <div id="introduction">
+
+                    <div id="introText">
+                        
+                        <div style="position: relative;">
+                            <button id="buttonIntro" onclick="oui()"></button>
+                            <p>Designer polyvalent diplômé de l'ENSCI Les Ateliers,<br>je suis particulièrement sensible aux enjeux sociaux, sociétaux et environnementaux actuels. J'aime dans mes travaux récupérer, bricoler, détourner et réinventer. <br>Je travaille sur une grande diversité de supports, autant physiques que numériques. J'hybride les médiums, les techniques pour répondre de manière originale à vos besoins. <br><br>Vous trouverez sur ce site les différents services que je propose. <br>Bonne visite !</p>
+                        </div>
+                    </div> 
+                </div>
+                <div id="designObjet" class="services">
+                    <button class="servicesButton" onclick="serviceSelected(0);"></button>
+                    <div animation="cube" class="base animatedContent" ></div>
+                    <div animation="cube-L" class="left animatedContent"></div>
+                    <div animation="title-obj" class="title animatedTitle"></div>
+                    <div animation="cube-R" class="right animatedContent"></div>
+                </div>
+                <div id="designMultimedia" class="services">
+                    <button class="servicesButton" onclick="serviceSelected(1);"></button>
+                    <div animation="sphere" class="base animatedContent" ></div>
+                    <div animation="sphere-L" class="left animatedContent"></div>
+                    <div animation="title-multimedia" class="title animatedTitle"></div>
+                    <div animation="sphere-R" class="right animatedContent"></div>
+                </div>
+                <div id="Illustration" class="services">
+                    <button class="servicesButton" onclick="serviceSelected(2);"></button>
+                    <div animation="cylinder" class="base animatedContent"></div>
+                    <div animation="cylinder-L" class="left animatedContent"></div>
+                    <div animation="title-illustration" class="title animatedTitle"></div>
+                    <div animation="cylinder-R" class="right animatedContent"></div>
+                </div>
+            </div>
+        </div>
+
     </div>
-
     <div id="footer">
+        
+        <div buttonBottom="aPropos" id="aPropos">
+            <button class="bottomButton" onclick="serviceSelected(3)"></button>
 
+            <div animation="apropos" class="animatedContent"></div>
+            <div style="display: none;"></div>
+            <div animation="title-apropos" class="bottomTitle animatedTitle"></div>
+        </div>
+        <div buttonBottom="galerie" id="galerie">
+            <button  class="bottomButton" onclick="serviceSelected(4)"></button>
+            <div animation="cone-R" class="cone animatedContent"></div>
+            <div style="display: none;"></div>
+            <div animation="title-galerie" class="bottomTitle animatedTitle"></div>
+        </div>
     </div>
-  </body>
+    
+</body>
 </html>

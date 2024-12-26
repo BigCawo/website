@@ -1,0 +1,174 @@
+body{
+    font-size: 1.5dvw
+}
+
+p, li{
+    font-family: Fababrac;
+    font-size: calc(var(--scaleWText) * 120%);
+
+}
+
+#textContainer p    {
+    background-color: rgba(255, 255, 255, 0.6); 
+    padding: 2vmin; 
+    border: solid rgba(0, 0, 0, 0.8  ) var(--borderWidth); 
+    border-radius: 1.5vmin; 
+    max-height: 90dvh;
+}
+
+br{
+    line-height: 0;
+}
+
+h1 {
+    padding-left: 5dvh;
+    padding-bottom: 5dvh;
+    font-family: Fababrac-titre;
+    font-size: calc(var(--scaleWText)*300%);
+    
+}
+
+
+
+
+
+#mainContainer{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background-color: rgba(0, 255, 255, 0.05); */
+  height: 100%;
+  width: 80dvw;
+  margin-left: 10dvw;
+  
+  }
+
+#mainContainer > div{
+    width: 48%;
+    height: 100%;
+}
+
+#textContainer{
+    /* background-color: rgba(0, 0, 255, 0.05); */
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    padding: 0 1.5dvw 0 1.5dvw;
+
+}
+#textcontainer .animService{
+    display: none;
+}
+
+#textContainer img{
+    margin: auto; position: relative;
+}
+
+#textContainer div{
+    width: 100%;
+    scroll-snap-align: center;
+    height: 90dvh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+
+}
+
+/* #textContainer div:first-child{
+    position: relative;
+    top: 10dvh;
+
+    scale : 0.8;
+    scroll-snap-align: none;
+    overflow-y: visible;
+
+
+} */
+
+
+#imgContainer{
+    position: relative;
+}
+
+.animService{
+    background-position: bottom; 
+    width: 100%; 
+    background-repeat: no-repeat; 
+    background-size: contain; 
+    bottom: 0;
+}
+
+#textContainer .animService{
+    position: relative; 
+    display: none;
+}
+
+#imgContainer .animService{
+    position: absolute; 
+    height: 50%; 
+    
+}
+
+.animIllustration{
+    background-image: url(/assets/services/animMultimedia.gif);
+    image-rendering: pixelated;
+    
+}
+
+#textContainer .animObjet{
+    height: 30dvh;
+}
+
+
+#textContainer .animIllustration{
+    position: relative; 
+    height: 45dvw;
+    display: none;
+}
+
+#textContainer .animMultimedia{
+    position: relative; 
+    height: 45dvw;
+    display: none;
+}
+
+/*footer*/
+
+
+  @media screen and (max-width: 480px){
+
+
+
+    #mainContainer{
+        
+        flex-direction: column;
+    }
+
+    #mainContainer div{
+
+        width: 100%;
+
+    }
+
+    #textContainer{
+
+        padding: 0;
+    
+    }
+
+    #textContainer .animService{
+        position: relative; 
+        display: block;
+    }
+    
+
+    #imgContainer{
+        display: none;
+        width: 100%;
+
+    }
+
+
+    
+  }

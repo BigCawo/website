@@ -1,9 +1,8 @@
 // intro //
 
 
-let Mq1300 = window.matchMedia("(max-width: 1300px)")
-let Mq900 = window.matchMedia("(max-width: 900px)")
-let Mq480 = window.matchMedia("(max-width: 480px)")
+
+
 
 
 // Listener function on state changes

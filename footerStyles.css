@@ -1,0 +1,93 @@
+/*footer*/
+
+#footer{
+    border-top: solid black var(--borderWidth);
+    height: 10dvh;
+    margin: auto;
+    width: 100dvw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+      
+  }
+  
+  #footer div{
+    display: flex; 
+    flex-direction: row; 
+    position: relative;
+    /* transition: all ease 1s; */
+  }
+  
+  #footer div:last-child{
+    flex-direction: row-reverse;
+  }
+  
+  #menuBar{
+    width: 100%; 
+    height: 100%; 
+    justify-content: center; 
+    align-items: center;
+  }
+  
+  #menuBar div{
+    margin: 0 2dvw 0 2dvw;
+  }
+  
+  #menuBar div:hover{
+    transition: opacity ease 0.1s;
+    opacity: 0.5;
+  }
+  
+  /* .cone{
+    visibility: hidden;
+    background-origin: content-box; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(var(--scaleRatio)*10vmin);
+    width: calc(var(--scaleRatio)*8vmin);
+    transition: all ease 0.25s;
+  
+  } */
+  
+  
+
+  
+  #footer div .animatedTitle{
+    background-size: auto 100% ;
+    height: calc(var(--scaleRatio)*10vmin);
+  
+    transition: all ease 0.25s;
+  }
+  
+  
+  #footer div:first-child .animatedTitle{
+    background-position: left;
+  }
+  
+  
+  #footer div:last-child .animatedTitle{
+    background-position: right;
+  }
+  
+  
+  
+  
+  
+  .bottomButton{
+    position: absolute; 
+    opacity: 0;
+    width: 100%; 
+    height: 100%; 
+    z-index: 50
+  }
+  
+  .anyButton{
+    position: absolute; 
+    opacity: 0;
+    width: 100%; 
+    height: 100%; 
+    z-index: 50
+  }
+  

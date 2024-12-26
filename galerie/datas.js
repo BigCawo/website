@@ -319,7 +319,7 @@ let projectList = [
     // ILLUSTRATIONS
     {
         offset : [5524,450],
-        size : [442,450],
+        size : [650,350],
         id: "illustrations",
         name: "Illustrations",
         text: "",

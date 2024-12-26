@@ -5,32 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eliot Bernaud Design Dessin Bricolage</title>
-    <link rel="shortcut icon" href="../assets/course.gif">
-    <link rel="stylesheet" href="../../styles.css">
+    <link rel="shortcut icon" href="/assets/course.gif">
+    <link rel="stylesheet" href="/galerie/styles.css">
+    <link rel="stylesheet" href="/footerStyles.css">
+    <link rel="stylesheet" href="/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Roboto:wght@400&display=swap" rel="stylesheet"> 
+
+    <script src="/global.js" defer></script>
+    <script src="/animatedImages.js" defer></script>
+    <script src="/buttonsBehavior.js" defer></script>
+    <script src="/galerie/scriptSidebar.js" defer></script>
+    <script src="/galerie/scriptIntro.js" defer> </script>
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M96FE4SJY3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-M96FE4SJY3');
-</script>
-
 <body>
+
     <div class="endGradient"></div>
     
-    <div id = sidebar>
-        <div id="categories">
-            <p> <a href="../../">Accueil</a> </p>
-            <p><a href="../../qui-suis-je/">Qui&nbsp;suis-je&nbsp;?</a></p>   
+    <div id="footer">
+        
+        <div buttonBottom="aPropos" id="aPropos">
+            <button class="bottomButton" onclick="serviceSelected(9)"></button>
+            <div animation="cone" class="animatedContent"></div>
+            <div style="visibility: hidden;" animation="title-apropos" class="bottomTitle animatedTitle"></div>
+        </div>
+        <div buttonBottom="galerie" id="galerie">
+            <button  class="bottomButton"> <a href="/aPropos/" style="display: inline-block; width: 100%; height: 100%;"></a></button>
+            <div animation="apropos" class="cone animatedContent"></div>
+            <div style="display: none;"></div>
+            <div animation="title-apropos" class="bottomTitle animatedTitle"></div>
         </div>
     </div>
+
 
     <div id = main>
 
@@ -43,7 +51,7 @@
                 <br><br>première partie, durée 2’30  
                 </p>
             </div>
-            <img id="imgIntro" loading="lazy" style="margin : auto unset; max-width: 90vh;" src="../../assets/terreslointaines.png" alt="e">
+            <img id="imgIntro" loading="lazy" style="margin : auto unset; max-width: 90vh;" src="/assets/projets/terreslointaines.png" alt="e">
             <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
         </div>
         
@@ -57,7 +65,7 @@
         <div class="espace"></div>
         
         <p class="img50pc"> Son format très large, pensé pour une projection, permet la contemplation des paysages et met en avant le cheminement des personnages, que nous devons suivre du regard le long de l’écran.</p>
-        <div class="background2"><img loading="lazy" height="100%" class="illusfin" src="../../assets/scene_05.png" alt=""></div>
+        <div class="background2"><img loading="lazy" height="100%" class="illusfin" src="/assets/projets/scene_05.png" alt=""></div>
         
 
         <div class="espace"></div>
@@ -66,7 +74,7 @@
         <div class="flexcontainer">
 
             <p class="texta">Deux techniques d’animation différentes sont utilisées pour animer les personnages et l’environnement. L’intention est de créer un certain décalage signifiant leur appartenance à des univers différents.</p>
-            <img loading="lazy" src="../../assets/terreslointaines-types-animation.jpg" alt="">
+            <img loading="lazy" src="/assets/projets/terreslointaines-types-animation.jpg" alt="">
 
         </div>
 
@@ -75,7 +83,7 @@
         <!-- <div class="flexcontainer">
 
             <p class="texta">L'aura du personnage modifie la perception qu’il a de son environnement. Curieux et bienveillant, son regard colore ce dernier.</p>
-            <img loading="lazy" src="../../assets/terreslointaines-types-coloration.jpg" alt="">
+            <img loading="lazy" src="/assets/projets/terreslointaines-types-coloration.jpg" alt="">
 
         </div> -->
 
@@ -84,8 +92,8 @@
 
         <p style="text-align: center;">Storyboard</p>
 
-        <img loading="lazy" class="imgscreen" src="../../assets/terreslointaines-storyboard-screen.png" alt="">
-        <img loading="lazy" class="imgmobile" src="../../assets/terreslointaines-storyboard-mobile.png" alt="">
+        <img loading="lazy" class="imgscreen" src="/assets/projets/terreslointaines-storyboard-screen.png" alt="">
+        <img loading="lazy" class="imgmobile" src="/assets/projets/terreslointaines-storyboard-mobile.png" alt="">
 
 
 
@@ -99,10 +107,10 @@
 
 
     </div>
+
+
 </body>
 
-    <script src="../../script.js"> </script>
-    <script src="../../scriptSidebar.js"></script>
-    <script src="../../scriptIntro.js"> </script>
+
     
 </html>

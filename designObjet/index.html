@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/footerStyles.css">
+        <link rel="stylesheet" href="/serviceStyles.css">
+        <script src="/global.js" defer></script>
+        <script src="/animatedImages.js" defer></script>
+        <script src="/buttonsBehavior.js" defer></script>
+
+    </head>
+<body>
+    <div id="header">
+
+    </div>
+    <div id="center">
+        <div id="centerBackground">
+        </div>
+
+        <div id="mainContainer">
+            <div id="textContainer">
+                <!-- <div animation="title-obj" class="animatedTitle" style="max-height: 12dvh;"></div> -->
+                <div >
+
+                    <p> 
+                        Je suis formé à la conception et à l'accompagnement de projets de typologies variées : 
+                        <i>dispositifs scénographiques et interactifs ; mobilier ; produit ; espaces intérieurs, extérieurs ...</i>
+                        <br>
+                        Je suis particulièrement sensible aux projets alternatifs liés aux low-tech, à la mobilité douce, au réemploi, à la maintenance, au bricolage, aux ESS...
+                        <br><br>
+
+                        <span class="animService animObjet"></span>
+
+                    </p>
+
+
+                </div>
+                <div>
+                    <p>Services proposés&nbsp;:<br>&#40; pour la réalisation de vos projets, ou pour des missions spécifiques &#41;
+                    <br><br>
+                        <i><u>idéation</u> : analyse du besoin / recherches préliminaires / cahier des charges</i>
+                        <br><br><i><u>conception</u> : croquis technique / recherches graphiques / modélisation 3D / maquettage / scénario d'usage</i>
+                        <br><br><i><u>fabrication</u> : plans techniques / prototypage</i>
+                        <br><br><i><u>communication</u> : illustration / rendus réalistes / vidéos / animations</i>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        outils :
+                    
+                        <br><br>modélisation 3D : Rhino ; Blender ; Grasshopper
+                        <br>création numérique : Suite Adobe ; CSS HTML JS
+                        <br>dessin traditionnel
+                        <br>outils du bois et du métal
+                    </p>
+                </div>
+                
+            </div>
+            <div id="imgContainer">
+                <div class="animService animObjet"></div>
+            </div>
+        </div>
+
+    </div>
+    <div id="footer">
+        <div id="accueil">
+            <button class="bottomButton" onclick="serviceSelected(8)"></button>
+            <div  animation="cone" class="animated animatedContent"></div>
+            <div style="display: none;" class="animatedTitle"></div>
+            
+        </div>
+        <div id="galerieObjet">
+            <button class="bottomButton" onclick="serviceSelected(5)"></button>
+            <div animation="cone-R" class="animated animatedContent"></div>
+            <div style="display: none;"></div>
+            <div animation="title-travauxLies-obj" class="animated animatedTitle"></div>
+        </div>
+    </div>
+
+</body>
+</html>

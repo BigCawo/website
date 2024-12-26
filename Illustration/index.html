@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/footerStyles.css">
+        <link rel="stylesheet" href="/serviceStyles.css">
+        <script src="/global.js" defer></script>
+        <script src="/animatedImages.js" defer></script>
+        <script src="/buttonsBehavior.js" defer></script>
+
+    </head>
+<body>
+    <div id="header">
+
+    </div>
+    <div id="center">
+        <div id="centerBackground">
+        </div>
+
+        <div id="mainContainer">
+            <div id="textContainer">
+
+                <div>
+                    <!-- <h1>Illustration, graphisme </h1> -->
+                    <p>
+                        Activité avant tout personnelle, le dessin occupe une place centrale dans mon travail. <br><br>
+                        Il est pour moi un excellent vecteur de transmission et de communication. <br>
+                        Plus universel que les mots, il permet une forme d'expression au delà des barrières inhérentes à ces derniers, comme la langue, le vocabulaire technique, la linéarité... <br>
+                        <!-- Je dessine quotidiennement, principalement en noir et blanc. <br>
+                        Je maitrise particulièrement la représentation des volumes dans l'espace. <br>
+                        Ma pratique est expérimentale -->
+                        <span class="animService animIllustration"></span>
+                    </p>
+                </div>
+                <div>
+                    <p>Services proposés&nbsp;:
+                    
+
+
+                        <br><br><i><u>illustration numérique ou traditionnelle</u> : illustration de livres, jeux / assets de vidéo, jeu, jeu vidéo, site web</i>
+                        <br><br><i><u>médiation ; facilitation graphique</u></i>
+                        <br><br><i><u>croquis</u> : recherches techniques, graphiques</i>
+                        <br><br><i><u>identité graphique</u></i>
+                        <br><br><i><u>services spéciaux</u> : dessin de maisons et d'espaces personnels</i>
+
+                        <br><br>Je suis ouvert à toute proposition, aussi exotique soit-elle !
+
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        outils :
+                    
+                    
+                        <br><br>dessin traditionnel : crayon, plume
+                        <br><br>dessin numérique : Photoshop, Animate, Illustrator, TVPaint
+                    </p>
+                </div>
+                
+            </div>
+            <div id="imgContainer">
+                <div class="animService animIllustration"></div>
+            </div>
+        </div>
+
+    </div>
+    <div id="footer">
+        <div id="accueil">
+            <button class="bottomButton" onclick="serviceSelected(8)"></button>
+            <div  animation="cone" class="animated animatedContent"></div>
+            <div style="display: none;" class="animatedTitle"></div>
+        </div>
+        <div id="galerieIllustration">
+            <button class="bottomButton" onclick="serviceSelected(7)"></button>
+            <div animation="cone-R" class="animated animatedContent"></div>
+            <div animation="title-travauxLies-obj" class="bottomTitle animatedTitle"></div>
+        </div>
+    </div>
+
+</body>
+</html>

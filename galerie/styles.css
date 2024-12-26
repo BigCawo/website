@@ -1,8 +1,8 @@
 /* ~~~~ variables ~~~~ */
 
-@font-face { font-family: Fababrac-titre; src: url('assets/fonts/Fababrac-GTitre.otf'); } 
-@font-face { font-family: Fababrac; src: url('assets/fonts/Fababrac-Minuscule.otf'); } 
-@font-face { font-family: Fababrac-soustitre; src: url('assets/fonts/Fababrac-Soustitre.otf'); } 
+@font-face { font-family: Fababrac-titre; src: url('/assets/fonts/Fababrac-GTitre.otf'); } 
+@font-face { font-family: Fababrac; src: url('/assets/fonts/Fababrac-Minuscule.otf'); } 
+@font-face { font-family: Fababrac-soustitre; src: url('/assets/fonts/Fababrac-Soustitre.otf'); } 
 
 
 :root {
@@ -10,7 +10,7 @@
     /* général */
 
     --w-sidebar:50px;
-    --h-sidebar: 5dvh;
+    --h-sidebar: 10dvh;
     --spaces: 20px;
     --ff-t:Fababrac;
     --ff-st:Roboto;
@@ -60,11 +60,17 @@ html, body{
     overflow-x: hidden;
 }
 
-body{background-color: rgba(0, 0, 0, 0);
+body{
+    
+    background-color: rgba(0, 0, 0, 0);
     position: relative;
     font-family: "Noto Sans", sans-serif;
     font-size: 100%;
     margin: auto;
+
+    overflow: initial !important;
+    width: initial !important;
+    height: initial !important;
 }
 
 
@@ -495,7 +501,7 @@ background-color: rgba(0, 0, 0, 0.8);
     z-index: -10;
     position: relative;
     width: 100vw;
-    background-image: url(assets/scene_05.png);
+    /* background-image: url(/assets/projets/scene_05.png); */
     background-repeat: repeat-x;
     background-size: 70vh;
     left: var(--test); 
@@ -509,7 +515,7 @@ background-color: rgba(0, 0, 0, 0.8);
     position: relative;
     width: 100vw;
     height: 38vh;
-    background-image: url(assets/mobiliergrillage-motif.jpg);
+    background-image: url(/assets/projets/mobiliergrillage-motif.jpg);
     background-repeat: repeat-x;
     background-size: 70vh;
     left: var(--test); 

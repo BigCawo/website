@@ -49,7 +49,7 @@ document.body.onload=function(){
     for( i = 1 ; i <= nbr; i++){
         div = document.createElement("div");
         div.className="carouselPhotoC"
-        div.style.backgroundImage="url('../../assets/carnets/2023_10_A5/"+(i-1)+".jpg')";
+        div.style.backgroundImage="url('/assets/projets/carnets/2023_10_A5/"+(i-1)+".jpg')";
         carouselContainer.appendChild(div);
     }
     affichermasquer();
