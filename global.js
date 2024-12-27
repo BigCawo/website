@@ -17,4 +17,6 @@ let urlEnd = window.location.href.replace(/\/$/, '').substring(window.location.h
 if (urlEnd.includes("2024")){urlEnd = "accueil"}
 localStorage.setItem("Page",urlEnd)
 
+document.title = "Eliot Bernaud - Design Produit / Multimedia / Illustration"
+
 // console.log(urlEnd);
