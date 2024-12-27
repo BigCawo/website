@@ -177,7 +177,7 @@ let projectList = [
         imgSrc1 : "none",
         imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
         class : "objet ",
-        link : ""
+        link : "none"
 
     },
     // LAMPE COLETTE
