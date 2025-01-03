@@ -1,5 +1,5 @@
 
-const wGalerie = 12000;
+const wGalerie = 1000;
 const hGalerie = 1084;
 const ratioGalerie = wGalerie/hGalerie;
 
@@ -7,9 +7,7 @@ let projectList = [
 
     // types : 0 = Projet personnel ; 1 = projet d'école ; 2 = projet de stage
     // 0
-    {
-
-    },
+    {},
     // A PROPOS
     {
         offset : [250,0],
@@ -22,14 +20,16 @@ let projectList = [
         date: "",
         spot : 1,
         imgSrc1 : "none",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
+        imgSrc2 : "none",
         class : "multimedia mediation illustration objet",
-        link : ""
-
+        link : "",
+        mirror : 0,
+        miniature : 0,
+        
     },
     // TERRES LOINTAINES
     {
-        offset : [100,430],
+        offset : [5785,430],
         size : [707,208],
         id: "terresLointaines",
         name: "Terres Lointaines",
@@ -39,14 +39,16 @@ let projectList = [
         date: "2020",
         spot : 1,
         imgSrc1 : "terreslointaines.png",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
+        imgSrc2 : "none",
         class : "illustration multimedia ",
-        link : ""
-
+        link : "",
+        mirror : 0,
+        miniature : 0,
+        
     },
     // OLLAS
     {
-        offset : [250,287],
+        offset : [839,392],
         size : [288,115],
         id: "ollas",
         name: "Ollas",
@@ -56,14 +58,16 @@ let projectList = [
         date: "2021",
         spot : 1,
         imgSrc1 : "none",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
+        imgSrc2 : "none",
         class : "objet ",
-        link : ""
-
+        link : "",
+        mirror : 0,
+        miniature : 0,
+        
     },
     // POL
     {
-        offset : [200,0],
+        offset : [6402,0],
         size : [401,294],
         id: "pol",
         name: "Pol",
@@ -73,14 +77,16 @@ let projectList = [
         date: "2019",
         spot : 1,
         imgSrc1 : "pol.jpg",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
+        imgSrc2 : "none",
         class : "objet ",
-        link : ""
-
+        link : "",
+        mirror : 0,
+        miniature : 0,
+        
     },
     // LAMPE ICOSAEDRE
     {
-        offset : [704,719],
+        offset : [4260,725],
         size : [302,361],
         id: "lampeIcosaedre",
         name: "Lampe Icosaèdre",
@@ -90,14 +96,16 @@ let projectList = [
         date: "2018",
         spot : 1,
         imgSrc1 : "lampe-icosaedre.png",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
+        imgSrc2 : "none",
         class : "objet ",
-        link : "none"
-
+        link : "none",
+        mirror : 0,
+        miniature : 0,
+        
     },
     // CHAISE ATTACHE
     {
-        offset : [851,0],
+        offset : [4289,0],
         size : [245,350],
         id: "chaiseAttache",
         name: "Chaise Attache",
@@ -107,14 +115,16 @@ let projectList = [
         date: "2020",
         spot : 1,
         imgSrc1 : "none",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
+        imgSrc2 : "none",
         class : "objet ",
-        link : "none"
-
+        link : "none",
+        mirror : 0,
+        miniature : 1,
+        
     },
     // FABRIQUE A BRAC
     {
-        offset : [1255,370],
+        offset : [1956,370],
         size : [652,481],
         id: "fabriqueABrac",
         name: "Fabrique À Brac",
@@ -124,14 +134,16 @@ let projectList = [
         date: "2022",
         spot : 1,
         imgSrc1 : "lafabriqueabrac.gif",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
-        class : "mediation multimedia ",
-        link : ""
-
+        imgSrc2 : "none",
+        class : "mediation multimedia",
+        link : "",
+        mirror : 0,
+        miniature : 0,
+        
     },
     // NASA
     {
-        offset : [1213,0],
+        offset : [1910,0],
         size : [670,380],
         id: "nasa",
         name: "NASA",
@@ -141,14 +153,16 @@ let projectList = [
         date: "2018",
         spot : 1,
         imgSrc1 : "nasa.png",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
+        imgSrc2 : "none",
         class : "objet ",
-        link : ""
-
+        link : "",
+        mirror : 0,
+        miniature : 1,
+        
     },
     // LAMPE RESSORT
     {
-        offset : [1986,145],
+        offset : [6575,288],
         size : [234,460],
         id: "lampeRessort",
         name: "Lampe Ressort",
@@ -158,14 +172,16 @@ let projectList = [
         date: "2018",
         spot : 1,
         imgSrc1 : "lamperessort.png",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
+        imgSrc2 : "none",
         class : "objet ",
-        link : ""
-
+        link : "",
+        mirror : 0,
+        miniature : 0,
+        
     },
     // TABLE BASSE
     {
-        offset : [1996,0],
+        offset : [2703,0],
         size : [505,155],
         id: "tableBasse",
         name: "Table Basse",
@@ -175,14 +191,16 @@ let projectList = [
         date: "2022",
         spot : 1,
         imgSrc1 : "none",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
+        imgSrc2 : "none",
         class : "objet ",
-        link : "none"
-
+        link : "none",
+        mirror : 0,
+        miniature : 0,
+        
     },
     // LAMPE COLETTE
     {
-        offset : [2260,700],
+        offset : [1254,700],
         size : [189,93],
         id: "lampeColette",
         name: "Lampe Colette",
@@ -192,14 +210,16 @@ let projectList = [
         date: "2022",
         spot : 1,
         imgSrc1 : "lampepince.png",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
+        imgSrc2 : "none",
         class : "objet ",
-        link : ""
-
+        link : "",
+        mirror : 0,
+        miniature : 0,
+        
     },
     // CHMUP
     {
-        offset : [2329,180],
+        offset : [3881,180],
         size : [424,386],
         id: "chmupTheDog",
         name: "Chmup The Dog",
@@ -209,14 +229,16 @@ let projectList = [
         date: "2019",
         spot : 1,
         imgSrc1 : "course.gif",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
+        imgSrc2 : "none",
         class : "multimedia illustration ",
-        link : ""
-
+        link : "",
+        mirror : 0,
+        miniature : 0,
+        
     },
     // VASE
     {
-        offset : [2939,392],
+        offset : [2764,145],
         size : [257,350],
         id: "vaseSuspendu",
         name: "Vase suspendu",
@@ -226,14 +248,16 @@ let projectList = [
         date: "2017",
         spot : 1,
         imgSrc1 : "vase-suspendu-triptique.gif",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
+        imgSrc2 : "none",
         class : "objet ",
-        link : ""
-
+        link : "",
+        mirror : 0,
+        miniature : 0,
+        
     },
     // MEUBLE A BAZAR
     {
-        offset : [2918,0],
+        offset : [757,0],
         size : [420,395],
         id: "meubleBazar",
         name: "Meuble à bazar",
@@ -243,14 +267,16 @@ let projectList = [
         date: "2023",
         spot : 1,
         imgSrc1 : "meuble-a-bazar.jpg",
-        imgSrc2 : "../assets_accueil/illustrations_APropos_0000s_0000_lampe-icosaedre.png",
-        class : "objet ",
-        link : "oui/"
-
+        imgSrc2 : "none",
+        class : "objet",
+        link : "oui/",
+        mirror : 1,
+        miniature : 1,
+        
     },
     // PARLERS ESPACE
     {
-        offset : [3266,500],
+        offset : [2804,500],
         size : [837,532],
         id: "parlersEspace",
         name: "Parlers Espace",
@@ -260,14 +286,16 @@ let projectList = [
         date: "2021",
         spot : 1,
         imgSrc1 : "parlersespace.gif",
-        imgSrc2 : "parlersespace.gif",
+        imgSrc2 : "none",
         class : "multimedia mediation illustration ",
-        link : ""
-
+        link : "",
+        mirror : 0,
+        miniature : 0,
+        
     },
     // POMME DE TERRE
     {
-        offset : [3793,0],
+        offset : [4642,0],
         size : [653,586],
         id: "pommeDeTerre",
         name: "Pomme de Terre",
@@ -277,14 +305,16 @@ let projectList = [
         date: "2019",
         spot : 1,
         imgSrc1 : "pommedeterre.jpg",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
+        imgSrc2 : "none",
         class : "multimedia mediation ",
-        link : ""
-
+        link : "",
+        mirror : 0,
+        miniature : 0,
+        
     },
     // CARNETS
     {
-        offset : [4591,400],
+        offset : [3503,400],
         size : [238,335],
         id: "carnets",
         name: "Carnets",
@@ -294,14 +324,16 @@ let projectList = [
         date: "",
         spot : 1,
         imgSrc1 : "carnets.png",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
+        imgSrc2 : "none",
         class : "illustration ",
-        link : ""
-
+        link : "",
+        mirror : 0,
+        miniature : 0,
+        
     },
     // POLES IMAGES
     {
-        offset : [4974,-3],
+        offset : [1334,-3],
         size : [445,589],
         id: "poleImage",
         name: "Qu'est ce qu'un Pôle Image ?",
@@ -311,14 +343,16 @@ let projectList = [
         date: "2024",
         spot : 1,
         imgSrc1 : "poleimage.png",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
+        imgSrc2 : "none",
         class : "multimedia mediation ",
-        link : ""
-
+        link : "",
+        mirror : 0,
+        miniature : 0,
+        
     },
     // ILLUSTRATIONS
     {
-        offset : [5524,450],
+        offset : [212,500],
         size : [650,350],
         id: "illustrations",
         name: "Illustrations",
@@ -328,14 +362,16 @@ let projectList = [
         date: "",
         spot : 1,
         imgSrc1 : "none",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
+        imgSrc2 : "none",
         class : "illustration ",
-        link : ""
-
+        link : "",
+        mirror : 0,
+        miniature : 0,
+        
     },
     // MOBILIER GRILLAGE
     {
-        offset : [5624,0],
+        offset : [0,0],
         size : [597,386],
         id: "mobilierGrillage",
         name: "Mobilier Grillage",
@@ -345,14 +381,36 @@ let projectList = [
         date: "depuis 2020",
         spot : 1,
         imgSrc1 : "mobiliergrillage.jpg",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
+        imgSrc2 : "none",
         class : "objet ",
-        link : ""
-
+        link : "",
+        mirror : 0,
+        miniature : 1,
+        
     },
+
+        // CHARLETTE
+        {
+            offset : [5402,0],
+            size : [761,589],
+            id: "charlette",
+            name: "Charlette",
+            text: "Cette remorque permet de transporter facilement une palette aux normes européennes avec n'importe quel vélo.<br><br> Ce projet est à l'initiative de l'association Veloma, que j'ai eu le plaisir d'assister dans la conception et la réalisation de ce premier prototype.",
+            desc:"",
+            type: "Projet professionnel",
+            date: "2023",
+            spot : 1,
+            imgSrc1 : "stellarium.png",
+            imgSrc2 : "none",
+            class : "objet ",
+            link : "https://veloma.org/2024/02/16/charlette-charrette-palette/",
+            mirror : 0,
+            miniature : 0,
+            
+        },
     // STELLARIUM
     {
-        offset : [6358,0],
+        offset : [6950,0],
         size : [882,598],
         id: "stellarium",
         name: "Stellarium",
@@ -362,28 +420,14 @@ let projectList = [
         date: "2016",
         spot : 1,
         imgSrc1 : "stellarium.png",
-        imgSrc2 : "20240304_illustrations_ChmupTheDog.png",
+        imgSrc2 : "none",
         class : "objet mediation ",
-        link : ""
-
+        link : "",
+        mirror : 0,
+        miniature : 0,
+        
     },
-    // CHARLETTE
-    {
-        offset : [7367,0],
-        size : [761,589],
-        id: "charlette",
-        name: "Charlette",
-        text: "Cette remorque permet de transporter facilement une palette aux normes européennes avec n'importe quel vélo.<br><br> Ce projet est à l'initiative de l'association Veloma, que j'ai eu le plaisir d'assister dans la conception et la réalisation de ce premier prototype.",
-        desc:"",
-        type: "Projet professionnel",
-        date: "2023",
-        spot : 1,
-        imgSrc1 : "none",
-        imgSrc2 : "../assets_accueil/illustrations_APropos_0000s_0000_lampe-icosaedre.png",
-        class : "objet ",
-        link : "https://veloma.org/2024/02/16/charlette-charrette-palette/"
 
-    },
     // // SITE WEB
     // {
     //     offset : [,0],
@@ -396,7 +440,7 @@ let projectList = [
     //     date: "depuis 2023",
     //     spot : 1,
     //     imgSrc1 : "none",
-    //     imgSrc2 : "../assets_accueil/illustrations_APropos_0000s_0000_lampe-icosaedre.png",
+    //     imgSrc2 : "none",
     //     class : "objet ",
     //     link : "bonjour/"
 
@@ -413,7 +457,7 @@ let projectList = [
     //     date: "2023",
     //     spot : 1,
     //     imgSrc1 : "none",
-    //     imgSrc2 : "../assets_accueil/illustrations_APropos_0000s_0000_lampe-icosaedre.png",
+    //     imgSrc2 : "none",
     //     class : "objet ",
     //     link : "bonjour/"
 

@@ -30,12 +30,8 @@
 
 
 
-img{background-color: rgba(0, 0, 255, 0);
-    /* padding: 1%; */
+img{
     width: 100%;
-    
-    
-
 }
 
 .imgpx{
@@ -658,7 +654,7 @@ button:hover {
     justify-content: space-between;
 }
 
-.icons{
+/* .icons{
     position: relative;
     max-width: 100%;
     width: 32%;
@@ -692,11 +688,11 @@ button:hover {
 
 .icons img:hover{
     opacity: 20%;
-}
+} */
 
 /* apropos */
 
-#aproposPp{
+/* #aproposPp{
     margin: 0; 
     padding-top: 25px !important; 
     padding-bottom: 25px !important; 
@@ -722,9 +718,9 @@ button:hover {
 
 #apropos h2{
     padding: 5px 0;
-}
+} */
 
-#cvEntete{
+/* #cvEntete{
     display: flex; 
     align-items: center; 
     justify-content: start;
@@ -735,11 +731,11 @@ button:hover {
     display: flex; 
     align-items :flex-start; 
     justify-content: space-between;
-}
+} */
 
 
 
-#cvCorps > div{
+/* #cvCorps > div{
     width: 47.5%;
 }
 
@@ -754,7 +750,7 @@ button:hover {
 
 .aproposTxt > div{
     width: 47.5%;
-}
+} */
 
 /* parlers Espace */
 
@@ -932,13 +928,13 @@ html{
 
 /* apropos */
 
-#cvCorps{
+/* #cvCorps{
     flex-direction: column;
 }
 
 #cvCorps > div{
     width: 100%;
-}
+} */
 
 
 

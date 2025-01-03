@@ -281,6 +281,7 @@ for (let i = 0 ; i < projectList.length - 2; i++) {
     Img2.src = "../assets/galerie/"+projPath.id+"Color.png";
     Img2.className = "backgroundColor shake"
     Img2.alt =""
+    if (projPath.mirror == 1){Img2.style.scale = "-1 1"}
     document.getElementById(projPath.id).appendChild(Img2);
 
     const Img3 = document.createElement("img");
@@ -288,6 +289,9 @@ for (let i = 0 ; i < projectList.length - 2; i++) {
     Img3.className = "backgroundColor2 shake"
     Img3.alt =""
     document.getElementById(projPath.id).appendChild(Img3);
+    if (projPath.mirror == 1){Img3.style.scale = "-1 1"}
+
+    
 
 
 }
@@ -611,14 +615,17 @@ window.addEventListener("mousemove",function(e){ Mx=e.clientX; My=e.clientY;} )
 
 const buttonProject = document.getElementsByClassName("buttonProject")
 
-for (let i = 1; i<buttonProject.length; i++){
+for (let i = 1; i<buttonProject.length+1; i++){
     const popup = document.getElementById("popup") 
     buttonProject[i-1].addEventListener("mousemove",function(e){
         
         popup.style.visibility = "visible"        
         popup.style.left = (Mx+10) + "px"
         popup.style.top = (My+10) + "px"
-        
+        if(projectList[i+1].miniature == 1){
+        popup.getElementsByTagName("img")[0].style.display = "initial"
+        popup.getElementsByTagName("img")[0].src = "/assets/projets/miniatures/"+projectList[i+1].id+".gif"
+        }else{popup.getElementsByTagName("img")[0].style.display = "none"}
 
         popup.getElementsByTagName("h2")[0].innerHTML = projectList[i+1].name
         if(Mq480.matches){pass}
