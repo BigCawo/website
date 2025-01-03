@@ -8,6 +8,8 @@ let w = projectValue
 let descContainer = document.getElementById("projectInformations")
 let y = 0
 
+projectList.sort((a, b) => a.offset[0] - b.offset[0])
+
 
 // Navigation Bar //
 
@@ -247,8 +249,8 @@ function projectSort(x) {
 
 
 //project generation
-for (let i = 0 ; i < projectList.length - 2; i++) {
-    let projPath = projectList[i + 2];
+for (let i = 0 ; i < projectList.length; i++) {
+    let projPath = projectList[i];
     let buttonId = "button" + projPath.id.charAt(0).toUpperCase() + projPath.id.slice(1);
     const buttonProject = document.createElement("button");
     
@@ -258,7 +260,7 @@ for (let i = 0 ; i < projectList.length - 2; i++) {
     buttonProject.style.bottom= projPath.offset[1]*center.offsetHeight/hGalerie+"px"
     buttonProject.style.width= projPath.size[0]*center.offsetHeight/hGalerie+"px"
     buttonProject.style.height= projPath.size[1]*center.offsetHeight/hGalerie+"px"
-    buttonProject.setAttribute('onclick',`projectSelect(${i+2});`);
+    buttonProject.setAttribute('onclick',`projectSelect(${i});`);
    
     document.getElementById("projects").appendChild(buttonProject);
    
@@ -296,6 +298,10 @@ for (let i = 0 ; i < projectList.length - 2; i++) {
 
 }
 
+// project sort by position
+
+
+
 //centersize change
 
 function centerResize() {
@@ -316,8 +322,8 @@ Mq480.addEventListener("change", function() {
 
 function loadValues() {
     //reload project positions
-    for (let i = 0 ; i < projectList.length - 2; i++) {
-        let projPath = projectList[i + 2];
+    for (let i = 0 ; i < projectList.length - 1; i++) {
+        let projPath = projectList[i + 1];
         const buttonProject = document.getElementById("button" + projPath.id.charAt(0).toUpperCase() + projPath.id.slice(1));
         
 
@@ -397,11 +403,10 @@ center.addEventListener("scroll", function(){ showHide(); })
 center.addEventListener('wheel', (evt) => {
     spotsVisible = document.getElementById("spot").style.opacity
     evt.preventDefault();
-    if (projectValue == 1){descSpawn(0)}
-    if (spotsVisible == 0.55 && projectValue > 1){ 
+    if (spotsVisible == 0.55 && projectValue >= 0){ 
         
-        w = Math.max(projectValue +  Math.sign(evt.deltaY),1)
-        if(1 < w && w < 23){
+        w = Math.max(projectValue +  Math.sign(evt.deltaY),-1)
+        if(-1 < w && w < 21){
             projectSelect(w)
             }
   
@@ -502,9 +507,6 @@ function projectSelect(x){
             if (projectList[x].link.includes('http'))
            window.open(projectList[x].link, '_blank');
 
-            else if (x == 1){
-                window.location.href = "../qui-suis-je/";
-            }
             else if (projectList[x].link == "none")
             {
             shake(document.getElementById(projectList[x].id));
@@ -520,7 +522,7 @@ function projectSelect(x){
 
     }
 
-    if( x > 0 ){ projectValue = x}
+    if( x >= 0 ){ projectValue = x}
 
     const backgroundColor = document.getElementsByClassName("backgroundColor2");
     for (let i = 0; i < backgroundColor.length; i++) {
@@ -543,14 +545,10 @@ function projectSelect(x){
 
 
 function scrollTo(x){
-    if(x > 0){
+    if(x >= 0){
     let pProject = Number(document.getElementById("button" +  projectList[x].id.charAt(0).toUpperCase() + projectList[x].id.slice(1)).offsetLeft);
     let Wproject = Number(document.getElementById("button" + projectList[x].id.charAt(0).toUpperCase() + projectList[x].id.slice(1)).offsetWidth);
     center.scrollTo((WindowWidth/4)+projectCenter*WindowWidth+(pProject+0.5*Wproject), 0)
-
-        //special accueil
-    
-    if(x == 1){center.scrollTo("50dvw", 0)}
     }
     
     
@@ -564,7 +562,7 @@ function scrollTo(x){
 }
 
 function projectHilight(x){
-    if(x > 0){
+    if(x >= 0){
         let a = Number(document.getElementById("button" + projectList[x].id.charAt(0).toUpperCase() + projectList[x].id.slice(1)).offsetWidth);
 
 
@@ -589,21 +587,10 @@ function projectHilight(x){
         }
         const elements = document.getElementById("spot").getElementsByTagName("div")
 
-        //special accueil
-
-        if (x == 1){            
-            elements[0].getElementsByTagName("img")[0].style.visibility = "hidden"
-            elements[1].style.transition = "all ease 0s"
-            elements[1].style.backgroundColor = "rgb(0, 0, 0)"
-            elements[1].style.transition = "all ease 0.25s"
-            elements[2].getElementsByTagName("img")[0].style.visibility = "hidden"
-
-        }
 
     }
 
 }
-
 
 
 window.addEventListener("mousemove",function(e){ Mx=e.clientX; My=e.clientY;} )
@@ -612,31 +599,33 @@ window.addEventListener("mousemove",function(e){ Mx=e.clientX; My=e.clientY;} )
 
 
 
-
 const buttonProject = document.getElementsByClassName("buttonProject")
+let Mx = 0
+let My = 0
+for (let i = 1; i<buttonProject.length; i++){
 
-for (let i = 1; i<buttonProject.length+1; i++){
     const popup = document.getElementById("popup") 
-    buttonProject[i-1].addEventListener("mousemove",function(e){
+    buttonProject[i].addEventListener("mousemove",function(e){
         
-        popup.style.visibility = "visible"        
+        popup.style.visibility = "visible"
+
         popup.style.left = (Mx+10) + "px"
         popup.style.top = (My+10) + "px"
-        if(projectList[i+1].miniature == 1){
+        if(projectList[i].miniature == 1){
         popup.getElementsByTagName("img")[0].style.display = "initial"
-        popup.getElementsByTagName("img")[0].src = "/assets/projets/miniatures/"+projectList[i+1].id+".gif"
+        popup.getElementsByTagName("img")[0].src = "/assets/projets/miniatures/"+projectList[i].id+".gif"
         }else{popup.getElementsByTagName("img")[0].style.display = "none"}
 
-        popup.getElementsByTagName("h2")[0].innerHTML = projectList[i+1].name
+        popup.getElementsByTagName("h2")[0].innerHTML = projectList[i].name
         if(Mq480.matches){pass}
         else{
-        document.getElementById(projectList[i+1].id).getElementsByClassName("backgroundColor")[0].style.filter = "grayscale(0) brightness(1)";}
+        document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor")[0].style.filter = "grayscale(0) brightness(1)";}
     })
     buttonProject[i-1].addEventListener("mouseout",function(e){
         popup.style.visibility = "hidden"
         if(Mq480.matches){pass}
         else{
-        document.getElementById(projectList[i+1].id).getElementsByClassName("backgroundColor")[0].style.filter = "grayscale(1)  brightness(1.5)";}
+        document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor")[0].style.filter = "grayscale(1)  brightness(1.5)";}
         
     }
     )

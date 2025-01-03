@@ -7,26 +7,26 @@ let projectList = [
 
     // types : 0 = Projet personnel ; 1 = projet d'école ; 2 = projet de stage
     // 0
-    {},
+    // {},
     // A PROPOS
-    {
-        offset : [250,0],
-        size : [772,576],
-        id : "aPropos",
-        name: "Bienvenue !",
-        text: "Je m'appelle Eliot, je suis artiste designer diplômé en création industrielle à l'ENSCI - Les Ateliers. Mon approche du design et de la création est à la fois poétique, rêveuse ; et réaliste, consciente des enjeux sociétaux, écologiques et techniques de demain. <br><br>  Pour en savoir plus sur ma <u>pratique</u>, sur les <u>services</u> que je propose ainsi que sur mes <u>travaux</u> actuels et passés, je vous invite à parcourir les différents espaces de ce site. <br><br> Je suis ouvert à toute proposition de travail ou de collaboration ! <br> Bonne visite :)",
-        desc:"",
-        type: "",
-        date: "",
-        spot : 1,
-        imgSrc1 : "none",
-        imgSrc2 : "none",
-        class : "multimedia mediation illustration objet",
-        link : "",
-        mirror : 0,
-        miniature : 0,
+    // {
+    //     offset : [250,0],
+    //     size : [772,576],
+    //     id : "aPropos",
+    //     name: "Bienvenue !",
+    //     text: "Je m'appelle Eliot, je suis artiste designer diplômé en création industrielle à l'ENSCI - Les Ateliers. Mon approche du design et de la création est à la fois poétique, rêveuse ; et réaliste, consciente des enjeux sociétaux, écologiques et techniques de demain. <br><br>  Pour en savoir plus sur ma <u>pratique</u>, sur les <u>services</u> que je propose ainsi que sur mes <u>travaux</u> actuels et passés, je vous invite à parcourir les différents espaces de ce site. <br><br> Je suis ouvert à toute proposition de travail ou de collaboration ! <br> Bonne visite :)",
+    //     desc:"",
+    //     type: "",
+    //     date: "",
+    //     spot : 1,
+    //     imgSrc1 : "none",
+    //     imgSrc2 : "none",
+    //     class : "multimedia mediation illustration objet",
+    //     link : "",
+    //     mirror : 0,
+    //     miniature : 0,
         
-    },
+    // },
     // TERRES LOINTAINES
     {
         offset : [5785,430],
@@ -314,7 +314,7 @@ let projectList = [
     },
     // CARNETS
     {
-        offset : [3503,400],
+        offset : [3503,300],
         size : [238,335],
         id: "carnets",
         name: "Carnets",
