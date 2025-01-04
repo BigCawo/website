@@ -58,11 +58,13 @@ let lastScrollTop = 0;
 let initScrollTop = 50;
 
 window.addEventListener("scroll", function(){
+    console.log("aaaa")
+
+let st =  this.window.scrollY;
+let stspecial =  document.getElementById("main").scrollTop;
 
 
-var st =  this.window.scrollY;
-
-if (st > lastScrollTop) {
+if (st > lastScrollTop || stspecial > lastScrollTop) {
     Sidebar.style.bottom= "calc(-1*var(--h-sidebar))"} 
    
 else 

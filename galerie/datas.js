@@ -48,7 +48,7 @@ let projectList = [
     },
     // OLLAS
     {
-        offset : [839,392],
+        offset : [839,396],
         size : [288,115],
         id: "ollas",
         name: "Ollas",
@@ -371,7 +371,7 @@ let projectList = [
     },
     // MOBILIER GRILLAGE
     {
-        offset : [0,0],
+        offset : [0,-10],
         size : [597,386],
         id: "mobilierGrillage",
         name: "Mobilier Grillage",

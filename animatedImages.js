@@ -16,21 +16,21 @@ function imageAnim(animatedImage){
 
 }
 
-const hoverableImage =  document.querySelectorAll('[hover]') 
+// const hoverableImage =  document.querySelectorAll('[hover]') 
 
-for(let i = 0 ; i < hoverableImage.length; i++){
+// for(let i = 0 ; i < hoverableImage.length; i++){
  
-    hoverableImage[i].addEventListener("mousemove",function(e){  
-        hoverableImage[i].getElementsByTagName("img")[0].style.transition = "filter ease 0.25s"     
-        hoverableImage[i].getElementsByTagName("img")[0].style.filter = "grayscale(0)"
-    })
-    hoverableImage[i].addEventListener("mouseout",function(e){
-        hoverableImage[i].getElementsByTagName("img")[0].style.transition = "filter ease 0.25s"     
-        hoverableImage[i].getElementsByTagName("img")[0].style.filter = "grayscale(0.7)"
+//     hoverableImage[i].addEventListener("mousemove",function(e){  
+//         hoverableImage[i].getElementsByTagName("img")[0].style.transition = "filter ease 0.25s"     
+//         hoverableImage[i].getElementsByTagName("img")[0].style.filter = "grayscale(0)"
+//     })
+//     hoverableImage[i].addEventListener("mouseout",function(e){
+//         hoverableImage[i].getElementsByTagName("img")[0].style.transition = "filter ease 0.25s"     
+//         hoverableImage[i].getElementsByTagName("img")[0].style.filter = "grayscale(0.7)"
         
-    }
-    )
-}
+//     }
+//     )
+// }
 const blouc = document.getElementsByClassName("animService")
 let n = 0
 intervalTest = 100

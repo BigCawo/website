@@ -321,23 +321,20 @@ a:active {color: rgb(0, 0, 0);}
 
 /* ~~~~ illustrations ~~~~ */
 
-#illustrations{
-    margin-top: var(--h-sidebar)
+
+
+#galleryComputer{
+    display: flex;            
+    flex-direction: row;
+}
+#galleryComputer > div{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
 }
 
 
-.modalImg{
-     display: block; 
-      
-     margin: auto;
-     
-     width: calc( 100% - var(--w-sidebar) );
-     height: auto;
-     
-     max-height: 94vh;
 
-     max-width: calc( 100% - var(--w-sidebar) );
-}
 
 * {
 box-sizing: border-box;
@@ -345,40 +342,17 @@ box-sizing: border-box;
 
 /* Galerie */
 
-.row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    
-
-}
-
-.column{
-    display: flex;
-    flex-direction: column;
-    flex: 50%;
-    max-width: 50%;
-}
-
-
-
-
-.gallery{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-
 .imgGallery img {
-    padding: 10px;
+    padding: 1vmin;
 }
 
-.gallery img.hover-shadow {
+.imgGallery img{
+    z-index: 50;
+
     transition: 0.3s;
     }
     
-.gallery .hover-shadow:hover {
+.imgGallery img:hover {
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -387,26 +361,22 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 display: none;
 position: fixed;
 z-index: 1;
-padding-top: 100px;
-right: 0;
+left: 0;
 top: 0;
-width: calc( 100% - var(--w-sidebar) )  ;
-height: 100vh;
+width: 100dvw;
+height: 100dvh;
 overflow: scroll;
 background-color: rgba(0, 0, 0, 0.208);
 }
-
 /* Modal Content */
-.modal-content {
-position: fixed;
-top: 3vh;
-right: 0;
-background-color: #fefefe00;
-margin: auto;
-padding: 0;
-height: 94vh;
-overflow: scroll;
-width: calc( 100% - var(--w-sidebar) )  ;
+
+.modalImg{
+    position: fixed;
+    overflow: scroll;
+    padding: 2vmin;
+    display: block;       
+    width: 100%;
+    height: 100%;     
 }
 
 /* The Close Button */
@@ -433,9 +403,6 @@ text-decoration: none;
 cursor: pointer;
 }
 
-.mySlides {
-display: none;
-}
 
 .cursor {
 cursor: pointer;
@@ -960,6 +927,7 @@ body{
 
 #main{
     left: 0 ;
+    position: relative;
 }
 
 #header{
@@ -1043,35 +1011,8 @@ body{
 
 /* illustrations */
 
-#illustrations{
-    margin-top: calc( ( 100vw - var(--w-main) ) /2 )
-}
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    right: 0;
-    top: 0;
-    width: 100%  ;
-    height: 100vh;
-    overflow: scroll;
-    background-color: rgba(0, 0, 0, 0.208);
-    }
-    
-    /* Modal Content */
-    .modal-content {
-    position: fixed;
-    top: 3vh;
-    right: 0;
-    background-color: #fefefe00;
-    margin: auto;
-    padding: 0;
-    height: 94vh;
-    overflow: scroll;
-    width: 100%  ;
-    }
+
 
 /*(mobilier grillage*/
 .background{left: -5vw;}

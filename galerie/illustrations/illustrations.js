@@ -1,101 +1,178 @@
-//lightbox
+// testing
+
+// console.log(document.getElementById("illustrations").offsetWidth)
+// setInterval(function(){console.log(document.getElementById("main").scrollLeft)},500  )
 
 
-function openModal() {
+// sidebar SPECIAAAL
+
+document.getElementById("illustrations").addEventListener("scroll", function(){
+let st =  document.getElementById("illustrations").scrollTop;
+
+if (st > lastScrollTop || st > lastScrollTop) {
+    Sidebar.style.bottom= "calc(-1*var(--h-sidebar))"} 
+else 
+    Sidebar.style.bottom= "0"
+   lastScrollTop = st <= 0 ? 0 : st;
+   })     
+
+
+// ~~~~~ IMAGE GENERATION ~~~~~
+
+
+// IMGINATION
+
+illusListImagination = illusList.filter(function test(x){if (x.type.includes(1)){return x}})
+
+//(phone)
+
+
+for (i = 0; i < illusListImagination.length ; i++){
+  const illusCanvas = document.createElement("div")
+  illusCanvas.setAttribute("onclick","openModal("+i+")")
+  illusCanvas.className = "imgGallery"
+  illusCanvas.id = illusListImagination[i].name
+
+document.getElementsByClassName("galleryPhone")[0].appendChild(illusCanvas)
+
+  const illus = document.createElement("img")
+  illus.setAttribute("number",i)
+  illus.loading = "lazy"
+  illus.src = illusListImagination[i].src
+  document.getElementById(illusListImagination[i].name).appendChild(illus)
+}
+
+//(computer)
+
+for (i = 0; i < illusListImagination.length ; i++){
+  const illusCanvas = document.createElement("div")
+  illusCanvas.setAttribute("onclick","openModal("+i+")")
+  illusCanvas.className = "imgGallery"
+  illusCanvas.id = illusListImagination[i].name
+
+  if (i % 2 == 0) {document.getElementsByClassName("imgRight")[0].appendChild(illusCanvas)}
+  else{document.getElementsByClassName("imgLeft")[0].appendChild(illusCanvas)}
+
+  const illus = document.createElement("img")
+  illus.setAttribute("number",i)
+  illus.loading = "lazy"
+  illus.src = illusListImagination[i].src
+  document.getElementById(illusListImagination[i].name).appendChild(illus)
+}
+
+
+// OBSERVATION
+
+illusListObservation = illusList.filter(function test(x){if (x.type.includes(0)){return x}})
+
+//(phone)
+
+
+  for (i = 0; i < illusListObservation.length ; i++){
+    const illusCanvas = document.createElement("div")
+    illusCanvas.setAttribute("onclick","openModal("+i+")")
+    illusCanvas.className = "imgGallery"
+    illusCanvas.id = illusListObservation[i].name
+  
+  document.getElementsByClassName("galleryPhone")[1].appendChild(illusCanvas)
+  
+    const illus = document.createElement("img")
+    illus.setAttribute("number",i)
+    illus.loading = "lazy"
+    illus.src = illusListObservation[i].src
+    document.getElementById(illusListObservation[i].name).appendChild(illus)
+  }
+  
+  //(computer)
+  
+  for (i = 0; i < illusListObservation.length ; i++){
+    const illusCanvas = document.createElement("div")
+    illusCanvas.setAttribute("onclick","openModal("+i+")")
+    illusCanvas.className = "imgGallery"
+    illusCanvas.id = illusListObservation[i].name
+  
+    if (i % 2 == 0) {document.getElementsByClassName("imgRight")[1].appendChild(illusCanvas)}
+    else{document.getElementsByClassName("imgLeft")[1].appendChild(illusCanvas)}
+  
+    const illus = document.createElement("img")
+    illus.setAttribute("number",i)
+    illus.loading = "lazy"
+    illus.src = illusListObservation[i].src
+    document.getElementById(illusListObservation[i].name).appendChild(illus)
+  }
+
+// ~~~~~ 
+
+
+// change display
+
+function displayMode(){
+  let sectionNbr = document.getElementsByClassName("galleryComputer")
+  for ( i = 0 ; i < sectionNbr.length ; i++){
+  if (Mq480.matches){
+    document.getElementsByClassName("galleryComputer")[i].style.display = "none"; document.getElementsByClassName("galleryPhone")[i].style.display = "initial"}
+  else{
+    document.getElementsByClassName("galleryComputer")[i].style.display = "flex"; document.getElementsByClassName("galleryPhone")[i].style.display = "none"}
+  }
+}
+displayMode();
+Mq480.addEventListener("change", function() {displayMode();}); 
+
+// hovering
+// const imgGallery = document.getElementsByClassName("imgGallery")
+// for (i = 0 ; i < imgGallery.length ; i ++){
+
+//   imgGallery[i].getElementsByTagName("img")[0].addEventListener("mousemove", function(e){
+//     imgGallery[i].style.backgroundColor = "blue"
+//     imgGallery[i].getElementsByTagName("img")[0].style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
+//   })
+//   imgGallery[i].addEventListener("mouseout", function(e){
+//     imgGallery[i].getElementsByTagName("img")[0].style.boxShadow = "initial"
+//   })
+// }
+
+// section change
+
+function sectionChange(x){
+  let sectionWidth = document.getElementById("illustrations").offsetWidth
+  document.getElementById("main").style.scrollBehavior = "smooth"
+  document.getElementById("main").scrollLeft = sectionWidth*x
+}
+
+
+
+
+//prototype-sorting
+function prototypeSort(){
+illusList.sort((a, b) => a.type[0] - b.type[0])
+}
+
+
+//popup img
+
+closeModal();
+
+function openModal(n) {
+
     document.getElementById("myModal").style.display = "block";
+    document.getElementById("myModal").scrollTo(0,0); 
+    document.getElementById("main").style.maxHeight = "100dvh";
+    document.getElementById("main").style.overflowY = "hidden";
 
-    document.getElementById("main").style.maxHeight = "100vh";
-  }
+    let slides = document.getElementById("imgZoom")
+    slides.src = illusList[n].src
+}
   
-  function closeModal() {
 
-    document.getElementById("myModal").style.display = "none";
+function closeModal() {
 
-    document.getElementById("main").style.maxHeight = "auto";
-    /*
-    let imgFocus = document.getElementsByClassName("modalImg")
-
-    for (i = 0; i < imgFocus.length; i++) {
-        imgFocus[i].style.height = "94vh";
-        imgFocus[i].style.width = "fit-content";      
-    }
-
-    document.getElementById("focus").value = "off"
-    */
-}
-/*
-function getFocus(){
-    
-    let imgFocus = document.getElementsByClassName("modalImg")
-    let focusState = document.getElementById("focus").value
-
-if (focusState == "off"){
-
-for (i = 0; i < imgFocus.length; i++) {
-    imgFocus[i].style.height = "auto";
-    imgFocus[i].style.width = "calc( 100% - var(--w-sidebar) )";      
-}
-document.getElementById("focus").value = "on"
+  document.getElementById("myModal").style.display = "none";
+  document.getElementById("main").style.maxHeight = "auto"; 
+  document.getElementById("main").style.overflowY = "scroll";
 
 }
 
-if (focusState == "on" ){
 
-for (i = 0; i < imgFocus.length; i++) {
-    imgFocus[i].style.height = "94vh";
-    imgFocus[i].style.width = "fit-content";      
-}
-document.getElementById("focus").value = "off"
 
-}
 
-}
-
-*/
   
-  var slideIndex = 1;
-  showSlides(slideIndex);
-  
-  function plusSlides(n) {
-    /*
-    let imgFocus = document.getElementsByClassName("modalImg")
-
-    for (i = 0; i < imgFocus.length; i++) {
-        imgFocus[i].style.height = "94vh";
-        imgFocus[i].style.width = "fit-content";      
-    }
-    document.getElementById("focus").value = "off"
-
-    */
-
-    showSlides(slideIndex += n);
-  }
-  
-  function currentSlide(n) {
-
-    let imgFocus = document.getElementsByClassName("modalImg")
-
-
-
-    
-
-    showSlides(slideIndex = n);
-  }
-  
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
-    var captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
-  }

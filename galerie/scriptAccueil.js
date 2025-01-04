@@ -602,7 +602,7 @@ window.addEventListener("mousemove",function(e){ Mx=e.clientX; My=e.clientY;} )
 const buttonProject = document.getElementsByClassName("buttonProject")
 let Mx = 0
 let My = 0
-for (let i = 1; i<buttonProject.length; i++){
+for (let i = 0; i<buttonProject.length; i++){
 
     const popup = document.getElementById("popup") 
     buttonProject[i].addEventListener("mousemove",function(e){
@@ -621,11 +621,11 @@ for (let i = 1; i<buttonProject.length; i++){
         else{
         document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor")[0].style.filter = "grayscale(0) brightness(1)";}
     })
-    buttonProject[i-1].addEventListener("mouseout",function(e){
+    buttonProject[i].addEventListener("mouseout",function(e){
         popup.style.visibility = "hidden"
         if(Mq480.matches){pass}
         else{
-        document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor")[0].style.filter = "grayscale(1)  brightness(1.5)";}
+        document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor")[0].style.filter = "grayscale(1)  brightness(1.3)";}
         
     }
     )

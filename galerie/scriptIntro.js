@@ -8,13 +8,14 @@ let parentScreen = document.getElementById('baliseScreen');
 let dateMobile = document.getElementById("dateMobile")
 let date = document.getElementById("date")
 
-
+if(parentMobile ==! undefined){
 parentMobile.insertBefore(content, parentMobile.firstChild);
 date.style.display = "inline-block";
-dateMobile.innerHTML = "&nbsp;-&nbsp;"
+dateMobile.innerHTML = "&nbsp;-&nbsp;"}
 
 
 function introElemPos(Mq900) {
+    if(parentMobile ==! undefined){
 if (Mq900.matches) { // If media query matches
 null
 } else {
@@ -23,6 +24,7 @@ null
     dateMobile.innerHTML = ""
 
 }
+    }
 }
 
 // Mq dependant function to call 

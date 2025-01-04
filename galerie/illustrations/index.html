@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="illustrations.js"></script>
+
+
     <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Roboto:wght@400&display=swap" rel="stylesheet"> 
     
     <script src="/galerie/datas.js"></script>
@@ -19,7 +20,42 @@
     <script src="/animatedImages.js" defer></script>
     <script src="/buttonsBehavior.js" defer></script>
     <script src="/galerie/scriptSidebar.js" defer></script>
-    <script src="/galerie/scriptIntro.js" defer> </script>
+    <!-- <script src="/galerie/scriptIntro.js" defer> </script> -->
+
+    <script src="illusDatas.js" defer></script>
+    <script src="illustrations.js" defer></script>
+    
+    <style>
+
+
+        #sectionContainer > div{
+            scroll-snap-align: center;
+            width: 100%;
+            height: 100dvh;
+            overflow-y: scroll;
+            position: absolute;
+            display: inline-block;
+            display: flex; 
+            flex-direction: row; 
+
+        }
+
+        #menuBar > div{
+            border-radius: 2vmin; 
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        #illustrations{
+            left: 0;
+        }
+        #croquis{
+
+            left: 100%;
+
+        }
+    </style>
+
+
 </head>
 
 
@@ -27,447 +63,82 @@
     
     <div id="footer">
         
-        <div buttonBottom="aPropos" id="aPropos">
+        <div>
             <button class="bottomButton" onclick="serviceSelected(9)"></button>
-            <div animation="cone" class="animatedContent"></div>
-            <div style="visibility: hidden;" animation="title-apropos" class="bottomTitle animatedTitle"></div>
+            <div animation="cone" class="animatedContent"></div>    
+            
+            <div animation="title-apropos" class="bottomTitle animatedTitle"></div>
         </div>
-        <div buttonBottom="galerie" id="galerie">
+        <div id="menuBar" style="position: absolute; bottom: 11dvh; justify-content: space-between; padding-left: 7vmin;  padding-right: 7vmin;"> 
+            <div>
+                <button class="anyButton" onclick="sectionChange(0)"></button>
+                <div animation="title-imagination" class="animatedContent " style="width: calc(var(--scaleRatio)*23vmin);"></div>
+            </div>
+            <div>
+                <button class="anyButton" onclick="sectionChange(1)"></button>
+                <div animation="title-observation" class="animatedContent "  style="width: calc(var(--scaleRatio)*23vmin);"></div>
+            </div>
+
+        </div>
+        <div>
             <button  class="bottomButton"> <a href="/aPropos/" style="display: inline-block; width: 100%; height: 100%;"></a></button>
             <div animation="apropos" class="cone animatedContent"></div>
             <div style="display: none;"></div>
             <div animation="title-apropos" class="bottomTitle animatedTitle"></div>
         </div>
+
+
     </div>
 
 
     <div id = "main">
 
 
+        <div id="sectionContainer">
+            <div id="illustrations">
 
-        <div id="illustrations">
-            <div class="gallery">
-                <div class="row">
-        
-                    <div class="column">
-                        
-                        <div class="imgGallery">
-                            <img loading="lazy" src="01.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-                        </div>  
-                        
-                        <div class="imgGallery">
-                            <img loading="lazy" src="02.jpg"  onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="03.jpg"  onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="04.jpg"  onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="05.jpg"  onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="06.jpg"  onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="07.jpg"  onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
-                        </div>
- 
-                        <div class="imgGallery">
-                            <img loading="lazy" src="08.jpg"  onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
-                        </div>
-                   
-                        <div class="imgGallery">
-                            <img loading="lazy" src="09.jpg"  onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="10.jpg"  onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="11.jpg"  onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="12.jpg"  onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
-                        </div>
-
-                        <!-- <div class="imgGallery">
-                            <img loading="lazy" src="13.jpg"  onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
-                        </div> -->
-
-                        <!-- <div class="imgGallery">
-                            <img loading="lazy" src="14.jpg"  onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
-                        </div> -->
-                        <!--
-                        <div class="imgGallery">
-                            <img loading="lazy" src="15.jpg"  onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
-                        </div>
-                        <div class="imgGallery">
-                            <img loading="lazy" src="16.jpg"  onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="17.jpg"  onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
-                        </div>
- 
-                        <div class="imgGallery">
-                            <img loading="lazy" src="18.jpg"  onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
-                        </div>
-                   
-                        <div class="imgGallery">
-                            <img loading="lazy" src="19.jpg"  onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="20.jpg"  onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
-                        </div>
-                        -->
-        
-                    </div>
-        
-                    <div class="column">
-                        <div class="imgGallery">
-                            <img loading="lazy" src="101.jpg" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="102.jpg"  onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="103.jpg"  onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="104.jpg"  onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="105.jpg"  onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="106.jpg"  onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="107.jpg"  onclick="openModal();currentSlide(19)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="112.jpg"  onclick="openModal();currentSlide(20)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="113.jpg"  onclick="openModal();currentSlide(21)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="114.jpg"  onclick="openModal();currentSlide(22)" class="hover-shadow cursor">
-                        </div>
-
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="108.jpg"  onclick="openModal();currentSlide(23)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="109.jpg"  onclick="openModal();currentSlide(24)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="110.jpg" onclick="openModal();currentSlide(25)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="111.jpg" onclick="openModal();currentSlide(26)" class="hover-shadow cursor">
-                        </div>
-
-                        <!-- <div class="imgGallery">
-                            <img loading="lazy" src="112.jpg"  onclick="openModal();currentSlide(26)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="113.jpg"  onclick="openModal();currentSlide(27)" class="hover-shadow cursor">
-                        </div>
-                        
-                        <div class="imgGallery">
-                            <img loading="lazy" src="114.jpg"  onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
-                        </div> -->
-                        <!--
-                        <div class="imgGallery">
-                            <img loading="lazy" src="115.jpg"  onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
-                        </div>
-                        <div class="imgGallery">
-                            <img loading="lazy" src="116.jpg"  onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="117.jpg"  onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="118.jpg"  onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="119.jpg"  onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
-                        </div>
-
-                        <div class="imgGallery">
-                            <img loading="lazy" src="120.jpg"  onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
-                        </div>
-                        -->
-                    </div>
-                   
+                <div class="galleryComputer" style="margin-top: 10dvh;" >
+                    <div class="imgLeft"></div>
+                    <div class="imgRight"></div>
                 </div>
+
+                <div class="galleryPhone" >
+                </div>
+
             </div>
-            
-            <div id="myModal" class="modal">
-                <button id="focus" style="display: none;" value="off"></button>
-              <span class="close cursor" onclick="closeModal()">&times;</span>
-              <div class="modal-content">
+
+
+            <div id="croquis" >
+
+                <div class="galleryComputer" style="margin-top: 10dvh;" >
+                    <div class="imgLeft"></div>
+                    <div class="imgRight"></div>
+                </div>
+
+                <div class="galleryPhone">
+                </div>
+                    
                 
-                <div class="mySlides modalImg">
-        
-                  <img loading="lazy" src="01.jpg">
-                </div>
-            
-                <div class="mySlides modalImg">
-        
-                  <img loading="lazy" src="02.jpg" >
-                </div>
-            
-                <div class="mySlides modalImg">
-        
-                  <img loading="lazy" src="03.jpg" >
-                </div>
-                
-                <div class="mySlides modalImg">
-        
-                  <img loading="lazy" src="04.jpg" >
-                </div>
-                
-                <div class="mySlides modalImg">
-    
-                 <img loading="lazy" src="05.jpg">
-                </div>
-            
-                <div class="mySlides modalImg">
-        
-                 <img loading="lazy" src="06.jpg" >
-                </div>
-            
-                <div class="mySlides modalImg">
-        
-                 <img loading="lazy" src="07.jpg" >
-                </div>
-
-                <div class="mySlides modalImg">
-        
-                  <img loading="lazy" src="08.jpg" >
-                </div>
-
-                <div class="mySlides modalImg">
-        
-                 <img loading="lazy" src="09.jpg" >
-                </div>
-
-                <div class="mySlides modalImg">
-        
-                    <img loading="lazy" src="10.jpg" >
-                </div>
-
-                <div class="mySlides modalImg">
-                    <img loading="lazy" src="11.jpg">
-                </div>
-            
-                <div class="mySlides modalImg">
-        
-                    <img loading="lazy" src="12.jpg" >
-                </div>
-            
-                <!-- <div class="mySlides modalImg">
-        
-                    <img loading="lazy" src="13.jpg" >
-                </div>
-                 
-                <div class="mySlides modalImg">
-        
-                    <img loading="lazy" src="14.jpg" >
-                </div>
-                
-                <div class="mySlides modalImg">
-
-                <img loading="lazy" src="15.jpg">
-                </div>
-            
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="16.jpg" >
-                </div>
-            
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="17.jpg" >
-                </div>
-
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="18.jpg" >
-                </div>
-
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="19.jpg" >
-                </div>
-
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="20.jpg" >
-                </div>
-                -->
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="101.jpg" >
-                </div>
-
-                <div class="mySlides modalImg">
-    
-                <img loading="lazy" src="102.jpg">
-                </div>
-            
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="103.jpg" >
-                </div>
-            
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="104.jpg" >
-                </div>
-                
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="105.jpg" >
-                </div>
-
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="106.jpg" >
-                </div>
-            
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="107.jpg" >
-                </div>
-                
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="112.jpg" >
-                </div>
-
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="113.jpg" >
-                </div>
-
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="114.jpg" >
-                </div>
-                            
-
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="108.jpg" >
-                </div>
-
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="109.jpg" >
-                </div>
-
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="110.jpg" >
-                </div>
-
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="111.jpg" >
-                </div>
-
-                <!-- <div class="mySlides modalImg">
-    
-                <img loading="lazy" src="112.jpg">
-                </div>
-            
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="113.jpg" >
-                </div> -->
-                <!--
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="114.jpg" >
-                </div>
-                
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="115.jpg" >
-                </div>
-
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="116.jpg" >
-                </div>
-            
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="117.jpg" >
-                </div>
-                
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="118.jpg" >
-                </div>
-
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="119.jpg" >
-                </div>
-
-                <div class="mySlides modalImg">
-        
-                <img loading="lazy" src="120.jpg" >
-                </div>
-                -->
-            </div>
-         <!--  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        --> 
             </div>
         </div>
-        <div id="croquis">
-
-        </div>
-        <div  class="espace"> </div>
-    
-
-
-
-
-
     </div>
+
+
+    </div> 
+    
+    <div id="myModal" class="modal" style="z-index: 100;">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        
+          <div class="modalImg">       
+            <img id="imgZoom" loading="lazy" src="">
+          </div>            
+
+      </div>  
+
+
+
+
+    
 </body>
 
     
