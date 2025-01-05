@@ -153,9 +153,11 @@ Mq480.addEventListener("change", function() {displayMode();});
 sectionChange(0,1);
 
 function sectionChange(x,y){
-
-  for (i = 0; i < sectionButtons.length; i++){sectionButtons[i].style.opacity = "0.5"}
-  sectionButtons[x].style.opacity = "1"
+  sectionButtonTitle = document.getElementById("menuBar").getElementsByClassName("animatedContent")
+  
+  for (i = 0; i < sectionButtonTitle.length; i++){sectionButtonTitle[i].style.opacity = "0.7"; sectionButtons[i].style.borderColor = "rgba(0,0,0,0.7"}
+  sectionButtonTitle[x].style.opacity = "1"
+  sectionButtons[x].style.borderColor = "black"
   if (y == 1){return}
   let sectionWidth = document.getElementById("illustrations").offsetWidth
   document.getElementById("antiScroll").style.visibility = "visible"

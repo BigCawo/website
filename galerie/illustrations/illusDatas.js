@@ -151,6 +151,46 @@ let illusList =[
     src : "23.jpg",
     type : [1],
 },
+{
+    name :"l'usine de Gardanne",
+    src : "v.jpg",
+    type : [0],
+},
+{
+    name :"nouvel an 2024 - 02",
+    src : "2025-01-03-nouvel an 02.jpg",
+    type : [0],
+},
+{
+    name :"modele vivant à MarseilleCity",
+    src : "2024-10-21-modeleVivant.jpg",
+    type : [0],
+},
+{
+    name :"marseille la plaine - 01",
+    src : "2024-10-21-0006_0001_marseille la plaine.jpg",
+    type : [0],
+},
+{
+    name :"marseille la plaine - 02",
+    src : "carnet-canson-A5-n2-2024-10-21-marseille la plaine toujours.jpg",
+    type : [0],
+},
+{
+    name :"nouvel an 2024 - 01",
+    src : "2025-01-03-nouvel an 015.jpg",
+    type : [0],
+},
+{
+    name :"Tours 2024-10-21",
+    src : "2024-10-21-observationATours.jpg",
+    type : [0],
+},
+{
+    name :"observation à la maison 2024-12",
+    src : "2025-01-03-0014observatuion a la maison.jpg",
+    type : [0],
+},
 
 
 ]
