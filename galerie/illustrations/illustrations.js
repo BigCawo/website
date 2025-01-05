@@ -6,30 +6,47 @@
 
 // sidebar SPECIAAAL
 
-document.getElementById("illustrations").addEventListener("scroll", function(){
-let st =  document.getElementById("illustrations").scrollTop;
+let sections = document.getElementsByClassName("section")
+let sectionButtons = document.getElementById("menuBar").querySelectorAll("#menuBar>div")
+for (i = 0; i< sections.length; i++){
 
-if (st > lastScrollTop || st > lastScrollTop) {
+
+sections[i].addEventListener("scroll", function(){
+
+let st =  this.scrollTop;
+if (currscroll != Math.ceil(st / 50) * 50){
+  lastscroll = currscroll
+
+currscroll = Math.ceil(st / 50) * 50;
+// console.log("last : "+lastscroll+", current : "+currscroll)
+
+if (currscroll > lastscroll) {
     Sidebar.style.bottom= "calc(-1*var(--h-sidebar))"} 
 else 
     Sidebar.style.bottom= "0"
-   lastScrollTop = st <= 0 ? 0 : st;
-   })     
+   }}
+  )     
+} 
 
+// lists
+
+let illusListObservation = illusList.filter(function test(x){if (x.type.includes(0)){return x}})
+let illusListImagination = illusList.filter(function test(x){if (x.type.includes(1)){return x}})
+let illusListLists = [illusListObservation,illusListImagination]
 
 // ~~~~~ IMAGE GENERATION ~~~~~
 
 
-// IMGINATION
+// IMAGINATION
 
-illusListImagination = illusList.filter(function test(x){if (x.type.includes(1)){return x}})
+
 
 //(phone)
 
 
 for (i = 0; i < illusListImagination.length ; i++){
   const illusCanvas = document.createElement("div")
-  illusCanvas.setAttribute("onclick","openModal("+i+")")
+  illusCanvas.setAttribute("onclick","openModal("+i+",1)")
   illusCanvas.className = "imgGallery"
   illusCanvas.id = illusListImagination[i].name
 
@@ -46,7 +63,7 @@ document.getElementsByClassName("galleryPhone")[0].appendChild(illusCanvas)
 
 for (i = 0; i < illusListImagination.length ; i++){
   const illusCanvas = document.createElement("div")
-  illusCanvas.setAttribute("onclick","openModal("+i+")")
+  illusCanvas.setAttribute("onclick","openModal("+i+",1)")
   illusCanvas.className = "imgGallery"
   illusCanvas.id = illusListImagination[i].name
 
@@ -63,14 +80,14 @@ for (i = 0; i < illusListImagination.length ; i++){
 
 // OBSERVATION
 
-illusListObservation = illusList.filter(function test(x){if (x.type.includes(0)){return x}})
+
 
 //(phone)
 
 
   for (i = 0; i < illusListObservation.length ; i++){
     const illusCanvas = document.createElement("div")
-    illusCanvas.setAttribute("onclick","openModal("+i+")")
+    illusCanvas.setAttribute("onclick","openModal("+i+",0)")
     illusCanvas.className = "imgGallery"
     illusCanvas.id = illusListObservation[i].name
   
@@ -87,7 +104,7 @@ illusListObservation = illusList.filter(function test(x){if (x.type.includes(0))
   
   for (i = 0; i < illusListObservation.length ; i++){
     const illusCanvas = document.createElement("div")
-    illusCanvas.setAttribute("onclick","openModal("+i+")")
+    illusCanvas.setAttribute("onclick","openModal("+i+",0)")
     illusCanvas.className = "imgGallery"
     illusCanvas.id = illusListObservation[i].name
   
@@ -133,10 +150,19 @@ Mq480.addEventListener("change", function() {displayMode();});
 
 // section change
 
-function sectionChange(x){
+sectionChange(0,1);
+
+function sectionChange(x,y){
+
+  for (i = 0; i < sectionButtons.length; i++){sectionButtons[i].style.opacity = "0.5"}
+  sectionButtons[x].style.opacity = "1"
+  if (y == 1){return}
   let sectionWidth = document.getElementById("illustrations").offsetWidth
+  document.getElementById("antiScroll").style.visibility = "visible"
   document.getElementById("main").style.scrollBehavior = "smooth"
   document.getElementById("main").scrollLeft = sectionWidth*x
+
+  setTimeout(()=> {document.getElementById("antiScroll").style.visibility = "hidden"},650)
 }
 
 
@@ -152,7 +178,7 @@ illusList.sort((a, b) => a.type[0] - b.type[0])
 
 closeModal();
 
-function openModal(n) {
+function openModal(n,x) {
 
     document.getElementById("myModal").style.display = "block";
     document.getElementById("myModal").scrollTo(0,0); 
@@ -160,7 +186,7 @@ function openModal(n) {
     document.getElementById("main").style.overflowY = "hidden";
 
     let slides = document.getElementById("imgZoom")
-    slides.src = illusList[n].src
+    slides.src = illusListLists[x][n].src
 }
   
 

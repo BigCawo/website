@@ -363,26 +363,25 @@ position: fixed;
 z-index: 1;
 left: 0;
 top: 0;
-width: 100dvw;
+
 height: 100dvh;
 overflow: scroll;
 background-color: rgba(0, 0, 0, 0.208);
 }
 /* Modal Content */
 
-.modalImg{
+/* .modalImg{
     position: fixed;
     overflow: scroll;
     padding: 2vmin;
     display: block;       
-    width: 100%;
-    height: 100%;     
-}
+    height: 100dvh;     
+} */
 
 /* The Close Button */
 .close {
-    display: block;
-    z-index: 10;
+display: block;
+z-index: 10;
 color: rgb(0, 0, 0);
 width: 30px;
 height: 30px;

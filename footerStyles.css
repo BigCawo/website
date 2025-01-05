@@ -31,14 +31,14 @@
     
   }
   
-  #menuBar div{
+  #menuBar > div{
     margin: 0 2dvw 0 2dvw;
   }
   #menuBar > div:last-child{
     margin: 0 0 0 2dvw;
   }
   
-  #menuBar  div:hover{
+  #menuBar > div:hover{
     transition: opacity ease 0.1s;
     opacity: 0.5;
   }
@@ -61,7 +61,6 @@
   #footer div .animatedTitle{
     background-size: auto 100% ;
     height: calc(var(--scaleRatio)*10vmin);
-  
     transition: all ease 0.25s;
   }
   
