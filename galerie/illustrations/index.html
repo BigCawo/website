@@ -30,6 +30,10 @@
             --scaleButtonsIllustration : 0.8
         }
 
+        #main{
+            overflow-x: hidden;
+        }
+
         #sectionContainer > div{
             scroll-snap-align: center;
             width: 100%;
@@ -77,10 +81,29 @@
             opacity: 1;
         }
 
-         .modalImg{
-            overflow: scroll;
+        #modalImg{
+            overflow: hidden;
             padding: 2vmin;  
+
         } 
+        #myModal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            height: 100dvh;
+            max-width: 100dvw;
+            overflow: scroll    ;
+            background-color: rgba(0, 0, 0, 0.208);
+            }
+
+
+        
+        #imgZoom{
+            overflow: hidden;
+        }
+            
         @media  screen and (max-width: 480px) {
 
             :root{
@@ -92,15 +115,11 @@
             margin: 3vmin;
         }
 
-        .modalImg{
- 
-            height: 100dvh;
-            width: 150dvh;
 
-        } 
 
-        #imgZoom{            overflow-y: hidden;}
-            
+
+
+
         }
     </style>
 
@@ -173,16 +192,17 @@
     </div>
 
 
-    </div> 
+
     
-    <div id="myModal" class="modal" style="z-index: 100;">
+    <div id="myModal">
         <span class="close cursor" onclick="closeModal()">&times;</span>
         
-          <div class="modalImg" style="overflow-y: scroll; padding: 2vmin;">       
-            <img id="imgZoom" loading="lazy" src="" style="height: 100%;">
-          </div>            
+        <div id="modalImg" >      
+        <div style="width: 100%; height: 100%; position: absolute;"></div> 
+        <img id="imgZoom" loading="lazy" src="" style="height: 100%;">
+        </div>            
 
-      </div>  
+    </div>  
 
 
 

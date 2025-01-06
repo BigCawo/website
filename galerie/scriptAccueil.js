@@ -602,10 +602,12 @@ window.addEventListener("mousemove",function(e){ Mx=e.clientX; My=e.clientY;} )
 const buttonProject = document.getElementsByClassName("buttonProject")
 let Mx = 0
 let My = 0
+
 for (let i = 0; i<buttonProject.length; i++){
 
     const popup = document.getElementById("popup") 
-    buttonProject[i].addEventListener("mousemove",function(e){
+    
+    if (Mq480.matches == false){buttonProject[i].addEventListener("mousemove",function(e){
         
         popup.style.visibility = "visible"
 
@@ -617,18 +619,18 @@ for (let i = 0; i<buttonProject.length; i++){
         }else{popup.getElementsByTagName("img")[0].style.display = "none"}
 
         popup.getElementsByTagName("h2")[0].innerHTML = projectList[i].name
-        if(Mq480.matches){pass}
+        if(Mq480.matches){return}
         else{
         document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor")[0].style.filter = "grayscale(0) brightness(1)";}
     })
     buttonProject[i].addEventListener("mouseout",function(e){
         popup.style.visibility = "hidden"
-        if(Mq480.matches){pass}
+        if(Mq480.matches){return}
         else{
         document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor")[0].style.filter = "grayscale(1)  brightness(1.3)";}
         
     }
-    )
+    )}
 }
 
 var shakingElements = [];

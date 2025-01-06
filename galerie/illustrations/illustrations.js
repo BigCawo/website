@@ -1,3 +1,8 @@
+// reload
+
+window.onresize = function(){ location.reload(); }
+
+
 // testing
 
 // console.log(document.getElementById("illustrations").offsetWidth)
@@ -33,6 +38,10 @@ else
 let illusListObservation = illusList.filter(function test(x){if (x.type.includes(0)){return x}})
 let illusListImagination = illusList.filter(function test(x){if (x.type.includes(1)){return x}})
 let illusListLists = [illusListObservation,illusListImagination]
+
+let slides = document.getElementById("imgZoom")
+let slideContainer =  document.getElementById("modalImg")
+let slideFrame = document.getElementById("myModal")
 
 // ~~~~~ IMAGE GENERATION ~~~~~
 
@@ -150,9 +159,9 @@ Mq480.addEventListener("change", function() {displayMode();});
 
 // section change
 
-sectionChange(0,1);
+sectionChange(0);
 
-function sectionChange(x,y){
+function sectionChange(x){
   sectionButtonTitle = document.getElementById("menuBar").getElementsByClassName("animatedContent")
   
   for (i = 0; i < sectionButtonTitle.length; i++){sectionButtonTitle[i].style.opacity = "0.7"; sectionButtons[i].style.borderColor = "rgba(0,0,0,0.7"}
@@ -182,15 +191,46 @@ closeModal();
 
 function openModal(n,x) {
 
+
+
     document.getElementById("myModal").style.display = "block";
     document.getElementById("myModal").scrollTo(0,0); 
     document.getElementById("main").style.maxHeight = "100dvh";
     document.getElementById("main").style.overflowY = "hidden";
 
-    let slides = document.getElementById("imgZoom")
+
     slides.src = illusListLists[x][n].src
+    
+    imgRatio = slides.naturalHeight / slides.naturalWidth
+    windowRatio = window.innerHeight / window.innerWidth
+
+    if(imgRatio >= windowRatio){
+      slideContainer.style.width = "100dvw";
+      slideContainer.style.height = slideContainer.offsetWidth*imgRatio+"px";
+      slideFrame.style.overflowX = "hidden";
+      slideFrame.style.overflowY = "scroll";}
+    else{
+      slideContainer.style.height = "100dvh";
+      slideContainer.style.width = slideContainer.offsetHeight/imgRatio+"px";
+      slideFrame.style.overflowX = "scroll";
+      slideFrame.style.overflowY = "hidden";}
+
+
 }
+
+slideFrame.addEventListener('wheel', (evt) => {
+  imgRatio = slides.naturalHeight / slides.naturalWidth
+  windowRatio = window.innerHeight / window.innerWidth
   
+  if (imgRatio < windowRatio){
+  evt.preventDefault();
+  slideFrame.style.scrollBehavior = "initial"
+  slideFrame.scrollLeft += (evt.deltaY/4);
+  slideFrame.style.scrollBehavior = "smooth"
+  }
+
+});
+
 
 function closeModal() {
 
