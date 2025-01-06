@@ -323,82 +323,13 @@ a:active {color: rgb(0, 0, 0);}
 
 
 
-#galleryComputer{
-    display: flex;            
-    flex-direction: row;
-}
-#galleryComputer > div{
-    flex-basis: 50%;
-    display: flex;
-    flex-direction: column;
-}
-
-
-
-
-* {
-box-sizing: border-box;
-}
-
-/* Galerie */
-
-.imgGallery img {
-    padding: 1vmin;
-}
-
-.imgGallery img{
-    z-index: 50;
-
-    transition: 0.3s;
-    }
-    
-.imgGallery img:hover {
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-/* The Modal (background) */
-
-/* Modal Content */
-
-/* .modalImg{
-    position: fixed;
-    overflow: scroll;
-    padding: 2vmin;
-    display: block;       
-    height: 100dvh;     
-} */
-
-/* The Close Button */
-.close {
-display: block;
-z-index: 10;
-color: rgb(0, 0, 0);
-width: 30px;
-height: 30px;
-background-color: rgb(228, 54, 54);
-position: fixed;
-top: calc( 3vh + 10px );
-right: 35px;
-font-size: 35px;
-line-height: 27px;
-text-align: center;
-}
-
-.close:hover,
-.close:focus {
-color: rgb(228, 54, 54);
-background-color: rgb(0, 0, 0);
-text-decoration: none;
-cursor: pointer;
-}
-
 
 .cursor {
 cursor: pointer;
 }
 
 /* Next & previous buttons */
-.prev,
+/* .prev,
 .next {
 cursor: pointer;
 position: absolute;
@@ -413,23 +344,19 @@ transition: 0.6s ease;
 border-radius: 0 3px 3px 0;
 user-select: none;
 -webkit-user-select: none;
-}
+} */
 
 /* Position the "next button" to the right */
-.next {
+/* .next {
 right: 0;
 border-radius: 3px 0 0 3px;
-}
+} */
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover,
+/* .prev:hover,
 .next:hover {
 background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-
-
+} */
 
 /*(chmup)*/
 
@@ -848,11 +775,6 @@ html{
 .imgmobile{display: inline-block;}
 
 /*illustrations*/
-
-.column{
-    flex: 100%;
-    max-width: 100%;
-}
 
 /*chmup*/
 
