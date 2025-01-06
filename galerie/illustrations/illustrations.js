@@ -1,6 +1,10 @@
 // reload
 
-window.onresize = function(){ location.reload(); }
+window.onresize = function(){
+  if (localStorage.getItem("sectionOpen") !== undefined){
+    sectionChange(localStorage.getItem("sectionOpen"));}
+  else {sectionChange(0)}
+}
 
 
 // testing
@@ -159,21 +163,25 @@ Mq480.addEventListener("change", function() {displayMode();});
 
 // section change
 
-sectionChange(0);
+sectionChange(0,1);
 
-function sectionChange(x){
+function sectionChange(x,y){
+  
   sectionButtonTitle = document.getElementById("menuBar").getElementsByClassName("animatedContent")
   
   for (i = 0; i < sectionButtonTitle.length; i++){sectionButtonTitle[i].style.opacity = "0.7"; sectionButtons[i].style.borderColor = "rgba(0,0,0,0.7"}
   sectionButtonTitle[x].style.opacity = "1"
   sectionButtons[x].style.borderColor = "black"
-
+  if(y !== 1){
   let sectionWidth = document.getElementById("illustrations").offsetWidth
   document.getElementById("antiScroll").style.visibility = "visible"
   document.getElementById("main").style.scrollBehavior = "smooth"
   document.getElementById("main").scrollLeft = sectionWidth*x
 
+  localStorage.setItem("sectionOpen", x)
+
   setTimeout(()=> {document.getElementById("antiScroll").style.visibility = "hidden"},650)
+}
 }
 
 
