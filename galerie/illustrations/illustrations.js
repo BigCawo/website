@@ -167,7 +167,7 @@ function sectionChange(x){
   for (i = 0; i < sectionButtonTitle.length; i++){sectionButtonTitle[i].style.opacity = "0.7"; sectionButtons[i].style.borderColor = "rgba(0,0,0,0.7"}
   sectionButtonTitle[x].style.opacity = "1"
   sectionButtons[x].style.borderColor = "black"
-  if (y == 1){return}
+
   let sectionWidth = document.getElementById("illustrations").offsetWidth
   document.getElementById("antiScroll").style.visibility = "visible"
   document.getElementById("main").style.scrollBehavior = "smooth"
