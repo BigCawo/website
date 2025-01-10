@@ -61,7 +61,8 @@ function serviceSelected(x){
         
     if(Mq480.matches){
         // document.getElementById(arrayPages[x]).getElementsByTagName("div")[2].offsetWidth > 0
-        if(currPage == arrayPages[x] ||  ["accueil","aPropos","galerieObjets","galerieMultimedia","galerieIllustration","galerie","return"].includes(arrayPages[x])){goToService(x);} 
+        if(currPage == arrayPages[x] ||  ["accueil","aPropos","galerieObjets","galerieMultimedia","galerieIllustration","galerie","return"].includes(arrayPages[x])){
+            goToService(x);} 
         currPage = arrayPages[x]
     }
     else goToService(x);
@@ -86,7 +87,9 @@ function goToService(x){
                 window.location.href = window.location.href.slice(0,-currPageLength);}
             else{
                 if(x == 9){
-                    history.back();
+                    
+                    if( !document.referrer.includes(location.hostname)){window.location.href = "/"}
+                    else{history.back();}
                 }
                 else{
                     window.location.href = window.location.href.slice(0,-currPageLength)+arrayPages[x];}
