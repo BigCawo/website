@@ -4,7 +4,9 @@
 
 
 // localStorage.setItem("explored", 0);
+
 let name = localStorage.getItem("explored")
+
 
 if (name == 1){
     oui();

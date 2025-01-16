@@ -91,6 +91,15 @@
     text-align: center;
   }
 
+  #introText > div > p:last-child{
+    position: relative;
+    z-index: 15;
+  }
+  #introText > div > p:last-child:hover{
+    cursor: pointer;
+    opacity: 0.5;
+  }
+
   
 
 
@@ -101,6 +110,7 @@
     height: 100%; 
     position: absolute; 
     opacity: 0;
+    cursor: pointer;
   }
   
   #genButton{
