@@ -200,7 +200,7 @@ let projectList = [
     },
     // LAMPE COLETTE
     {
-        offset : [1254,700],
+        offset : [1450,800],
         size : [189,93],
         id: "lampeColette",
         name: "Lampe Colette",
@@ -333,7 +333,7 @@ let projectList = [
     },
     // POLES IMAGES
     {
-        offset : [1334,-3],
+        offset : [1400,-3],
         size : [445,589],
         id: "poleImage",
         name: "Qu'est ce qu'un Pôle Image ?",
@@ -352,7 +352,7 @@ let projectList = [
     },
     // ILLUSTRATIONS
     {
-        offset : [212,500],
+        offset : [0,500],
         size : [650,350],
         id: "illustrations",
         name: "Illustrations",
@@ -419,14 +419,34 @@ let projectList = [
         type: "Projet personnel",
         date: "2016",
         spot : 1,
-        imgSrc1 : "stellarium.png",
+        imgSrc1 : "",
         imgSrc2 : "none",
-        class : "objet mediation ",
+        class : "objet mediation",
         link : "",
         mirror : 0,
         miniature : 0,
         
     },
+    // ANIMATIONS
+    {
+        offset : [800,580],
+        size : [491,350],
+        id: "animations",
+        name: "Animations",
+        text: "",
+        desc:"",
+        type: "",
+        date: "",
+        spot : 1,
+        imgSrc1 : "none",
+        imgSrc2 : "none",
+        class : "illustration multimedia",
+        link : "",
+        mirror : 0,
+        miniature : 0,
+        
+    },
+
 
     // // SITE WEB
     // {
