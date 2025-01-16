@@ -42,6 +42,7 @@
     opacity: 0.5;
   }
   
+  
   /* .cone{
     visibility: hidden;
     background-origin: content-box; 
@@ -83,6 +84,15 @@
     width: 100%; 
     height: 100%; 
     z-index: 50
+  }
+
+  #footer > div:first-child:hover{
+    transition: opacity ease 0.1s  !important;
+    opacity: 0.55 !important;
+  }
+  #footer > div:last-child:hover{
+    transition: opacity ease 0.1s  !important;
+    opacity: 0.55 !important;
   }
   
   .anyButton{

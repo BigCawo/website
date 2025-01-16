@@ -5,16 +5,19 @@ body{
 p, li{
     font-family: Fababrac;
     font-size: calc(var(--scaleWText) * 120%);
+    overflow-y: scroll;
 
 }
 
-#textContainer p    {
+#textContainer > div > p    {
     background-color: rgba(255, 255, 255, 0.6); 
     padding: 2vmin; 
     border: solid rgba(0, 0, 0, 0.8  ) var(--borderWidth); 
     border-radius: 1.5vmin; 
     max-height: 90dvh;
 }
+
+
 
 br{
     line-height: 0;
@@ -66,6 +69,7 @@ h1 {
 }
 
 #textContainer div{
+    position: relative;
     width: 100%;
     scroll-snap-align: center;
     height: 90dvh; 

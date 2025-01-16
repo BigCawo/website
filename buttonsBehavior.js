@@ -39,6 +39,8 @@ const buttonBottom = document.getElementsByClassName("bottomButton")
 
 
     for (let i = 0; i<buttonBottom.length; i++){
+        bottom[i].style.transition = "all ease 0.35s"
+        bottom[i].style.width = "calc(var(--scaleRatio)*23vmin)"
         buttonBottom[i].addEventListener("mousemove",function(e){ 
         if(Mq480.matches == false){
 
@@ -49,8 +51,9 @@ const buttonBottom = document.getElementsByClassName("bottomButton")
         
         buttonBottom[i].addEventListener("mouseout",function(e){  
             if(Mq480.matches == false){ 
-
-        bottom[i].style.width = "0"}
+            return
+        // bottom[i].style.width = "0"
+        }
         })}
 
 
