@@ -581,6 +581,8 @@ function projectHilight(x){
         document.getElementById("projectText").innerHTML = projectList[x].text
         document.getElementById("projectType").innerHTML = projectList[x].type
         let image = projectList[x].imgSrc1
+        
+        document.getElementById("projectImg").style.width = 100*projectList[x].scale+"%"
         if (image == "none"){document.getElementById("projectImg").style.display = "none"}
         else {document.getElementById("projectImg").style.display = "initial"
         document.getElementById("projectImg").src = "../assets/galerie/images/"+projectList[x].imgSrc1
