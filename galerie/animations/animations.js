@@ -154,7 +154,8 @@ galleryComputer.addEventListener('wheel', (evt) => {
 
   evt.preventDefault();
   galleryComputer.style.scrollBehavior = "initial"
-  galleryComputer.scrollLeft += (evt.deltaY/4);
+  galleryComputer.scrollLeft += (evt.deltaY/4* window.innerWidth/500);
+
   galleryComputer.style.scrollBehavior = "smooth"
   
 
