@@ -20,6 +20,10 @@ body{
 
 }
 
+a:hover{
+  opacity: 0.55;
+}
+
 #test{
   position: absolute;
   width: 100dvw;
