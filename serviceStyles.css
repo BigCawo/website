@@ -59,6 +59,7 @@ h1 {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     padding: 0 1.5dvw 0 1.5dvw;
+    scrollbar-width: none;
 
 }
 #textcontainer .animService{
