@@ -3,25 +3,29 @@ const intervalBase = 2500
 imgDatas = [
     {
         src : "/assets/galerie/images/lampepince.png",
-        title : "blehh",
+        title : "lampe colette",
+        titleColor : 0,
         size : 1,
         time  : 0.2,
     },
     {
         src : "/assets/galerie/images/meuble-a-bazar.jpg",
-        title : "blehh",
+        title : "meuble a bazar",
+        titleColor : 0,
         size : 1,
         time  : 1,
     },
     {
         src : "/assets/galerie/images/mobiliergrillage.jpg",
-        title : "blehh",
+        title : "mobilier grillagé",
+        titleColor : 1,
         size : 1,
         time  : 1,
     },
     {
         src : "/assets/galerie/images/vase-suspendu-triptique.gif",
-        title : "blehh",
+        title : "vase suspendu",
+        titleColor : 0,
         size : 1,
         time  : 1,
     },

@@ -40,6 +40,7 @@ h1 {
   position: relative;
   display: flex;
   flex-direction: row;
+  overflow-x: scroll;
   justify-content: space-between;
   /* background-color: rgba(0, 255, 255, 0.05); */
   height: 100%;
@@ -95,7 +96,6 @@ h1 {
 
 #imgContainer{
     position: relative;
-    overflow-y: none;
     overflow-x: scroll;
     scrollbar-width: none;
     align-items: end;

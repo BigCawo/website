@@ -12,6 +12,22 @@
         <script src="/global.js" defer></script>
         <script src="/animatedImages.js" defer></script>
         <script src="/buttonsBehavior.js" defer></script>
+        <script src="/scripts/scriptServices.js" defer></script>
+
+
+        <style>
+            /* #imgContainer .animIllustration{
+                left : 10dvw
+            } */
+
+            /* @media screen and (max-width : 480px) {
+            
+            #imgContainer > div:first-child{
+                left : 10dvw
+            }
+   
+            } */
+        </style>
 
     </head>
 <body>
@@ -25,19 +41,19 @@
         <div id="mainContainer">
             <div id="textContainer">
 
-                <div>
+                <div class="text">
                     <!-- <h1>Illustration, graphisme </h1> -->
                     <p>
                         Activité avant tout personnelle, le dessin occupe une place centrale dans mon travail. <br><br>
                         Il est pour moi un excellent vecteur de transmission et de communication. <br>
-                        Plus universel que les mots, il permet une forme d'expression au delà des barrières inhérentes à ces derniers, comme la langue, le vocabulaire technique, la linéarité... <br>
+                        Plus universel que les mots, il permet une forme d'expression alternative et accessible à tous, sans barrières de langage ou de vocabulaire <br>
                         <!-- Je dessine quotidiennement, principalement en noir et blanc. <br>
                         Je maitrise particulièrement la représentation des volumes dans l'espace. <br>
                         Ma pratique est expérimentale -->
                         <span class="animService animIllustration"></span>
                     </p>
                 </div>
-                <div>
+                <div  class="text" >
                     <p>Services proposés&nbsp;:
                     
                         <br><br><i><u><a href="/galerie/illustrations/" target="_blank">illustration</a> / <a href="/galerie/animations/" target="_blank">animation</a> numérique ou traditionnelle</u> : illustration de livres, jeux / assets de vidéo, jeu, jeu vidéo, site web</i>
@@ -50,7 +66,7 @@
 
                     </p>
                 </div>
-                <div >
+                <div class="text">
                     <p>
                         outils :
                     
@@ -70,7 +86,12 @@
                 
             </div>
             <div id="imgContainer">
-                <div class="animService animIllustration"></div>
+                <div class="page">
+                    <div class="animService animIllustration"></div>
+                </div>
+                <div class="page carouselContainer">
+                    <iframe src="/Illustration/carousselIllus-01/index.html" frameborder="0"  style="width: 100%; height: 100%;"></iframe>
+                </div>
             </div>
         </div>
 
