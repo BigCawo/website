@@ -5,7 +5,7 @@ let slideDates = imgDatas
 loadCaroussel();
 
 sizeCarousel();
-sizeCarousel();
+
 
 
 function sizeCarousel(){
@@ -48,6 +48,7 @@ for (i = 0; i< imgDatas.length ; i++){
     newSlide.style.scale = imgDatas[i].size
     newSlide.className = "slide"
     newSlide.id = "slide"+i
+    newSlide.style. height = "100%"
     newSlide.style.display = "flex"
     newSlide.style.alignItems = "center"
 
@@ -58,6 +59,7 @@ for (i = 0; i< imgDatas.length ; i++){
     const newSubSlide = document.createElement("div")
     newSubSlide.id = "subSlide"+i
     newSubSlide.style.margin = "auto"
+    newSubSlide.style. height = "100%"
     newSubSlide.style.backgroundImage = "url("+imgDatas[i].src+")"
     newSubSlide.style.backgroundSize = "contain"
 
