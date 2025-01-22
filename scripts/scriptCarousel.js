@@ -4,7 +4,8 @@ let slideDates = imgDatas
 
 loadCaroussel();
 
-sizeCarousel();
+setTimeout(sizeCarousel(),1000)
+
 
 
 
