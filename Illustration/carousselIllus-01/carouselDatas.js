@@ -27,6 +27,13 @@ imgDatas = [
         title : "animations de toupies",
         titleColor : 0,
         size : 1,
+        time  : 2,
+    },
+    {
+        src : "/galerie/animations/01b.gif",
+        title : "animation",
+        titleColor : 0,
+        size : 1,
         time  : 1,
     },
 ]

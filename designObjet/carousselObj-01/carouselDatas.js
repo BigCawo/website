@@ -6,7 +6,7 @@ imgDatas = [
         title : "lampe colette",
         titleColor : 0,
         size : 1,
-        time  : 0.2,
+        time  : 1,
     },
     {
         src : "/assets/galerie/images/meuble-a-bazar.jpg",
@@ -25,6 +25,13 @@ imgDatas = [
     {
         src : "/assets/galerie/images/vase-suspendu-triptique.gif",
         title : "vase suspendu",
+        titleColor : 0,
+        size : 1,
+        time  : 1.5,
+    },
+    {
+        src : "/assets/galerie/images/lampepince.png",
+        title : "lampe colette",
         titleColor : 0,
         size : 1,
         time  : 1,

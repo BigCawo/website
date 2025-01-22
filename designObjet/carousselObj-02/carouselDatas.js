@@ -1,11 +1,11 @@
-const intervalBase = 2500
+const intervalBase = 3500
 
 imgDatas = [
     {
         src : "/assets/projets/ollas-grasshopper.gif",
         title : "expérimentation sur grasshopper",
         size : 1,
-        time  : 0.2,
+        time  : 1,
     },
     {
         src : "/assets/projets/lampepince-recherches-02.png",
@@ -23,6 +23,12 @@ imgDatas = [
     {
         src : "/assets/projets/poldossiertechnique.jpg",
         title : "plan technique",
+        size : 1,
+        time  : 1,
+    },
+    {
+        src : "/assets/projets/ollas-grasshopper.gif",
+        title : "expérimentation sur grasshopper",
         size : 1,
         time  : 1,
     },

@@ -1,11 +1,12 @@
 let slideContainer = document.getElementById("slides-container")
 let slideDates = imgDatas
 
-console.log(imgDatas[0].title)
 
 loadCaroussel();
 
 sizeCarousel();
+sizeCarousel();
+
 
 function sizeCarousel(){
     for (i = 0; i< imgDatas.length ; i++){
@@ -29,24 +30,6 @@ function sizeCarousel(){
     
 
     }
-
-        //container resize
-        let imgRatio = document.getElementById("slide"+0).getElementsByTagName("img")[0].naturalHeight / document.getElementById("slide"+0).getElementsByTagName("img")[0].naturalWidth
-        let slideContainerRatio = slideContainer.offsetHeight / slideContainer.offsetWidth
-    
-        // console.log(slideContainer.offsetHeight, hSlide)
-    
-        if (imgRatio / slideContainerRatio >= 1) /*img + haute que le container*/{
-            document.getElementById("subSlide").style.height = "100%" 
-            let hSlide = document.getElementById("subSlide").offsetHeight
-            console.log(slideContainer.offsetHeight, hSlide)
-            document.getElementById("subSlide").style.width = (1/imgRatio)*hSlide+"px"
-        }
-        else /*img + large que le container*/{
-            document.getElementById("subSlide").style.width = "100%" 
-            let wSlide = document.getElementById("subSlide").offsetWidth
-            document.getElementById("subSlide").style.height = imgRatio*wSlide+"px"
-        }
 
 }
 
@@ -103,37 +86,7 @@ for (i = 0; i< imgDatas.length ; i++){
     document.getElementById("subSlide"+i).appendChild(newTitle)
 
 }
-    // container
 
-    const newSlide = document.createElement("div")
-    // newSlide.style.backgroundImage = "url("+imgDatas[i].src+")"
-    newSlide.style.scale = imgDatas[0].size
-    newSlide.className = "slide"
-    newSlide.id = "slide"
-    newSlide.style.display = "flex"
-    newSlide.style.alignItems = "center"
-
-    slideContainer.appendChild(newSlide)
-
-    //subcontainer
-
-    const newSubSlide = document.createElement("div")
-    newSubSlide.id = "subSlide"
-    newSubSlide.style.margin = "auto"
-    newSubSlide.style.backgroundImage = "url("+imgDatas[0].src+")"
-    newSubSlide.style.backgroundSize = "contain"
-
-   document.getElementById("slide").appendChild(newSubSlide)
-
-
-    //titre
-
-    const newTitle = document.createElement("p")
-    newTitle.style.position = "relative"
-    newTitle.style.top = "0"
-    newTitle.style.padding = "1dvh"
-    newTitle.innerHTML = imgDatas[0].title
-    document.getElementById("subSlide").appendChild(newTitle)
 
     sizeCarousel();
 
@@ -144,8 +97,9 @@ const slide = document.querySelector(".slide")
 let behhh = document.getElementsByClassName("slide")
 
 
-let interval = intervalBase
+
 let n = 0
+let interval = intervalBase*imgDatas[0].time
 slideContainer.scrollLeft = 0
 
 startInterval(interval);
@@ -164,7 +118,7 @@ function animObjet(){
 
 
 
-    if(n >= slideLength){
+    if(n >= slideLength-1){
         for (i = 0; i< behhh.length; i++){behhh[i].style.opacity = "0"}
         
         slideContainer.style.scrollBehavior = "initial"
@@ -180,6 +134,8 @@ function animObjet(){
         for (i = 0; i< behhh.length; i++){behhh[i].style.opacity = "0"}
         behhh[0].style.transition = "opacity ease 0.2s"
         behhh[n+1].style.opacity = "1"
+        document.getElementById("subSlide"+(n+1)).style.backgroundImage = "url("+imgDatas[n+1].src+")"
+        behhh[n+1].style.opacity = "1"
         slideContainer.scrollLeft += slideWidth; 
         
         
@@ -191,7 +147,8 @@ function animObjet(){
 
 
     clearInterval(intervalId)
-    if([slideLength,0].includes(n)){interval = intervalBase/2;} else {interval = intervalBase}
+    if([slideLength-1,0].includes(n)){interval = (intervalBase*imgDatas[0].time)/2;} 
+    else {interval = intervalBase*imgDatas[n].time}
     startInterval(interval)
     
     

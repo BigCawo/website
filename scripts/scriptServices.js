@@ -7,9 +7,15 @@ bonjour = "0"
 // console.log(mainContainer.offsetHeight, textContainer.offsetHeight,textNbr.length)
 // console.log(imgContainer.scrollLeft)
 
-textContainer.addEventListener("scroll", function() {
-    bonjour = Math.ceil((this.scrollTop - 10) / this.offsetHeight)
-    // console.log(imgContainer.scrollLeft, imgContainer.offsetWidth)
-    imgContainer.scrollLeft = this.scrollTop * (imgContainer.offsetWidth/this.offsetHeight)
-
+window.addEventListener ("resize", function() {
+    imgContainerMovement();
 })
+
+textContainer.addEventListener("scroll", function() {
+    imgContainerMovement();
+})
+
+function imgContainerMovement(){
+    bonjour = Math.ceil((textContainer.scrollTop - 10) / textContainer.offsetHeight)
+    imgContainer.scrollLeft = textContainer.scrollTop * (imgContainer.offsetWidth/textContainer.offsetHeight)
+}
