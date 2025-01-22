@@ -15,6 +15,8 @@ textContainer.addEventListener("scroll", function() {
     imgContainerMovement();
 })
 
+setTimeout(imgContainerMovement(), 500)
+
 function imgContainerMovement(){
     bonjour = Math.ceil((textContainer.scrollTop - 10) / textContainer.offsetHeight)
     imgContainer.scrollLeft = textContainer.scrollTop * (imgContainer.offsetWidth/textContainer.offsetHeight)

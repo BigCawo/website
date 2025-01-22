@@ -31,7 +31,7 @@ function imageAnim(animatedImage){
 //     }
 //     )
 // }
-const blouc = document.getElementsByClassName("animService")
+const blouc = document.getElementsByClassName("animObjet")
 let n = 0
 intervalTest = 100
 
