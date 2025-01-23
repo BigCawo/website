@@ -1,7 +1,7 @@
 let slideContainer = document.getElementById("slides-container")
 let slideDates = imgDatas
 
-
+document.head.innerHTML += '<link rel="stylesheet" href="styles.css" type="text/css"/>';
 loadCaroussel();
 
 

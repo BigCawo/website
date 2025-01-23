@@ -4,9 +4,13 @@
 
 *{box-sizing: border-box; margin: 0; padding: 0;}
 
+body{
+    font-size: 1.5dvw
+}
+
 p{
     font-family: Fababrac;
-    font-size: 1.25em;
+    font-size: calc(var(--scaleWText) * 240%);
 }
 #main{
 
@@ -50,4 +54,12 @@ p{
     background-size: contain; 
     background-repeat: no-repeat; 
     background-position: center;
+}
+
+@media screen and (max-width: 480px) {
+    p{
+        font-family: Fababrac;
+        font-size: calc(var(--scaleWText) * 120%);
+    }
+    
 }
