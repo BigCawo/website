@@ -101,5 +101,15 @@ function goToService(x){
     },250);
 
     }
+function instagram(){window.open('https://www.instagram.com/eliot_bernaud/', '_blank');}
 
-    console.log(window.location.href.replace(/\/$/, '').substring(window.location.href.replace(/\/$/, '').lastIndexOf('/') + 1))
+function mailTo(){
+    window.open('mailto:bernaud.eliot@gmail.com', '_blank');
+}
+
+function cv(){
+    window.open('/assets/services/CV.pdf', '_blank');
+}
+
+console.log("buttonBehavior loaded")
+// console.log(window.location.href.replace(/\/$/, '').substring(window.location.href.replace(/\/$/, '').lastIndexOf('/') + 1))

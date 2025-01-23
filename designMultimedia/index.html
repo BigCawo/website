@@ -62,16 +62,25 @@
                         <br><br><i><u>programmation, conception </u>: CSS HTML JS ; Godot</i>
                         <br><br><i><u>animation </u>: Aseprite ; DragonFrame ; Animate</i>
 
-                         
-
-                    </p>
-                    
-                    <div style="position: relative; top: 2dvh; width: 100%; max-height: 10dvh;">
-                        <div style=" margin: auto; max-height: 100%; max-width: 10dvh;"> 
-                            <button class="anyButton" onclick="window.open('/assets/services/CV.pdf', '_blank');"></button>
+                    </p>    
+                </div>
+                <div>
+                    <p style="visibility: hidden;"> <br><br><br>Plus d'infos sur mes travaux en bas à droite ! </p>
+                    <div style="position: relative; width: 100%; max-height: 10dvh; display: flex; flex-direction: row; justify-content: center;">
+                        <div class="hoverButton" style=" margin: auto; max-height: 100%; max-width: 10dvh;"> 
+                            <button class="anyButton"  onclick="cv();"></button>
                             <div animation="cv" class="animatedContent"></div>
                         </div>
+                        <div class="hoverButton" style=" margin: auto; max-height: 100%; max-width: 10dvh;"> 
+                            <button class="anyButton" onclick="instagram();"></button>
+                            <div animation="insta" class="animatedContent"></div>
+                        </div>
+                        <div class="hoverButton" style=" margin: auto; max-height: 100%; max-width: 10dvh;"> 
+                            <button class="anyButton" onclick="serviceSelected(3);"></button>
+                            <div animation="apropos" class="animatedContent"></div>
+                        </div>
                     </div>
+                    <p style="background-color: unset; border: unset; text-align: center;"> <br><br><br>Plus d'infos sur mes travaux en bas à droite ! </p>
                 </div>
                 
             </div>

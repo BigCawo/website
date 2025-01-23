@@ -10,13 +10,7 @@ p, li{
 
 }
 
-#textContainer > div > p    {
-    background-color: rgba(255, 255, 255, 0.6); 
-    padding: 2vmin; 
-    border: solid rgba(0, 0, 0, 0.8  ) var(--borderWidth); 
-    border-radius: 1.5vmin; 
-    max-height: 90dvh;
-}
+
 
 
 
@@ -29,69 +23,45 @@ h1 {
     padding-bottom: 5dvh;
     font-family: Fababrac-titre;
     font-size: calc(var(--scaleWText)*300%);
-    
 }
 
 
-
-
-
-#mainContainer{
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
-  justify-content: space-between;
-  /* background-color: rgba(0, 255, 255, 0.05); */
-  height: 100%;
-  width: 80dvw;
-  margin-left: 10dvw;
-  
-  }
-
-#mainContainer > div{
-    width: 48%;
+.carouselContainer{
     height: 100%;
 }
 
-#textContainer{
-    /* background-color: rgba(0, 0, 255, 0.05); */
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    padding: 0 1.5dvw 0 1.5dvw;
-    scrollbar-width: none;
-
-}
-#textcontainer .animService{
-    display: none;
+.animService{
+    background-position: bottom; 
+    width: 100%; 
+    background-repeat: no-repeat; 
+    background-size: contain; 
+    bottom: 0;
 }
 
-#textContainer img{
-    margin: auto; position: relative;
+.animIllustration{
+    background-image: url(/assets/services/animMultimedia.gif);
+    image-rendering: pixelated;
+    
 }
 
-#textContainer div{
+#mainContainer{
     position: relative;
-    width: 100%;
-    scroll-snap-align: center;
-    height: 90dvh; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center;
-
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    justify-content: space-between;
+    /* background-color: rgba(0, 255, 255, 0.05); */
+    height: 100%;
+    width: 80dvw;
+    margin-left: 10dvw;
+    
+    }
+  
+#mainContainer > div {
+    width: 48%;
+    height: 100%;
 }
-
-/* #textContainer div:first-child{
-    position: relative;
-    top: 10dvh;
-
-    scale : 0.8;
-    scroll-snap-align: none;
-    overflow-y: visible;
-
-
-} */
+  
 
 
 #imgContainer{
@@ -110,33 +80,48 @@ h1 {
     
 }
 
-.carouselContainer{
-    height: 100%;
-}
-
-.animService{
-    background-position: bottom; 
-    width: 100%; 
-    background-repeat: no-repeat; 
-    background-size: contain; 
-    bottom: 0;
-}
-
-#textContainer .animService{
-    position: relative; 
-    display: none;
-}
-
 #imgContainer .animService{
     position: absolute; 
     height: 50%; 
     
 }
 
-.animIllustration{
-    background-image: url(/assets/services/animMultimedia.gif);
-    image-rendering: pixelated;
-    
+#imgContainer iframe{
+    width: 100%; 
+    height: 100%;
+}
+
+#textContainer{
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    padding: 0 1.5dvw 0 1.5dvw;
+    scrollbar-width: none;
+
+}
+
+#textContainer > div{
+    position: relative;
+    width: 100%;
+    scroll-snap-align: center;
+    height: 90dvh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+
+}
+
+#textContainer > div > p    {
+    background-color: rgba(255, 255, 255, 0.6); 
+    padding: 2vmin; 
+    border: solid rgba(0, 0, 0, 0.8  ) var(--borderWidth); 
+    border-radius: 1.5vmin; 
+    max-height: 90dvh;
+}
+
+#textContainer .animService{
+    position: relative; 
+    display: none;
 }
 
 #textContainer .animObjet{
@@ -156,6 +141,16 @@ h1 {
     display: none;
 }
 
+#textContainer iframe{
+    width: 100%; 
+    height: 80dvw;
+}
+
+#textContainer img{
+    margin: auto; 
+    position: relative;
+}
+
 /*footer*/
 
 
@@ -170,14 +165,22 @@ h1 {
 
     #mainContainer div{
 
+        overflow-y: scroll;
         width: 100%;
 
     }
+    #textContainer > div{
+        position: relative;
+        padding-top: 10dvw;
+        padding-bottom: 10dvw;
+        width: 100%;
+        scroll-snap-align: start;
+        height: unset; 
+        min-height: 90dvh;
+    }
 
-    #textContainer{
-
-        padding: 0;
-    
+    #textContainer > div > p    {
+        max-height: unset;
     }
 
     #textContainer .animService{
@@ -189,7 +192,6 @@ h1 {
     #imgContainer{
         display: none;
         width: 100%;
-
     }
 
 

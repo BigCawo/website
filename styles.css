@@ -146,10 +146,10 @@ overflow: hidden;
   z-index: 50
 }
 
-.hoverButton:hover{
+/* .hoverButton:hover{
   transition: opacity ease 0.1s;
   opacity: 0.55;
-}
+} */
 
 button{
   cursor: pointer;

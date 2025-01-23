@@ -4,7 +4,7 @@ let slideDates = imgDatas
 
 loadCaroussel();
 
-setTimeout(sizeCarousel(),1000)
+
 
 
 
@@ -89,9 +89,8 @@ for (i = 0; i< imgDatas.length ; i++){
     document.getElementById("subSlide"+i).appendChild(newTitle)
 
 }
-
-
-    sizeCarousel();
+    setTimeout(() => {sizeCarousel();}, 50);
+    
 
 }
 
@@ -108,14 +107,15 @@ slideContainer.scrollLeft = 0
 startInterval(interval);
 
 function startInterval(interval){
+    sizeCarousel();
     intervalId = setInterval(function(){animObjet()},interval)
 }
 
 
 function animObjet(){
-    
-    slideWidth = slide.clientWidth
-    sliderWidth = slideContainer.clientWidth
+
+    slideWidth = slide.clientWidth;
+    sliderWidth = slideContainer.clientWidth;
 
     
 
@@ -124,28 +124,28 @@ function animObjet(){
     if(n >= slideLength-1){
         for (i = 0; i< behhh.length; i++){behhh[i].style.opacity = "0"}
         
-        slideContainer.style.scrollBehavior = "initial"
-        slideContainer.scrollLeft = 0
-        slideContainer.style.scrollBehavior = "smooth"
-        behhh[0].style.transition = "none"
-        behhh[0].style.opacity = "1"
+        slideContainer.style.scrollBehavior = "initial";
+        slideContainer.scrollLeft = 0;
+        slideContainer.style.scrollBehavior = "smooth";
+        behhh[0].style.transition = "none";
+        behhh[0].style.opacity = "1";
 
-        n = 0
+        n = 0;
 
     }
     else{
         for (i = 0; i< behhh.length; i++){behhh[i].style.opacity = "0"}
-        behhh[0].style.transition = "opacity ease 0.2s"
-        behhh[n+1].style.opacity = "1"
-        document.getElementById("subSlide"+(n+1)).style.backgroundImage = "url("+imgDatas[n+1].src+")"
-        behhh[n+1].style.opacity = "1"
+        behhh[0].style.transition = "opacity ease 0.2s";
+        behhh[n+1].style.opacity = "1";
+        document.getElementById("subSlide"+(n+1)).style.backgroundImage = "url("+imgDatas[n+1].src+")";
+
         slideContainer.scrollLeft += slideWidth; 
         
         
         // slideContainer.scrollLeft = (sliderWidth/slideLength)*n; 
         n += 1}
     
-    
+        
     
 
 
