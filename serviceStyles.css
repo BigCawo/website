@@ -174,7 +174,7 @@ h1 {
         padding-top: 10dvw;
         padding-bottom: 10dvw;
         width: 100%;
-        scroll-snap-align: start;
+        scroll-snap-align: unset;
         height: unset; 
         min-height: 90dvh;
     }
