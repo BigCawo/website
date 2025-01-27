@@ -19,16 +19,116 @@
     <script src="/buttonsBehavior.js" defer></script>
     <script src="/galerie/scriptSidebar.js" defer></script>
     <script src="/galerie/scriptIntro.js" defer> </script>
+    <script src="mobilierGrillage.js" defer></script>
+
+    <style>
+        #main{
+            overflow-x: hidden;
+        }
+
+        #sectionContainer > div{
+            padding-top: 5dvh;
+            scroll-snap-align: center;
+            width: 100%;
+            height: 100dvh;
+            overflow-y: scroll;
+            position: absolute;
+            display: inline-block;
+            scrollbar-width: none;
+
+        }
+
+        #menuBar > div{
+            scale: var(--scaleButtonsIllustration);
+            border-radius: 2vmin; 
+            
+            background-color: rgba(255, 255, 255, 0.75);
+            border: solid black calc(var(--borderWidth)/var(--scaleButtonsIllustration));
+            margin: 0;
+
+            transition: opacity ease 0.1s;
+            opacity: 0.85;
+        }
+
+        #illustrations{
+            left: 0;
+            overflow-y: scroll;
+        }
+        #croquis{
+
+            left: 100%;
+
+        }
+
+
+        #menuBar >  div:hover{
+            transition: opacity ease 0.1s;
+            opacity: 1;
+        }
+
+        #antiScroll{
+            width: 100dvw; 
+            height: 100dvh; 
+            position: fixed; 
+            z-index: 4; 
+            visibility: hidden;
+        }
+
+        .versionDisplayer{
+            display: flex; 
+            flex-direction: row; 
+            align-items: center;
+            height: 90dvh; 
+            width: 65vmin; 
+            margin: auto; 
+
+            background-position: center; 
+            background-size: contain; 
+            background-repeat: no-repeat;
+        }
+
+
+        .versionDisplayer > p{
+            position: relative; 
+            top: -5vmin; 
+            display: block; 
+            height: 50dvh;
+        }
+
+        @media  screen and (max-width: 480px) {
+
+        :root{
+        --scaleButtonsIllustration : 0.8
+        }
+
+        #menuBar > div{
+
+        margin: 3vmin;
+        }
+
+}
+    </style>
 </head>
 
-<body>
-    
+<body >
+   <div style="scroll-snap-type: y mandatory; scroll-behavior: smooth; max-height: 100dvh; overflow-y: scroll;">
     <div id="footer">
         
         <div buttonBottom="aPropos" id="aPropos">
             <button class="bottomButton" onclick="serviceSelected(9)"></button>
             <div animation="cone" class="animatedContent"></div>
             <div style="visibility: hidden;" animation="title-apropos" class="bottomTitle animatedTitle"></div>
+        </div>
+        <div id="menuBar" style="position: absolute;  bottom: 11dvh; justify-content: space-between; padding-left: 2vmin;  padding-right: 2vmin;"> 
+            <div>
+                <button class="anyButton" onclick="sectionChange(0)"></button>
+                <div  class="animatedContent " style="width: calc(var(--scaleRatio)*25vmin); display: flex; align-items: center;"> <p style="display: block; margin: auto; font-size: 150%; text-align: center; line-height: 0;">Version 2</p></div>
+            </div>
+            <div>
+                <button class="anyButton" onclick="sectionChange(1)"></button>
+                <div class="animatedContent " style="width: calc(var(--scaleRatio)*25vmin); display: flex; align-items: center;"> <p style="display: block; margin: auto; font-size: 150%; text-align: center; line-height: 0;">Version 1</p></div>
+            </div>
+
         </div>
         <div buttonBottom="galerie" id="galerie">
             <button  class="bottomButton"> <a href="/aPropos/" style="display: inline-block; width: 100%; height: 100%;"></a></button>
@@ -38,22 +138,25 @@
         </div>
     </div>
 
-    <div  id = main>
 
-        <div id="intro" class="flexcontainer">
-            <div id="baliseScreen" class="carton">
-                <h1 id="date">Mobilier Grillagé</h1>
-                <h2><span id="dateMobile"></span>2020</h2> <p class="typeProjet"> <i>- Projet personnel </i></p>
-                <p id="baliseMobile"><b>Quoi de plus pérenne que de fabriquer les objets qui nous entourent en utilisant des matières réemployées ?</b></p>
-                <p>C’est dans cette optique que j’ai imaginé ce mobilier de jardin, fabriqué à partir d’un gisement de matière récupérée, le panneau grillagé rigide.</p>
-            </div>
-            <img id="imgIntro" loading="lazy" style="margin : auto unset; max-height: 90vh; max-width: 100%;" src="/assets/projets/mobiliergrillage.jpg" alt="e">
-            <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
+
+
+    <div id="intro" class="flexcontainer mainAlt" style="scroll-snap-align: center;">
+        <div id="baliseScreen" class="carton">
+            <h1 id="date">Mobilier Grillagé</h1>
+            <h2><span id="dateMobile"></span>2020</h2> <p class="typeProjet"> <i>- Projet personnel </i></p>
+            <p id="baliseMobile"><b>Quoi de plus pérenne que de fabriquer les objets qui nous entourent en utilisant des matières réemployées ?</b></p>
+            <p>C’est dans cette optique que j’ai imaginé ce mobilier de jardin, fabriqué à partir d’un gisement de matière récupérée, le panneau grillagé rigide.</p>
         </div>
-        
+        <img id="imgIntro" loading="lazy" style="margin : auto unset; max-height: 90vh; max-width: 100%;" src="/assets/projets/mobiliergrillage.jpg" alt="e">
+        <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
+    </div>
+    
+    <div class="mainAlt"  style="scroll-snap-align: center;">
+
         <div class="espaceIntro"></div>
         <div>
-        <p><b>Un gisement possédant de nombreuses qualités :</b> <br><br>
+        <p><b>Le grillage rigide possède de nombreuses qualités :</b> <br><br>
             - Il est tramé d’un motif répétitif et orthogonal. <br>
             - Il est léger et très résistant à la flexion dans sa hauteur. <br>
             - Il est nervuré. <br>
@@ -63,38 +166,119 @@
             </p>
         
         </div>
+
         <div class="background"></div>
 
-        <div class="espace"></div>
-
-        <div class="flexcontainer">
-
-            <p class="texta">expérimentations formelles sur le logiciel Rhino</p>
-            <img loading="lazy" src="/assets/projets/mobiliergrillage-3D2.JPG" alt="">
-
-        </div>
-        <div class="espaceImg"></div>
-
-
-
-        <div class="espace"></div>
-
-
-        <div class="flexcontainer">
-
-            <p class="texta">recherches sur la forme, les procédés de fabrication et l’économie de matière</p>
-            <img loading="lazy" src="/assets/projets/mobiliergrillage-misenoeuvre.jpg" alt="">
-
-        </div>
-
-        <div class="espace"></div>
-
-        <div>
-            <p class="texta textfin" >Les nervures, présentes en des zones bien définies de la grille, dessinent la forme élégante et résistante des éléments de mobilier.</p>
-            <img loading="lazy" src="/assets/projets/mobiliergrillage-illus1.jpg" alt="">
-        </div>
-            
     </div>
+    <div id="antiScroll"></div>
+    <div  id = main  style="scroll-snap-align: center;">
+
+
+
+        <div id="sectionContainer">
+            <div class="section" id="illustrations">
+
+                
+                <div class="versionDisplayer" style="background-image: url(/assets/projets/mobilierGrillage_gif-V2.gif)">
+                    <p>Version 2 <i>&lpar; grillage plié &rpar;</i></p>
+                </div>
+        
+                <div class="espace"></div>
+                <p class="texta" style="position: relative; top: -5vmin">expérimentations formelles <i>&lpar; Rhino &rpar;</i></p>
+
+                <div class="flexcontainer">
+        
+                    <img loading="lazy" src="/assets/projets/mobilierGrillage_recherche-01LQ.jpg" alt="">
+                    <img loading="lazy" src="/assets/projets/mobilierGrillage_recherche-02LQ.jpg" alt="">
+        
+                </div>
+                <div class="espace"></div>
+                
+                <p class="texta" style="position: relative;">outil de pliage</p>
+                <div class="flexcontainer">
+        
+
+                    <img loading="lazy" src="/assets/projets/dessin fonctionnement.jpg" alt="">
+                    <img loading="lazy" src="/assets/projets/fab proto 02.jpg" alt="">
+        
+                </div>
+
+
+                <div class="espace"></div>
+
+                <div class="flexcontainer">
+        
+
+                    <img loading="lazy" src="/assets/projets/mobilierGrillage_outil-pliage-v2.jpg" alt="">
+                    <img loading="lazy" src="/assets/projets/mobilierGrillage_outil-pliage-v2-02.jpg" alt="">
+        
+                </div>
+
+    
+                <div class="espace"></div>
+        
+                <p class="texta" >Prototype</p>
+
+                <div class="flexcontainer">
+        
+ 
+                    <img loading="lazy" src="/assets/projets/mobilierGrillage-proto-details_0004_IMG_7715.jpg" alt="">
+                    <div class="espaceImg"></div>
+                    <img loading="lazy" src="/assets/projets/mobilierGrillage-proto-details_0000_IMG_7711.jpg" alt="">
+                    <div class="espaceImg"></div>
+                    <img loading="lazy" src="/assets/projets/mobilierGrillage-proto-details_0002_IMG_7703.jpg" alt="">
+        
+                </div>
+        
+                <div class="espace"></div>
+        
+                <div>
+                    <img loading="lazy" src="/assets/projets/mobilierGrillage_proto-01.jpg" alt="">
+                </div>
+                    
+            </div>
+            <div class="section" id="croquis">
+
+                <div class="versionDisplayer"  style="background-image: url(/assets/projets/mobilierGrillage_gif-V1.gif)">
+                        <p>Version 1 <i>&lpar; grillage découpé &rpar;</i></p>
+                </div>
+        
+                <div class="espace"></div>
+        
+                <div class="flexcontainer">
+        
+                    <p class="texta">expérimentations formelles <i>&lpar; Rhino &rpar;</i></p>
+                    <img loading="lazy" src="/assets/projets/mobiliergrillage-3D2.JPG" alt="">
+        
+                </div>
+                <div class="espaceImg"></div>
+        
+        
+        
+                <div class="espace"></div>
+        
+        
+                <div class="flexcontainer">
+        
+                    <p class="texta">technique de pliage et découpe des nervures</p>
+                    <img loading="lazy" src="/assets/projets/mobiliergrillage-misenoeuvre.jpg" alt="">
+        
+                </div>
+        
+                <div class="espace"></div>
+        
+                <div style="background-color: rgba(89, 0, 255, 0.452);">
+                    <p class="texta textfin" >Les nervures, présentes en des zones bien définies de la grille, dessinent la forme élégante et résistante des éléments de mobilier.</p>
+                    <img loading="lazy" src="/assets/projets/mobiliergrillage-illus1.jpg" alt="">
+                </div>
+                    
+            </div>
+
+        </div>
+
+    </div>
+
+</div> 
 </body>
 
 

@@ -186,6 +186,21 @@ a:active {color: rgb(0, 0, 0);}
 
 /* ~~~~  main  ~~~~ */
 
+.mainAlt{
+
+
+
+    position: relative;
+    min-height: 100vh;
+    width: var(--w-main);
+    margin: auto;
+    margin-bottom: 0;
+    animation-duration:  1s ;
+    animation-name: fadeIn;
+    
+
+}
+
 #main{background-color: rgba(0, 255, 255, 0);
 
 
