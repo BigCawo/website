@@ -176,8 +176,16 @@ h1 {
         width: 100%;
         scroll-snap-align: unset;
         height: unset; 
-        min-height: 90dvh;
+
     }
+
+    #textContainer > div:last-child{
+
+        scroll-snap-align: unset;
+
+
+    }
+
 
     #textContainer > div > p    {
         max-height: unset;
