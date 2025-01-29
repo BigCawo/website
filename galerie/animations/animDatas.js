@@ -39,28 +39,28 @@ let illusList =[
     name :"generique fabrique à brac",
     src : "generique6.gif",
     type : [1],
-    size: 0.7,
+    size: 1,
     date : ""
 },
 {
     name :"toupie 01",
     src : "toupie-02-V2-24-is.gif",
     type : [1],
-    size: 0.7,
+    size: 1,
     date : ""
 },
 {
     name :"toupie 02",
     src : "04_toupies_symétrie-b.gif",
     type : [1],
-    size: 0.7,
+    size: 1,
     date : ""
 },
 {
     name :"toupie 03",
     src : "05_toupies_répartition-masse.gif",
     type : [1],
-    size: 0.7,
+    size: 1,
     date : ""
 },
 

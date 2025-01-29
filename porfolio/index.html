@@ -41,13 +41,7 @@
             </div>
         </div> 
     </div>
-      <script> function heyooo(){ 
-        setTimeout(()=>{  document.getElementById("introPorfolio").style.display = "none" ;},1000); 
-        document.getElementById("introPorfolio").style.transition = "opacity ease 1s"; 
-        document.getElementById("introPorfolio").style.opacity = "0"
-        document.getElementById("projects").style.transition = "opacity ease 1s"; 
-        document.getElementById("projects").style.opacity = "1";
-        localStorage.setItem("visited",1)}</script>
+
     </div>
 
     <div id="projectInformations">
@@ -133,6 +127,16 @@
 
         document.getElementById("projects").style.opacity = "0";
       }
-    </script>
+
+      function heyooo(){ 
+        setTimeout(()=>{  document.getElementById("introPorfolio").style.display = "none" ;},1000); 
+        document.getElementById("introPorfolio").style.transition = "opacity ease 1s"; 
+        document.getElementById("introPorfolio").style.opacity = "0"
+        document.getElementById("projects").style.transition = "opacity ease 1s"; 
+        document.getElementById("projects").style.opacity = "1";
+        localStorage.setItem("visited",1)}
+      
+      </script>
+    
   </body>
 </html>
