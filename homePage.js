@@ -3,9 +3,9 @@
 // retrieve data value
 
 
-// localStorage.setItem("explored", 0);
+// sessionStorage.setItem("explored", 0);
 
-let name = localStorage.getItem("explored")
+let name = sessionStorage.getItem("explored")
 
 
 if (name == 1){
@@ -30,7 +30,7 @@ function oui(){
             bottomTitles[i].style.display ="flex"
             bottomTitles[i].style.opacity ="1"
         } 
-        localStorage.setItem("explored", 1);
+        sessionStorage.setItem("explored", 1);
     },0);
 
 }

@@ -280,14 +280,14 @@ for (let i = 0 ; i < projectList.length; i++) {
     // document.getElementById(projPath.id).appendChild(Img);
 
     const Img2 = document.createElement("img");
-    Img2.src = "../assets/galerie/"+projPath.id+"Color.png";
+    Img2.src = "/assets/galerie/"+projPath.id+"Color.png";
     Img2.className = "backgroundColor shake"
     Img2.alt =""
     if (projPath.mirror == 1){Img2.style.scale = "-1 1"}
     document.getElementById(projPath.id).appendChild(Img2);
 
     const Img3 = document.createElement("img");
-    Img3.src = "../assets/galerie/"+projPath.id+"Color.png";
+    Img3.src = "/assets/galerie/"+projPath.id+"Color.png";
     Img3.className = "backgroundColor2 shake"
     Img3.alt =""
     document.getElementById(projPath.id).appendChild(Img3);
@@ -513,7 +513,7 @@ function projectSelect(x){
             }
             else
 
-            window.location.href = projectList[x].id
+            window.location.href = "/galerie/"+ projectList[x].id
             }
         
         else
@@ -585,7 +585,7 @@ function projectHilight(x){
         document.getElementById("projectImg").style.width = 100*projectList[x].scale+"%"
         if (image == "none"){document.getElementById("projectImg").style.display = "none"}
         else {document.getElementById("projectImg").style.display = "initial"
-        document.getElementById("projectImg").src = "../assets/galerie/images/"+projectList[x].imgSrc1
+        document.getElementById("projectImg").src = "/assets/galerie/images/"+projectList[x].imgSrc1
         }
         const elements = document.getElementById("spot").getElementsByTagName("div")
 

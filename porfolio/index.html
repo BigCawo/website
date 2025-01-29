@@ -5,6 +5,7 @@
     <link rel="shortcut icon" href="/assets/course.gif" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/galerie/styles.css" />
+    <link rel="stylesheet" href="/homeStyles.css">
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/footerStyles.css">
     
@@ -26,6 +27,27 @@
 
   <body id="corps" onresize="loadValues(); " onload="loadValues()">
     <div id="header">
+    </div>
+
+    <div id="introPorfolio" style="width: 100%; height: 90dvh; position: fixed; z-index: 150; display: flex; align-items: center; display: none; ">
+      <div id="introduction" >
+
+        <div id="introText">
+            
+            <div style="padding: 3vmin; display: flex; flex-direction: column; align-items: center;">
+
+                <p>Vous trouverez dans ce porfolio différents travaux que j'ai réalisé et qui se rapportent de près où de loin à mes intentions pour la résidence. Un clic pour avoir un aperçu du projet, deux clics pour accéder aux détails. <br> Pour voir les autres projets que j'ai réalisés, vous pouvez visiter le reste de mon site par <a href="/" target="_blank">ici </a> ! :</p>
+                <p  onclick="heyooo()" style="font-size: 150%; font-family: Fababrac-soustitre;">X</p>
+            </div>
+        </div> 
+    </div>
+      <script> function heyooo(){ 
+        setTimeout(()=>{  document.getElementById("introPorfolio").style.display = "none" ;},1000); 
+        document.getElementById("introPorfolio").style.transition = "opacity ease 1s"; 
+        document.getElementById("introPorfolio").style.opacity = "0"
+        document.getElementById("projects").style.transition = "opacity ease 1s"; 
+        document.getElementById("projects").style.opacity = "1";
+        localStorage.setItem("visited",1)}</script>
     </div>
 
     <div id="projectInformations">
@@ -78,12 +100,12 @@
 
     <div id="footer">
 
-      <div id="accueil">
+      <div id="accueil" style="display: none;">
           <button class="bottomButton" onclick="serviceSelected(9)"></button>
           <div  animation="cone" class="animatedContent"></div>
           <div style="display: none;" class="animatedTitle"></div>
       </div>
-      <div id="categories">
+      <div id="categories" style="display: none;">
         <li>
           <button id="buttonObjet" class="button" onclick="projectSort(1)" value="off">Produit</button>
         </li>
@@ -102,5 +124,15 @@
       </div>
       <div style="visibility: hidden;"></div>
     </div>
+    <script defer>
+
+      if (localStorage.getItem("visited") != 1){
+
+        document.getElementById("introPorfolio").style.opacity = "1"
+        document.getElementById("introPorfolio").style.display = "flex"
+
+        document.getElementById("projects").style.opacity = "0";
+      }
+    </script>
   </body>
 </html>

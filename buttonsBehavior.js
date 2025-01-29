@@ -73,7 +73,7 @@ function serviceSelected(x){
 }
 
 function goToService(x){
-    // localStorage.setItem("Page", arrayPages[x])
+    // sessionStorage.setItem("Page", arrayPages[x])
     setTimeout(()=> {      
 
         for(let i= 0; i < arrayPages.length; i++){
