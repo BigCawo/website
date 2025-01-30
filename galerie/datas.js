@@ -89,7 +89,7 @@ let projectList = [
     },
     // LAMPE ICOSAEDRE
     {
-        offset : [4260,725],
+        offset : [4420,725],
         size : [302,361],
         id: "lampeIcosaedre",
         name: "Lampe Icosaèdre",
@@ -471,22 +471,22 @@ let projectList = [
 
 
     // // SITE WEB
-    // {
-    //     offset : [,0],
-    //     size : [,],
-    //     id: "siteWeb",
-    //     name: "Site Web",
-    //     text: "",
-    //     desc:"",
-    //     type: "Projet professionnel",
-    //     date: "depuis 2023",
-    //     spot : 1,
-    //     imgSrc1 : "none",
-    //     imgSrc2 : "none",
-    //     class : "objet ",
-    //     link : "bonjour/"
+    {
+        offset : [3700,640],
+        size : [625,756],
+        id: "siteWeb",
+        name: "Site Web",
+        text: "Le site sur lequel vous vous trouvez est un projet personnel que j'alimente et approfondis depuis plus d'un an. Je l'ai pensé comme un lieu virtuel, zone de stockage pour mes différents travaux et vitrine pour ma pratique d'artiste designer. Il reflète ma personnalité et mon amour pour les espace à explorer. <!--On peut y retrouver, disposés au sein d'un espace dessiné et bidimensionnel, mes différents travaux ainsi que des informations sur ma pratique et les services que je propose. .J'ai programmé ce site intégralement en HTML, CSS et JavaScript. Il est à la fois pour moi un prétexte pour apprendre la programmation, une vitrine et un objet qui me permet de mieux cerner qui je suis et ce vers quoi j'oriente ma vie professionnelle-->",
+        desc:"",
+        type: "Projet personnel",
+        date: "depuis 2023",
+        spot : 1,
+        imgSrc1 : "none",
+        imgSrc2 : "none",
+        class : "objet ",
+        link : ""
 
-    // },
+    },
     // // MosquitOS
     // {
     //     offset : [,0],

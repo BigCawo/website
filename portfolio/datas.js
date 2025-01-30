@@ -229,7 +229,7 @@ let projectList = [
     // },
     // CHMUP
     {
-        offset : [2500,150],
+        offset : [2250,150],
         size : [424,386],
         id: "chmupTheDog",
         name: "Chmup The Dog",
@@ -369,7 +369,7 @@ let projectList = [
     },
     // ILLUSTRATIONS
     {
-        offset : [3100,500],
+        offset : [2900,500],
         size : [650,350],
         id: "illustrations",
         name: "Illustrations",
@@ -450,7 +450,7 @@ let projectList = [
     },
     // ANIMATIONS
     {
-        offset : [2100,660],
+        offset : [3800,660],
         size : [491,350],
         id: "animations",
         name: "Animations",
@@ -471,39 +471,43 @@ let projectList = [
 
 
     // // SITE WEB
-    // {
-    //     offset : [,0],
-    //     size : [,],
-    //     id: "siteWeb",
-    //     name: "Site Web",
-    //     text: "",
-    //     desc:"",
-    //     type: "Projet professionnel",
-    //     date: "depuis 2023",
-    //     spot : 1,
-    //     imgSrc1 : "none",
-    //     imgSrc2 : "none",
-    //     class : "objet ",
-    //     link : "bonjour/"
+    {
+        offset : [2100,640],
+        size : [625,756],
+        id: "siteWeb",
+        name: "Site Web",
+        text: "Le site sur lequel vous vous trouvez est un projet personnel que j'alimente et approfondis depuis plus d'un an. Je l'ai pensé comme un lieu virtuel, zone de stockage pour mes différents travaux et vitrine pour ma pratique d'artiste designer. Il reflète ma personnalité et mon amour pour les espace à explorer. <!--On peut y retrouver, disposés au sein d'un espace dessiné et bidimensionnel, mes différents travaux ainsi que des informations sur ma pratique et les services que je propose. .J'ai programmé ce site intégralement en HTML, CSS et JavaScript. Il est à la fois pour moi un prétexte pour apprendre la programmation, une vitrine et un objet qui me permet de mieux cerner qui je suis et ce vers quoi j'oriente ma vie professionnelle-->",
+        desc:"",
+        type: "Projet personnel",
+        date: "depuis 2023",
+        spot : 1,
+        imgSrc1 : "none",
+        imgSrc2 : "none",
+        class : "objet ",
+        link : "",
+        mirror : 0,
+        miniature : 0,
 
-    // },
-    // // MosquitOS
-    // {
-    //     offset : [,0],
-    //     size : [,],
-    //     id: "mosquitos",
-    //     name: "MosquitOS",
-    //     text: "",
-    //     desc:"",
-    //     type: "Projet professionnel",
-    //     date: "2023",
-    //     spot : 1,
-    //     imgSrc1 : "none",
-    //     imgSrc2 : "none",
-    //     class : "objet ",
-    //     link : "bonjour/"
+    },
+    // MADMAXVR
+    {
+        offset : [4800,550],
+        size : [335,335],
+        id: "madMaxVR",
+        name: "Max Max VR",
+        text: "Dans le cadre d'un projet à l'ENSCI, Joseph Henry et moi avons travaillé à la reproduction d'une scène de couse poursuite du film 'Mad Max Fury Road' en réalité virtuelle",
+        desc:"",
+        type: "Projet d'études",
+        date: "2020",
+        spot : 1,
+        imgSrc1 : "madmax-steeringwheel.jpg",
+        imgSrc2 : "none",
+        class : "objet ",
+        link : "https://johhnry.com/work/mad-max-vr.html",
+        mirror : 1,
+        miniature : 0,
 
-    // },
+    },
 
 
 ];
