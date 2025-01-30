@@ -495,7 +495,7 @@ let projectList = [
         size : [335,335],
         id: "madMaxVR",
         name: "Max Max VR",
-        text: "Dans le cadre d'un projet à l'ENSCI, Joseph Henry et moi avons travaillé à la reproduction d'une scène de couse poursuite du film 'Mad Max Fury Road' en réalité virtuelle",
+        text: "Dans le cadre d'un projet à l'ENSCI, Joseph Henry et moi avons travaillé à la reproduction d'une scène de course poursuite du film 'Mad Max Fury Road' en réalité virtuelle",
         desc:"",
         type: "Projet d'études",
         date: "2020",

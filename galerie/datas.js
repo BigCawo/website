@@ -487,6 +487,25 @@ let projectList = [
         link : ""
 
     },
+    // MADMAXVR
+    {
+        offset : [5300,650],
+        size : [335,335],
+        id: "madMaxVR",
+        name: "Max Max VR",
+        text: "Dans le cadre d'un projet à l'ENSCI, Joseph Henry et moi avons travaillé à la reproduction d'une scène de course poursuite du film 'Mad Max Fury Road' en réalité virtuelle",
+        desc:"",
+        type: "Projet d'études",
+        date: "2020",
+        spot : 1,
+        imgSrc1 : "madmax-steeringwheel.jpg",
+        imgSrc2 : "none",
+        class : "objet ",
+        link : "https://johhnry.com/work/mad-max-vr.html",
+        mirror : 1,
+        miniature : 0,
+
+    },
     // // MosquitOS
     // {
     //     offset : [,0],
