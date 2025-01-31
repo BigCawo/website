@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliot Bernaud Design Dessin Bricolage</title>
+    <link rel="shortcut icon" href="/assets/course.gif">
+    <link rel="stylesheet" href="/galerie/styles.css">
+    <link rel="stylesheet" href="/footerStyles.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Roboto:wght@400&display=swap" rel="stylesheet"> 
+    
+    <script src="/galerie/datas.js"></script>
+    <script src="/global.js" defer></script>
+    <script src="/animatedImages.js" defer></script>
+    <script src="/buttonsBehavior.js" defer></script>
+    <script src="/galerie/scriptSidebar.js" defer></script>
+    <script src="/galerie/scriptIntro.js" defer> </script>
+</head>
+
+<body>
+    
+    <div id="footer">
+        
+        <div buttonBottom="aPropos" id="aPropos">
+            <button class="bottomButton" onclick="serviceSelected(9)"></button>
+            <div animation="cone" class="animatedContent"></div>
+            <div style="visibility: hidden;" animation="title-apropos" class="bottomTitle animatedTitle"></div>
+        </div>
+        <div buttonBottom="galerie" id="galerie">
+            <button  class="bottomButton"> <a href="/aPropos/" style="display: inline-block; width: 100%; height: 100%;"></a></button>
+            <div animation="apropos" class="cone animatedContent"></div>
+            <div style="display: none;"></div>
+            <div animation="title-apropos" class="bottomTitle animatedTitle"></div>
+        </div>
+
+        <style>
+            #imgIntro{
+                margin : auto; 
+                width: 100%; 
+                height: 80dvh; 
+                border: solid black 0.5vh; 
+                border-radius: 1vh;
+            }
+
+            @media screen and (max-width : 480px) {
+                #imgIntro{
+
+                height: 60dvh; 
+
+            }
+                
+            }
+        </style>
+    </div>
+
+
+    <div id = main>
+
+        <div id="intro" class="flexcontainer">
+            <div id="baliseScreen" class="carton">
+                <h1 id="date">Site Web</h1>
+                <h2><span id="dateMobile"></span>depuis 2023</h2> <p class="typeProjet"> <i>- Projet d'études </i></p>
+                <p id="baliseMobile"><b>Prétexte pour apprendre le design et la programmation web. Objet non figé, qui me sert d'espace de stockage, d'expérimentation et de vitrine</b></p>
+                <p>/!\ en construction /!\ 
+                </p>
+            </div>
+            <div id="imgIntro" >
+                <iframe src="/index.html" frameborder="0" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+        
+
+        <div class="espaceIntro"></div>
+      
+        <!-- <div style="padding:26.33% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/504948795?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Terres Lointaines - Partie 1"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script> -->
+
+
+
+        <!-- <div class="espace"></div>
+        
+        <p class="img50pc"> Son format très large, pensé pour une projection, permet la contemplation des paysages et met en avant le cheminement des personnages, que nous devons suivre du regard le long de l’écran.</p>
+        <div class="background2"><img loading="lazy" height="100%" class="illusfin" src="/assets/projets/scene_05.png" alt=""></div>
+        
+
+        <div class="espace"></div> -->
+
+
+        <div class="flexcontainer">
+
+            <p class="texta">  Je pensais ce site au départ uniquement comme un portfolio, puis je me suis rendu compte qu'il pourrait devenir un objet plus conséquent, personnel et expérimental .</p>
+            <div style="width: 100%; height: 60dvh;">
+                <p> <i> Version 1 </i></p>
+                <iframe style=" border: solid black 0.5vh; border-radius: 1vh; overflow: hidden;" src="2023-11-12_backup/accueil.html" frameborder="0" width="100%" height="100%"></iframe>
+            </div>
+
+        </div>
+
+        <div class="espace"></div>
+
+        <!-- <div class="flexcontainer">
+
+            <p class="texta">L'aura du personnage modifie la perception qu’il a de son environnement. Curieux et bienveillant, son regard colore ce dernier.</p>
+            <img loading="lazy" src="/assets/projets/terreslointaines-types-coloration.jpg" alt="">
+
+        </div> -->
+
+        
+        <!-- <div class="espace"></div>
+
+        <p style="text-align: center;">Storyboard</p>
+
+        <img loading="lazy" class="imgscreen" src="/assets/projets/terreslointaines-storyboard-screen.png" alt="">
+        <img loading="lazy" class="imgmobile" src="/assets/projets/terreslointaines-storyboard-mobile.png" alt="">
+
+
+
+        <div class="espace"></div> -->
+
+
+            
+        <div class="espace"></div>
+        <div class="espace"></div>
+        <div class="espace"></div>
+        <p class="copyright">@ All right reserved @</p>
+
+
+
+    </div>
+
+
+</body>
+
+
+    
+</html>
