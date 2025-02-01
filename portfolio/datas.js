@@ -484,7 +484,7 @@ let projectList = [
         imgSrc1 : "none",
         imgSrc2 : "none",
         class : "objet ",
-        link : "none",
+        link : "",
         mirror : 0,
         miniature : 0,
 
