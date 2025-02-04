@@ -373,7 +373,7 @@ let projectList = [
         size : [650,350],
         id: "illustrations",
         name: "Illustrations",
-        text: "",
+        text: "Elles occupent une place très importante dans mon travail. L'illustration, et le dessin en général sont pour moi des médias qui permet une forme d'expression particulièrementlibre, au delà du langage.<br> Vous trouverez des dessins d'observation et d'imagination, effectués principalement dans un cadre personnel.",
         desc:"",
         type: "",
         date: "",

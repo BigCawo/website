@@ -406,7 +406,7 @@ center.addEventListener('wheel', (evt) => {
     if (spotsVisible == 0.55 && projectValue >= 0){ 
         
         w = Math.max(projectValue +  Math.sign(evt.deltaY),-1)
-        if(-1 < w && w < 21){
+        if(-1 < w && w < projectList.length){
             projectSelect(w)
             }
   
