@@ -47,32 +47,52 @@
                         
                         <div style="position: relative;">
                             <button id="buttonIntro" onclick="oui()"></button>
-                            <p>Designer polyvalent diplômé de l'ENSCI Les Ateliers,<br>je suis particulièrement sensible aux enjeux sociaux, sociétaux et environnementaux actuels. J'aime dans mes travaux récupérer, bricoler, détourner et réinventer. <br>Je travaille sur une grande diversité de supports, autant physiques que numériques. J'hybride les médiums, les techniques pour répondre de manière originale à vos besoins. <br><br>Vous trouverez sur ce site les différents services que je propose. <br>Bonne visite !</p>
+                            <p>Designer polyvalent diplômé de l'ENSCI Les Ateliers,
+                                <br>je suis particulièrement sensible aux enjeux sociaux, sociétaux et environnementaux actuels et j'axe mon travail sur des questions de médiation et de facilitation graphique
+                                <br>J'aime dans mes travaux récupérer, bricoler, détourner et réinventer. Je travaille sur une grande diversité de supports, autant physiques que numériques. J'hybride les médiums, les techniques pour répondre de manière originale à vos besoins. 
+                                <br><br>Vous trouverez sur ce site les différents services que je propose. 
+                                <br>Bonne visite !</p>
                             <p  onclick="oui()">X</p>
                         </div>
                     </div> 
                 </div>
-                <div id="designObjet" class="services">
-                    <button class="servicesButton" onclick="serviceSelected(0);"></button>
-                    <div animation="cube" class="base animatedContent" ></div>
-                    <div animation="cube-L" class="left animatedContent"></div>
-                    <div animation="title-obj" class="title animatedTitle"></div>
-                    <div animation="cube-R" class="right animatedContent"></div>
+                <div id="servicesContainer">
+                    <div>
+                        <div id="designObjet" class="services">
+                            <button class="servicesButton" onclick="serviceSelected(0);"></button>
+                            <div animation="cube" class="base animatedContent" ></div>
+                            <div animation="cube-L" class="left animatedContent"></div>
+                            <div animation="title-obj" class="title animatedTitle"></div>
+                            <div animation="cube-R" class="right animatedContent"></div>
+                        </div>
+                        <div id="Illustration" class="services">
+                            <button class="servicesButton" onclick="serviceSelected(2);"></button>
+                            <div animation="cylinder" class="base animatedContent"></div>
+                            <div animation="cylinder-L" class="left animatedContent"></div>
+                            <div animation="title-illustration" class="title animatedTitle"></div>
+                            <div animation="cylinder-R" class="right animatedContent"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div id="designMultimedia" class="services">
+                            <button class="servicesButton" onclick="serviceSelected(1);"></button>
+                            <div animation="sphere" class="base animatedContent" ></div>
+                            <div animation="sphere-L" class="left animatedContent"></div>
+                            <div animation="title-multimedia" class="title animatedTitle"></div>
+                            <div animation="sphere-R" class="right animatedContent"></div>
+                        </div>
+        
+                        <div id="mediationGraphique" class="services">
+                            <button class="servicesButton" onclick="serviceSelected(10);"></button>
+                            <div animation="pyramid" class="base animatedContent" ></div>
+                            <div animation="pyramid-L" class="left animatedContent"></div>
+                            <div animation="title-mediat" class="title animatedTitle"></div>
+                            <div animation="pyramid-R" class="right animatedContent"></div>
+                        </div>
+                    </div>
                 </div>
-                <div id="designMultimedia" class="services">
-                    <button class="servicesButton" onclick="serviceSelected(1);"></button>
-                    <div animation="sphere" class="base animatedContent" ></div>
-                    <div animation="sphere-L" class="left animatedContent"></div>
-                    <div animation="title-multimedia" class="title animatedTitle"></div>
-                    <div animation="sphere-R" class="right animatedContent"></div>
-                </div>
-                <div id="Illustration" class="services">
-                    <button class="servicesButton" onclick="serviceSelected(2);"></button>
-                    <div animation="cylinder" class="base animatedContent"></div>
-                    <div animation="cylinder-L" class="left animatedContent"></div>
-                    <div animation="title-illustration" class="title animatedTitle"></div>
-                    <div animation="cylinder-R" class="right animatedContent"></div>
-                </div>
+
+
             </div>
         </div>
 

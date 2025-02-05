@@ -38,9 +38,17 @@ h1 {
     bottom: 0;
 }
 
+
+
 .animIllustration{
     background-image: url(/assets/services/animMultimedia.gif);
     image-rendering: pixelated;
+    
+}
+
+.animMediation{
+
+    background-image: url(/assets/services/animMediation.gif);
     
 }
 
@@ -111,6 +119,10 @@ h1 {
 
 }
 
+#textContainer > .text:first-child > p {
+    padding-bottom: 0;
+}
+
 #textContainer > div > p    {
     background-color: rgba(255, 255, 255, 0.6); 
     padding: 2vmin; 
@@ -130,6 +142,12 @@ h1 {
 
 
 #textContainer .animIllustration{
+    position: relative; 
+    height: 45dvw;
+    display: none;
+}
+
+#textContainer .animMediation{
     position: relative; 
     height: 45dvw;
     display: none;

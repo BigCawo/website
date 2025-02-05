@@ -26,23 +26,27 @@
 
 
   <body id="corps" onresize="loadValues(); " onload="loadValues()">
-    <div id="header">
-    </div>
+    <div id="introPorfolio" style="width: 100%; position: absolute; height: 100%; position: fixed; z-index: 150; display: flex; align-items: center; display: none; overflow-y: scroll; ">
+      <div style="position: absolute; width: 100%; height: 100%; cursor: pointer; z-index: 0;" onclick="heyooo()">
 
-    <div id="introPorfolio" style="width: 100%; height: 90dvh; position: fixed; z-index: 150; display: flex; align-items: center; display: none; ">
-      <div id="introduction" >
-
+      </div>
+      <div id="introduction">
         <div id="introText">
             
             <div style="padding: 3vmin; display: flex; flex-direction: column; align-items: center;">
 
-                <p>Vous trouverez dans ce portfolio différents travaux que j'ai réalisés et qui se rapportent de près où de loin à mes intentions pour la résidence. Un clic pour avoir un aperçu du projet, deux clics pour accéder aux détails. <br> Pour voir les autres projets que j'ai réalisés, vous pouvez visiter le reste de mon site par <a href="/" target="_blank">ici </a> ! :</p>
-                <p  onclick="heyooo()" style="font-size: 150%; font-family: Fababrac-soustitre;">X</p>
+                <p>Vous trouverez dans ce portfolio différents travaux que j'ai réalisés et qui se rapportent de près où de loin à mes intentions pour la résidence. Un clic pour avoir un aperçu du projet, deux clics pour accéder aux détails. <br> Pour voir les autres projets que j'ai réalisés, vous pouvez visiter le reste de mon site par <a href="/" target="_blank">ici </a> !</p>
+                <p   style="font-size: 150%; font-family: Fababrac-soustitre; cursor: pointer;">X</p>
             </div>
         </div> 
+      </div>
+    </div>
+    <div id="header">
     </div>
 
-    </div>
+
+
+
 
     <div id="projectInformations">
       <div id="descContainer">

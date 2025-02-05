@@ -6,6 +6,8 @@
 // sessionStorage.setItem("explored", 0);
 
 let name = sessionStorage.getItem("explored")
+sessionStorage.setItem("ServicePage","home");
+
 
 
 if (name == 1){

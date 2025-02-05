@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eliot Bernaud - Design Produit / Multimedia / Illustration</title>
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/footerStyles.css">
+        <link rel="stylesheet" href="/serviceStyles.css">
+        <script src="/global.js" defer></script>
+        <script src="/animatedImages.js" defer></script>
+        <script src="/buttonsBehavior.js" defer></script>
+        <script src="/scripts/scriptServices.js" defer></script>
+
+    </head>
+<body>
+    <div id="header">
+
+    </div>
+    <div id="center">
+        <div id="centerBackground">
+        </div>
+
+        <div id="mainContainer">
+            <div id="textContainer">
+                <!-- <div animation="title-obj" class="animatedTitle" style="max-height: 12dvh;"></div> -->
+                <div class="text" >
+
+                    <p > 
+                        Depuis tout petit, je cultive une grande curiosité pour les choses qui m'entourent, leur manière d'être et leur fonctionnement. J'aime contempler ce que je trouve beau et que je ne comprends pas vraiment, comme les nuages d'orage, les tourbillons dans la Loire en crue, les mouvements de la foule…
+                        <br><br>
+                        Je souhaite partager cette curiosité en traduisant des connaissances, des recherches, des observations via des formes numériques ou interactives ludiques et accessibles. 
+                        <br><br> Par le biais de la transmission et de la médiation, je souhaite inviter à porter un regard différent sur les choses du monde.
+                        
+                        
+                        
+                        <span class="animService animMediation" ></span>
+                    </p>
+
+
+
+
+                </div>
+                <!-- <div  class="text">
+                    <p>Services proposés&nbsp;:<br>&#40; pour la réalisation de vos projets, ou pour des missions spécifiques &#41;
+                        <br>
+                        <iframe  class="animService" src="carousselObj-01/index.html" frameborder="0"></iframe>
+                    <br>
+                        <i><u hover = "">idéation</u> : analyse du besoin / recherches préliminaires / cahier des charges</i>
+                        <br><br><i><u hover = "croquis">conception</u> : croquis technique / recherches graphiques / modélisation 3D / maquettage / scénario d'usage</i>
+                        <br><br><i><u>fabrication</u> : plans techniques / prototypage</i>
+                        <br><br><i><u>communication</u> : illustration / rendus réalistes / vidéos / animations</i>
+                    </p>
+
+                </div>
+                <div  class="text">
+                    <p >
+                        outils :
+                    
+                        <br><br>modélisation 3D : Rhino ; Blender ; Grasshopper
+                        <br>création numérique : Suite Adobe ; CSS HTML JS
+                        <br>dessin traditionnel
+                        <br>outils du bois et du métal
+                        <br>
+                        <iframe class="animService" src="carousselObj-02/index.html" frameborder="0"></iframe>
+
+                    </p>
+                    
+                </div> -->
+                <div >
+                    <p style="visibility: hidden;"> <br><br><br>Plus d'infos sur mes travaux en bas à droite ! </p>
+                    <div  style="position: relative; width: 100%; max-height: 10dvh; display: flex; flex-direction: row; justify-content: center; overflow: hidden;">
+                        <div class="hoverButton" style=" margin: auto; max-height: 100%; max-width: 10dvh;"> 
+                            <button class="anyButton"  onclick="cv();"></button>
+                            <div animation="cv" class="animatedContent"></div>
+                        </div>
+                        <div class="hoverButton" style=" margin: auto; max-height: 100%; max-width: 10dvh;"> 
+                            <button class="anyButton" onclick="instagram();"></button>
+                            <div animation="insta" class="animatedContent"></div>
+                        </div>
+                        <div class="hoverButton" style=" margin: auto; max-height: 100%; max-width: 10dvh;"> 
+                            <button class="anyButton" onclick="serviceSelected(3);"></button>
+                            <div animation="apropos" class="animatedContent"></div>
+                        </div>
+                    </div>
+                    <p style="background-color: unset; border: unset; text-align: center;"> <br><br><br>Plus d'infos sur mes travaux en bas à droite ! </p>
+                </div>
+                
+            </div>
+            <div id="imgContainer">
+                <div class="page" style=" width: 100%; height: 100%;">
+                    <div style="background-image: url(/assets/services/animMediation.gif); background-position: bottom; background-repeat: no-repeat; width: 100%; height: 100%; background-size: contain; background-size: 75%;">
+                        
+                    </div> 
+                </div>
+                <!-- <div class="page carouselContainer">             
+                    <iframe src="carousselObj-01/index.html" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+                </div>
+                <div  class="page carouselContainer">
+                    <iframe src="carousselObj-02/index.html" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+                </div> -->
+                
+            </div>
+        </div>
+
+    </div>
+    <div id="footer">
+        <div id="accueil">
+            <button class="bottomButton" onclick="serviceSelected(8)"></button>
+            <div  animation="cone" class="animated animatedContent"></div>
+            <div style="display: none;" class="animatedTitle"></div>
+            
+        </div>
+        <div id="galerieObjet">
+            <button class="bottomButton" onclick="serviceSelected(5)"></button>
+            <div animation="cone-R" class="animated animatedContent"></div>
+            <div style="display: none;"></div>
+            <div animation="title-travauxLies-obj" class="animated animatedTitle"></div>
+        </div>
+    </div>
+
+</body>
+</html>

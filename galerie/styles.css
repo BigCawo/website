@@ -529,7 +529,7 @@ button{
     transition: font-size 0.25s ease;
     text-transform: uppercase;
     font-weight: 300;
-    font-size: var(--fs-c);
+    font-size: calc(var(--fs-c)*0.1);
     
 
     padding: 15px 6px;

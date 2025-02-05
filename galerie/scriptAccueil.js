@@ -696,8 +696,9 @@ var shake = function (element, magnitude = 16) {
 
 };
 
-
-if(prevPage == "Illustration"){projectSort(0);}
-if(prevPage == "designObjet"){projectSort(1);}
-if(prevPage == "designMultimedia"){projectSort(3);}
-
+if(typeof prevServicePage !== 'undefined'){
+if(prevServicePage == "Illustration"){projectSort(0);}
+if(prevServicePage == "designObjet"){projectSort(1);}
+if(prevServicePage == "designMultimedia"){projectSort(3);}
+if(prevServicePage == "mediationGraphique"){projectSort(2);}
+}

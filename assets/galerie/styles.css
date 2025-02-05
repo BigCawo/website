@@ -555,11 +555,13 @@ p{
     width: fit-content;
 }
 
-#categories li button{
+#categories button{
     font-family: fababrac;
-    font-size: 4dvh;  
+    font-size: 3dvh;  
     padding-left: 2dvw;
     padding-right: 1dvw;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 #entete{

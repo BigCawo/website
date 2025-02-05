@@ -1,4 +1,6 @@
-let arrayPages = ["designObjet","designMultimedia","Illustration","aPropos","galerie","galerieObjets","galerieMultimedia","galerieIllustration","accueil","return"]
+let arrayPages = ["designObjet","designMultimedia","Illustration","aPropos","galerie","galerieObjets","galerieMultimedia","galerieIllustration","accueil","return","mediationGraphique"]
+
+
 let currPage = ""
 let currPageLength = ""
 let buttonClicked = ""
