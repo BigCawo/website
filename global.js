@@ -12,7 +12,7 @@ if(performance.navigation.type == 2){
  }
 
 
-
+//#region historique des pages
 
 let prevPage = sessionStorage.getItem("Page")
 // if (typeof sessionStorage.getItem("ServicePage") == undefined){sessionStorage.setItem("ServicePage","")}
@@ -38,7 +38,7 @@ for (let i = 0; i < arrayServices.length ; i++){
 console.log("previous service page : "+ prevServicePage)
 console.log("url end : "+ urlEnd )
 
-
+//#endregion
 
 document.title = "Eliot Bernaud - Design Produit / Multimedia / Illustration"
 
@@ -50,3 +50,52 @@ for (let i = 1; i<projectList.length; i++){
     if(urlEnd == projectList[i].id){console.log(projectIndex = i)}
 }
 }
+
+//#region images en plein écran !
+
+const clickableImgs = document.getElementsByTagName("img")
+
+for (let i = 0; i< clickableImgs.length; i++){
+    clickableImgs[i].setAttribute("onclick","imgClick(event);")
+}
+
+
+function imgClick(event){
+    const source = event.srcElement;
+    // console.log(source.src);
+
+    const imgContainer = document.createElement("div")
+    imgContainer.id = "imgViewer"
+    imgContainer.style.position = "fixed"
+    imgContainer.style.zIndex = "500"
+    imgContainer.style.top = "0"
+    imgContainer.style.width = "100%"
+    imgContainer.style.height = "100%"
+    imgContainer.style.backgroundColor = "rgba(0,0,0,0.5)"
+    if(source.nodeName == "DIV"){
+        url = document.defaultView.getComputedStyle(source).backgroundImage
+        // style = source.currentStyle
+        imgContainer.style.backgroundImage = url
+    }
+    else{
+        imgContainer.style.backgroundImage = "url("+ source.src +")"
+    }
+    imgContainer.style.backgroundSize = "contain"
+    imgContainer.style.backgroundPosition = "center"
+    imgContainer.style.backgroundRepeat = "no-repeat"
+    imgContainer.style.scale = "0"
+    imgContainer.style.transition = "scale ease 0.2s"
+    imgContainer.setAttribute("onclick","imgDismiss(event);")
+
+    document.body.appendChild(imgContainer);
+    document.getElementById("imgViewer").style.scale = "1"
+    console.log(source)
+    console.log(document.getElementById("imgViewer"))
+}
+
+function imgDismiss(event){
+    const source = event.srcElement;
+    console.log(source);
+    source.remove()
+}
+//#endregion

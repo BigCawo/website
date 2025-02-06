@@ -95,10 +95,26 @@
             height: 50dvh;
         }
 
+        .displayComputer{
+            display:flex;
+        }
+
+        .displayMobile{
+            display: none;
+        }
+
         @media  screen and (max-width: 480px) {
 
         :root{
         --scaleButtonsIllustration : 0.8
+        }
+
+        .displayComputer{
+            display: none;
+        }
+
+        .displayMobile{
+            display: block;
         }
 
         #menuBar > div{
@@ -179,7 +195,7 @@
             <div class="section" id="illustrations">
 
                 
-                <div class="versionDisplayer" style="background-image: url(/assets/projets/mobilierGrillage_gif-V2.gif)">
+                <div onclick="imgClick(event);" class="versionDisplayer" style="background-image: url(/assets/projets/mobilierGrillage_gif-V2.gif)">
                     <p>Version 2 <i>&lpar; grillage plié &rpar;</i></p>
                 </div>
         
@@ -219,7 +235,15 @@
         
                 <p class="texta" >Prototype</p>
 
-                <div class="flexcontainer">
+                <div>
+                    <img loading="lazy" src="/assets/projets/mobilierGrillage_proto-01.jpg" alt="">
+                </div>
+
+
+        
+                <div class="espace"></div>
+        
+                <div class="flexcontainer displayComputer">
         
  
                     <img loading="lazy" src="/assets/projets/mobilierGrillage-proto-details_0004_IMG_7715.jpg" alt="">
@@ -229,17 +253,15 @@
                     <img loading="lazy" src="/assets/projets/mobilierGrillage-proto-details_0002_IMG_7703.jpg" alt="">
         
                 </div>
-        
                 <div class="espace"></div>
-        
-                <div>
-                    <img loading="lazy" src="/assets/projets/mobilierGrillage_proto-01.jpg" alt="">
+                <div class="displayMobile" style="height: 85vmin;">
+                    <iframe src="carousselMobGrill-01/" frameborder="0" width="100%" height="100%"></iframe>
                 </div>
                     
             </div>
             <div class="section" id="croquis">
 
-                <div class="versionDisplayer"  style="background-image: url(/assets/projets/mobilierGrillage_gif-V1.gif)">
+                <div  onclick="imgClick(event);" class="versionDisplayer"  style="background-image: url(/assets/projets/mobilierGrillage_gif-V1.gif);">
                         <p>Version 1 <i>&lpar; grillage découpé &rpar;</i></p>
                 </div>
         
