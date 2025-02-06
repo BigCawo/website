@@ -353,7 +353,7 @@ let projectList = [
         size : [445,589],
         id: "poleImage",
         name: "Qu'est ce qu'un Pôle Image ?",
-        text: "Cette pastille mixant plusieurs types d'animation est une réponse de l'entreprise Cinémagraphic à un appel à projet lancé par les Pôles Images.<br><br>J'y ai été assistant à la réalisation, à l'animation et à la prise de vue.",
+        text: "Cette pastille mixant plusieurs types d'animation est une réponse de l'entreprise Cinémagraphic à un appel à projet lancé par les Pôles Images.<br> L'objectif était d'expliquer les différentes missions d'éducation et de médiation de notre commanditaire.<br><br>J'y ai été assistant à la réalisation, à l'animation et à la prise de vue.",
         desc:"",
         type: "Projet professionnel",
         date: "2024",

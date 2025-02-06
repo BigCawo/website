@@ -16,6 +16,9 @@ function imageAnim(animatedImage){
 
 }
 
+
+
+
 // const hoverableImage =  document.querySelectorAll('[hover]') 
 
 // for(let i = 0 ; i < hoverableImage.length; i++){

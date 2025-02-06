@@ -119,9 +119,6 @@ h1 {
 
 }
 
-#textContainer > .text:first-child > p {
-    padding-bottom: 0;
-}
 
 #textContainer > div > p    {
     background-color: rgba(255, 255, 255, 0.6); 
@@ -174,7 +171,9 @@ h1 {
 
   @media screen and (max-width: 480px){
 
-
+    #textContainer > .text:first-child > p {
+        padding-bottom: 0;
+    }
 
     #mainContainer{
         
@@ -208,6 +207,9 @@ h1 {
     #textContainer > div > p    {
         max-height: unset;
     }
+
+
+    
 
     #textContainer .animService{
         position: relative; 
