@@ -7,6 +7,17 @@ let spawnState = -1;
 let w = projectValue
 let descContainer = document.getElementById("projectInformations")
 let y = 0
+let glowState = -1
+
+let glowEnabled = sessionStorage.getItem("glowEnabled")
+console.log(glowEnabled)
+sessionStorage.setItem("glowEnabled","0")
+if(glowEnabled == undefined || null){
+    sessionStorage.setItem("glowEnabled","0")
+}
+console.log(glowEnabled)
+let intervalGlow = undefined
+let lastGlow = undefined
 
 projectList.sort((a, b) => a.offset[0] - b.offset[0])
 
@@ -453,6 +464,7 @@ function descSpawn(x){
 
 
     if (x == 0) {
+        glowClear();
         document.getElementById("spot").style.opacity = "0"
         if(Mq480.matches)
         {center.style.overflowX = "scroll" }
@@ -495,7 +507,14 @@ function descSpawn(x){
 
 
 function projectSelect(x){
+    if (glowEnabled == 0){
 
+        console.log(glowEnabled)
+        sessionStorage.setItem("glowEnabled","1")
+        glowEnabled = sessionStorage.getItem("glowEnabled")
+    }
+    console.log(glowEnabled)
+    
     y = projectValue
 
 
@@ -504,9 +523,10 @@ function projectSelect(x){
 
         if (projectList[x].link !== undefined) {
             
-            if (projectList[x].link.includes('http'))
-           window.open(projectList[x].link, '_blank');
-
+            if (projectList[x].link.includes('http')){
+                window.open(projectList[x].link, '_blank');
+                sessionStorage.setItem("glowEnabled","2");
+                }
             else if (projectList[x].link == "none")
             {
             shake(document.getElementById(projectList[x].id));
@@ -514,6 +534,7 @@ function projectSelect(x){
             else
 
             window.location.href = "/galerie/"+ projectList[x].id
+            sessionStorage.setItem("glowEnabled","2")
             }
         
         else
@@ -562,6 +583,8 @@ function scrollTo(x){
 }
 
 function projectHilight(x){
+    if(intervalGlow !== undefined){glowClear();console.log("heyy")}
+
     if(x >= 0){
         let a = Number(document.getElementById("button" + projectList[x].id.charAt(0).toUpperCase() + projectList[x].id.slice(1)).offsetWidth);
 
@@ -577,6 +600,11 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        // document.getElementById("voile").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        // document.getElementById("voile").style.width = a+"px"
+        // document.getElementById("voile").style.opacity = 0.5
+
         document.getElementById("projectName").innerHTML = projectList[x].name
         document.getElementById("projectText").innerHTML = projectList[x].text
         document.getElementById("projectType").innerHTML = projectList[x].type
@@ -588,12 +616,79 @@ function projectHilight(x){
         document.getElementById("projectImg").src = "/assets/galerie/images/"+projectList[x].imgSrc1
         }
         const elements = document.getElementById("spot").getElementsByTagName("div")
-
-
+       
+        setTimeout(()=> {
+            if(glowEnabled < 2){
+                glowClear();
+                if(document.getElementById("spot").style.visibility == "visible"){
+                startGlowInterval(x);
+                }
+            } 
+        }  
+        ,7500)
     }
+}
+
+//#region Glow Functions
+
+function glowClear(){
+    for (let i = 0; i <  projectList.length; i++){
+        if(projectList[i] != undefined){
+
+            document.getElementById(projectList[i].id).style.transition = "unset"
+            document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor2")[0].style.transition = "unset"
+           
+            document.getElementById(projectList[i].id).style.filter = "brightness(1)";
+            document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor2")[0].style.filter = "drop-shadow(0 0 0 0)"
+            // document.getElementById(projectList[i].id).style.opacity = 1
+        }
+
+    }   
+    document.getElementById("projectInformations").style.backgroundColor = "white";
+
+    clearInterval(intervalGlow);
+}
+
+if(Mq480.matches){
+setTimeout(() => {if(glowEnabled == 0){startGlowInterval(x = 0);}},7500)
+}
+else{sessionStorage;setItem("glowEnabled","1")}
+function startGlowInterval(x){  
+    intervalGlow = setInterval(function(){glowProj(x,glowState)},800)
 
 }
 
+function glowProj(x){
+    bwa = 1-Math.max(-glowState*0.5,-0.5)
+    colorIndex = ["white","rgb(255, 228, 155)"]
+    if(document.getElementById("spot").style.visibility == "visible"){
+
+        if (projectList[x].link !== "none"){
+        document.getElementById(projectList[x].id).style.transition = "filter ease-out 1.2s"
+        document.getElementById(projectList[x].id).getElementsByClassName("backgroundColor2")[0].style.transition = "filter ease-out 1.2s"
+        document.getElementById("projectInformations").style.transition = "background-color ease-out 1.2s"
+
+        document.getElementById(projectList[x].id).style.filter = "brightness("+bwa+")";
+        document.getElementById(projectList[x].id).getElementsByClassName("backgroundColor2")[0].style.filter = "drop-shadow(0 0 10dvh rgba(255, 202, 58, "+Math.max(glowState,0.2)+"))"
+        document.getElementById("projectInformations").style.backgroundColor = colorIndex[Math.max(glowState,0)];
+        }
+    }
+    else{
+        for (let i = 0; i < projectList.length; i++){
+        // setTimeout(() => {
+            document.getElementById(projectList[i].id).style.transition = "filter ease-out 1.2s"
+            document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor2")[0].style.transition = "filter ease-out 1.2s"
+            document.getElementById(projectList[i].id).style.filter = "brightness("+bwa+")";
+            document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor2")[0].style.filter = "drop-shadow(0 0 10dvh rgba(255, 202, 58, "+Math.max(glowState,0.2)+"))"
+        // },(i*50))
+        }
+    }
+    glowState = -glowState;
+    // console.log(bwa)
+    // console.log(glowState)
+}
+
+//#endregion
 
 window.addEventListener("mousemove",function(e){ Mx=e.clientX; My=e.clientY;} )
 

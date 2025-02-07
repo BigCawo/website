@@ -484,7 +484,7 @@ let projectList = [
         spot : 1,
         imgSrc1 : "none",
         imgSrc2 : "none",
-        class : "objet ",
+        class : "multimedia illustration mediation",
         link : ""
 
     },
@@ -501,7 +501,7 @@ let projectList = [
         spot : 1,
         imgSrc1 : "madmax-steeringwheel.jpg",
         imgSrc2 : "none",
-        class : "objet ",
+        class : "multimedia",
         link : "https://johhnry.com/work/mad-max-vr.html",
         mirror : 1,
         miniature : 0,
