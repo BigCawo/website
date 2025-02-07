@@ -11,7 +11,7 @@ let glowState = -1
 
 let glowEnabled = sessionStorage.getItem("glowEnabled")
 console.log(glowEnabled)
-sessionStorage.setItem("glowEnabled","0")
+
 if(glowEnabled == undefined || null){
     sessionStorage.setItem("glowEnabled","0")
 }
@@ -625,7 +625,7 @@ function projectHilight(x){
                 }
             } 
         }  
-        ,7500)
+        ,500)
     }
 }
 
@@ -640,6 +640,11 @@ function glowClear(){
            
             document.getElementById(projectList[i].id).style.filter = "brightness(1)";
             document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor2")[0].style.filter = "drop-shadow(0 0 0 0)"
+            document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor")[0].style.filter = "drop-shadow(0 0 0 0)"
+        
+
+            console.log("jsuis passé par la")
+
             // document.getElementById(projectList[i].id).style.opacity = 1
         }
 
@@ -650,10 +655,11 @@ function glowClear(){
 }
 
 if(Mq480.matches){
-setTimeout(() => {if(glowEnabled == 0){startGlowInterval(x = 0);}},7500)
+setTimeout(() => {if(glowEnabled == 0){startGlowInterval(x = 0);}},500  )
 }
 else{sessionStorage;setItem("glowEnabled","1")}
 function startGlowInterval(x){  
+
     intervalGlow = setInterval(function(){glowProj(x,glowState)},800)
 
 }
@@ -669,7 +675,7 @@ function glowProj(x){
         document.getElementById("projectInformations").style.transition = "background-color ease-out 1.2s"
 
         document.getElementById(projectList[x].id).style.filter = "brightness("+bwa+")";
-        document.getElementById(projectList[x].id).getElementsByClassName("backgroundColor2")[0].style.filter = "drop-shadow(0 0 10dvh rgba(255, 202, 58, "+Math.max(glowState,0.2)+"))"
+        document.getElementById(projectList[x].id).getElementsByClassName("backgroundColor2")[0].style.filter = "drop-shadow(0 0 10vmin rgba(255, 202, 58, "+Math.max(glowState,0.2)+"))"
         document.getElementById("projectInformations").style.backgroundColor = colorIndex[Math.max(glowState,0)];
         }
     }
@@ -677,17 +683,17 @@ function glowProj(x){
         for (let i = 0; i < projectList.length; i++){
         // setTimeout(() => {
             document.getElementById(projectList[i].id).style.transition = "filter ease-out 1.2s"
-            document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor2")[0].style.transition = "filter ease-out 1.2s"
+            document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor")[0].style.transition = "filter ease-out 1.2s"
             document.getElementById(projectList[i].id).style.filter = "brightness("+bwa+")";
-            document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor2")[0].style.filter = "drop-shadow(0 0 10dvh rgba(255, 202, 58, "+Math.max(glowState,0.2)+"))"
-        // },(i*50))
+        //     document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor")[0].style.filter = "drop-shadow(0 0 10vmin rgba(255, 202, 58, "+Math.max(glowState,0.2)+"))"
+        // // },(i*50))
         }
     }
     glowState = -glowState;
     // console.log(bwa)
     // console.log(glowState)
 }
-
+// sessionStorage.setItem("glowEnabled","0")
 //#endregion
 
 window.addEventListener("mousemove",function(e){ Mx=e.clientX; My=e.clientY;} )
