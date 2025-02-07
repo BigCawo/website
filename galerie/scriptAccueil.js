@@ -10,7 +10,7 @@ let y = 0
 let glowState = -1
 
 let glowEnabled = sessionStorage.getItem("glowEnabled")
-console.log(glowEnabled)
+console.log("wadawww "+glowEnabled)
 
 if(glowEnabled == undefined || null){
     sessionStorage.setItem("glowEnabled","0")
@@ -515,7 +515,7 @@ function projectSelect(x){
         sessionStorage.setItem("glowEnabled","1")
         glowEnabled = sessionStorage.getItem("glowEnabled")
     }
-    console.log(glowEnabled)
+    console.log("ici ma merde ?"+glowEnabled)
     
     y = projectValue
 
@@ -659,7 +659,7 @@ function glowClear(){
 if(Mq480.matches){
 setTimeout(() => {if(glowEnabled == 0){startGlowInterval(x = 0);}},7500  )
 }
-else{sessionStorage.setItem("glowEnabled","1")}
+else{if(glowEnabled == 0){sessionStorage.setItem("glowEnabled","1")}}
 function startGlowInterval(x){  
 
     intervalGlow = setInterval(function(){glowProj(x,glowState)},800)
