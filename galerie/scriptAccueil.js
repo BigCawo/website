@@ -15,6 +15,8 @@ console.log(glowEnabled)
 if(glowEnabled == undefined || null){
     sessionStorage.setItem("glowEnabled","0")
 }
+glowEnabled = sessionStorage.getItem("glowEnabled")
+
 console.log(glowEnabled)
 let intervalGlow = undefined
 let lastGlow = undefined
@@ -625,7 +627,7 @@ function projectHilight(x){
                 }
             } 
         }  
-        ,500)
+        ,7500)
     }
 }
 
@@ -640,7 +642,7 @@ function glowClear(){
            
             document.getElementById(projectList[i].id).style.filter = "brightness(1)";
             document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor2")[0].style.filter = "drop-shadow(0 0 0 0)"
-            document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor")[0].style.filter = "drop-shadow(0 0 0 0)"
+            // document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor")[0].style.filter = "drop-shadow(0 0 0 0)"
         
 
             console.log("jsuis passé par la")
@@ -655,9 +657,9 @@ function glowClear(){
 }
 
 if(Mq480.matches){
-setTimeout(() => {if(glowEnabled == 0){startGlowInterval(x = 0);}},500  )
+setTimeout(() => {if(glowEnabled == 0){startGlowInterval(x = 0);}},7500  )
 }
-else{sessionStorage;setItem("glowEnabled","1")}
+else{sessionStorage.setItem("glowEnabled","1")}
 function startGlowInterval(x){  
 
     intervalGlow = setInterval(function(){glowProj(x,glowState)},800)
@@ -683,7 +685,7 @@ function glowProj(x){
         for (let i = 0; i < projectList.length; i++){
         // setTimeout(() => {
             document.getElementById(projectList[i].id).style.transition = "filter ease-out 1.2s"
-            document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor")[0].style.transition = "filter ease-out 1.2s"
+            // document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor")[0].style.transition = "filter ease-out 1.2s"
             document.getElementById(projectList[i].id).style.filter = "brightness("+bwa+")";
         //     document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor")[0].style.filter = "drop-shadow(0 0 10vmin rgba(255, 202, 58, "+Math.max(glowState,0.2)+"))"
         // // },(i*50))
