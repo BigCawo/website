@@ -307,7 +307,7 @@ for (let i = 0 ; i < projectList.length; i++) {
 
 
 }
-
+glowClear();
 // project sort by position
 
 
@@ -652,8 +652,6 @@ function glowClear(){
             document.getElementById(projectList[i].id).style.filter = "brightness(1)";
             document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor2")[0].style.filter = "drop-shadow(0 0 0 0)"
             // document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor")[0].style.filter = "drop-shadow(0 0 0 0)"
-        
-
             // document.getElementById(projectList[i].id).style.opacity = 1
         }
 
