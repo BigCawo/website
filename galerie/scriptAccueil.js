@@ -8,18 +8,15 @@ let w = projectValue
 let descContainer = document.getElementById("projectInformations")
 let y = 0
 let glowState = -1
-
 let glowEnabled = sessionStorage.getItem("glowEnabled")
-console.log("wadawww "+glowEnabled)
 
-if(glowEnabled == undefined || null){
-    sessionStorage.setItem("glowEnabled","0")
-}
-glowEnabled = sessionStorage.getItem("glowEnabled")
+glowCheck(glowEnabled);
+
+
+
 
 console.log(glowEnabled)
 let intervalGlow = undefined
-let lastGlow = undefined
 
 projectList.sort((a, b) => a.offset[0] - b.offset[0])
 
@@ -511,11 +508,8 @@ function descSpawn(x){
 function projectSelect(x){
     if (glowEnabled == 0){
 
-        console.log(glowEnabled)
-        sessionStorage.setItem("glowEnabled","1")
-        glowEnabled = sessionStorage.getItem("glowEnabled")
+        glowCheck(1);
     }
-    console.log("ici ma merde ?"+glowEnabled)
     
     y = projectValue
 
@@ -524,20 +518,23 @@ function projectSelect(x){
     if (projectValue == x || x == -1){
 
         if (projectList[x].link !== undefined) {
-            
-            if (projectList[x].link.includes('http')){
-                window.open(projectList[x].link, '_blank');
-                sessionStorage.setItem("glowEnabled","2");
-                }
-            else if (projectList[x].link == "none")
-            {
-            shake(document.getElementById(projectList[x].id));
-            }
-            else
 
-            window.location.href = "/galerie/"+ projectList[x].id
-            sessionStorage.setItem("glowEnabled","2")
+            if (projectList[x].link !== "none"){glowCheck(2);}
+            setTimeout(()=>{
+
+            if (projectList[x].link.includes('http'))
+                {window.open(projectList[x].link, '_blank');}
+
+            else if (projectList[x].link == "none")                
+            {shake(document.getElementById(projectList[x].id));}
+
+            else
+            {window.location.href = "/galerie/"+ projectList[x].id}
+                
+            },100)
             }
+            
+        
         
         else
         null;
@@ -585,7 +582,7 @@ function scrollTo(x){
 }
 
 function projectHilight(x){
-    if(intervalGlow !== undefined){glowClear();console.log("heyy")}
+    if(intervalGlow !== undefined){glowClear();}
 
     if(x >= 0){
         let a = Number(document.getElementById("button" + projectList[x].id.charAt(0).toUpperCase() + projectList[x].id.slice(1)).offsetWidth);
@@ -633,6 +630,18 @@ function projectHilight(x){
 
 //#region Glow Functions
 
+//get glow value
+function glowCheck(x){
+    
+    if(glowEnabled == undefined || null){
+        sessionStorage.setItem("glowEnabled","0")   
+    }
+    else {sessionStorage.setItem("glowEnabled",x)}
+    glowEnabled = sessionStorage.getItem("glowEnabled")
+    console.log(glowEnabled)
+}
+
+//clear glow effect
 function glowClear(){
     for (let i = 0; i <  projectList.length; i++){
         if(projectList[i] != undefined){
@@ -645,8 +654,6 @@ function glowClear(){
             // document.getElementById(projectList[i].id).getElementsByClassName("backgroundColor")[0].style.filter = "drop-shadow(0 0 0 0)"
         
 
-            console.log("jsuis passé par la")
-
             // document.getElementById(projectList[i].id).style.opacity = 1
         }
 
@@ -656,16 +663,19 @@ function glowClear(){
     clearInterval(intervalGlow);
 }
 
+// bypass glow 1 (computer version)
 if(Mq480.matches){
-setTimeout(() => {if(glowEnabled == 0){startGlowInterval(x = 0);}},7500  )
+setTimeout(() => {if(glowEnabled == 0){startGlowInterval(x = 0);}},10000)
 }
-else{if(glowEnabled == 0){sessionStorage.setItem("glowEnabled","1")}}
+else{if(glowEnabled == 0){glowCheck(1);}
+}
+
+//start glow loop
 function startGlowInterval(x){  
-
     intervalGlow = setInterval(function(){glowProj(x,glowState)},800)
-
 }
 
+//glow effect
 function glowProj(x){
     bwa = 1-Math.max(-glowState*0.5,-0.5)
     colorIndex = ["white","rgb(255, 228, 155)"]
@@ -692,10 +702,9 @@ function glowProj(x){
         }
     }
     glowState = -glowState;
-    // console.log(bwa)
-    // console.log(glowState)
+
 }
-// sessionStorage.setItem("glowEnabled","0")
+
 //#endregion
 
 window.addEventListener("mousemove",function(e){ Mx=e.clientX; My=e.clientY;} )
