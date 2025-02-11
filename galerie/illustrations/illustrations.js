@@ -3,8 +3,8 @@
 window.onresize = function(){
   if (localStorage.getItem("sectionOpen") !== undefined){
     sectionChange(localStorage.getItem("sectionOpen"));}
-  else {sectionChange(0)}
-  checkTypePresence(activeSection);
+  else {sectionChange(activeSection)}
+
 }
 
 
@@ -86,11 +86,11 @@ function generateTypesButtons(){
 
 }
 
-function checkTypePresence(x){
+function checkTypePresence(q){
   for (let i = 0; i< illusTypes.length-1; i++){
-    let illusSectioncheck = illusList.filter(function test(z){if (z.type.includes(x)){return z}})
+    let illusSectioncheck = illusList.filter(function test(z){if (z.type.includes(q)){return z}})
     let illusCheck = illusSectioncheck.filter(function test(z){if (z.type.includes(illusTypes[i])){return z}})
-    console.log(illusTypes[i],illusCheck.length)
+    // console.log(illusTypes[i],illusCheck.length)
     if (illusCheck.length == 0){
       document.getElementsByClassName("buttonType")[i].style.opacity = 0.5
       document.getElementsByClassName("buttonType")[i].disabled = true
@@ -113,7 +113,7 @@ function loadIllustrations(){
 
 for (i = 0; i < illusListImagination.length ; i++){
   const illusCanvas = document.createElement("div")
-  illusCanvas.setAttribute("onclick","openModal("+i+",1)")
+  illusCanvas.setAttribute("onclick","openModal(event);")
   illusCanvas.className = "imgGallery"
   illusCanvas.id = illusListImagination[i].name
 
@@ -130,7 +130,7 @@ document.getElementsByClassName("galleryPhone")[0].appendChild(illusCanvas)
 
 for (i = 0; i < illusListImagination.length ; i++){
   const illusCanvas = document.createElement("div")
-  illusCanvas.setAttribute("onclick","openModal("+i+",1)")
+  illusCanvas.setAttribute("onclick","openModal(event);")
   illusCanvas.className = "imgGallery"
   illusCanvas.id = illusListImagination[i].name
 
@@ -139,6 +139,7 @@ for (i = 0; i < illusListImagination.length ; i++){
 
   const illus = document.createElement("img")
   illus.setAttribute("number",i)
+  illus.setAttribute("onclick","openModal(event);")
   illus.loading = "lazy"
   illus.src = illusListImagination[i].src
   document.getElementById(illusListImagination[i].name).appendChild(illus)
@@ -154,7 +155,7 @@ for (i = 0; i < illusListImagination.length ; i++){
 
   for (i = 0; i < illusListObservation.length ; i++){
     const illusCanvas = document.createElement("div")
-    illusCanvas.setAttribute("onclick","openModal("+i+",0)")
+    illusCanvas.setAttribute("onclick","openModal(event);")
     illusCanvas.className = "imgGallery"
     illusCanvas.id = illusListObservation[i].name
   
@@ -171,7 +172,7 @@ for (i = 0; i < illusListImagination.length ; i++){
   
   for (i = 0; i < illusListObservation.length ; i++){
     const illusCanvas = document.createElement("div")
-    illusCanvas.setAttribute("onclick","openModal("+i+",0)")
+    illusCanvas.setAttribute("onclick","openModal(event);")
     illusCanvas.className = "imgGallery"
     illusCanvas.id = illusListObservation[i].name
   
@@ -251,8 +252,8 @@ Mq480.addEventListener("change", function() {displayMode();});
 sectionChange(activeSection);
 
 function sectionChange(x){
-  activeSection = x
-  console.log(activeSection)
+  
+  
   sectionButtonTitle = document.getElementById("menuBar").getElementsByClassName("animatedContent")
   
   for (i = 0; i < sectionButtonTitle.length; i++){sectionButtonTitle[i].style.opacity = "0.5"; sectionButtons[i].style.borderColor = "rgba(0,0,0,0.7"}
@@ -265,7 +266,8 @@ function sectionChange(x){
   document.getElementById("main").scrollLeft = sectionWidth*x
 
   localStorage.setItem("sectionOpen", x)
-  checkTypePresence(activeSection);
+  
+  checkTypePresence(x);
   setTimeout(()=> {document.getElementById("antiScroll").style.visibility = "hidden"},650)
 
 }
@@ -283,8 +285,8 @@ illusList.sort((a, b) => a.type[0] - b.type[0])
 
 closeModal();
 
-function openModal(n,x) {
-
+function openModal(event) {
+    const source = event.srcElement
 
 
     document.getElementById("myModal").style.display = "block";
@@ -292,8 +294,8 @@ function openModal(n,x) {
     document.getElementById("main").style.maxHeight = "100dvh";
     document.getElementById("main").style.overflowY = "hidden";
 
-
-    slides.src = illusListLists[x][n].src
+    console.log(source)
+    slides.src = source.src
     
     imgRatio = slides.naturalHeight / slides.naturalWidth
     windowRatio = window.innerHeight / window.innerWidth
