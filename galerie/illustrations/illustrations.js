@@ -4,6 +4,7 @@ window.onresize = function(){
   if (localStorage.getItem("sectionOpen") !== undefined){
     sectionChange(localStorage.getItem("sectionOpen"));}
   else {sectionChange(0)}
+  checkTypePresence(activeSection);
 }
 
 
@@ -47,13 +48,66 @@ let slides = document.getElementById("imgZoom")
 let slideContainer =  document.getElementById("modalImg")
 let slideFrame = document.getElementById("myModal")
 
+let activeSection = 0
+
+loadIllustrations();
+generateTypesButtons();
+checkTypePresence(activeSection);
+
+function generateTypesButtons(){
+  const buttonTypesContainer = document.createElement("div")
+  buttonTypesContainer.id = "buttonTypesContainer"
+  buttonTypesContainer.style.position = "fixed"
+  buttonTypesContainer.style.top = "0"
+  buttonTypesContainer.style.display = "flex"
+  buttonTypesContainer.style.flexDirection = "column"
+  buttonTypesContainer.style.justifyContent = "center"
+  buttonTypesContainer.style.width = "20dvw"
+  buttonTypesContainer.style.height = "80dvh"
+  document.body.appendChild(buttonTypesContainer)
+
+  for (let i = 0; i< illusTypes.length;i++){
+    const buttonTypes = document.createElement("button")
+    buttonTypes.setAttribute("onclick","sortBy('"+illusTypes[i]+"')")
+    buttonTypes.innerHTML = illusTypes[i]
+    buttonTypes.style.width ="100%"
+    buttonTypes.style.fontSize ="150%"
+    buttonTypes.style.fontFamily ="Fababrac"
+    buttonTypes.className = "buttonType"
+    buttonTypes.style.backgroundColor = "unset"
+    buttonTypes.id = "buttonType"+illusTypes[i]
+    buttonTypes.style.height = 70/illusTypes.length+"dvh"
+    document.getElementById("buttonTypesContainer").appendChild(buttonTypes)   
+    
+  }
+
+
+
+
+}
+
+function checkTypePresence(x){
+  for (let i = 0; i< illusTypes.length-1; i++){
+    let illusSectioncheck = illusList.filter(function test(z){if (z.type.includes(x)){return z}})
+    let illusCheck = illusSectioncheck.filter(function test(z){if (z.type.includes(illusTypes[i])){return z}})
+    console.log(illusTypes[i],illusCheck.length)
+    if (illusCheck.length == 0){
+      document.getElementsByClassName("buttonType")[i].style.opacity = 0.5
+      document.getElementsByClassName("buttonType")[i].disabled = true
+    }
+    else {
+      document.getElementsByClassName("buttonType")[i].style.opacity = 1
+      document.getElementsByClassName("buttonType")[i].disabled = false
+    }
+  }
+}
+
 // ~~~~~ IMAGE GENERATION ~~~~~
 
 
 // IMAGINATION
 
-
-
+function loadIllustrations(){
 //(phone)
 
 
@@ -131,8 +185,39 @@ for (i = 0; i < illusListImagination.length ; i++){
     document.getElementById(illusListObservation[i].name).appendChild(illus)
   }
 
+}
+
+function clearIllustrations(){
+  const elements = document.getElementsByClassName("imgGallery");
+  while(elements.length > 0){
+      elements[0].parentNode.removeChild(elements[0]);
+  }
+}
 // ~~~~~ 
 
+// sort by
+
+function sortBy(x){
+
+  clearIllustrations();
+  if (x == "X"){
+    illusListObservation = illusList.filter(function test(x){if (x.type.includes(0)){return x}})
+    illusListImagination = illusList.filter(function test(x){if (x.type.includes(1)){return x}})
+    for (i = 0; i < illusTypes.length; i++){
+      document.getElementsByClassName("buttonType")[i].style.fontWeight = "unset"
+    }
+    
+  }
+  else{
+    newIllusList = illusList.filter(function test(y){if (y.type.includes(x)){return y}})
+    illusListObservation = newIllusList.filter(function test(x){if (x.type.includes(0)){return x}})
+    illusListImagination = newIllusList.filter(function test(x){if (x.type.includes(1)){return x}})
+
+    document.getElementById("buttonType"+x).style.fontWeight = "900"
+    document.getElementsByClassName("buttonType")[illusTypes.length-1].style.fontWeight = "900"
+  }
+  loadIllustrations();
+}
 
 // change display
 
@@ -163,25 +248,26 @@ Mq480.addEventListener("change", function() {displayMode();});
 
 // section change
 
-sectionChange(0,1);
+sectionChange(activeSection);
 
-function sectionChange(x,y){
-  
+function sectionChange(x){
+  activeSection = x
+  console.log(activeSection)
   sectionButtonTitle = document.getElementById("menuBar").getElementsByClassName("animatedContent")
   
-  for (i = 0; i < sectionButtonTitle.length; i++){sectionButtonTitle[i].style.opacity = "0.7"; sectionButtons[i].style.borderColor = "rgba(0,0,0,0.7"}
+  for (i = 0; i < sectionButtonTitle.length; i++){sectionButtonTitle[i].style.opacity = "0.5"; sectionButtons[i].style.borderColor = "rgba(0,0,0,0.7"}
   sectionButtonTitle[x].style.opacity = "1"
   sectionButtons[x].style.borderColor = "black"
-  if(y !== 1){
+
   let sectionWidth = document.getElementById("illustrations").offsetWidth
   document.getElementById("antiScroll").style.visibility = "visible"
   document.getElementById("main").style.scrollBehavior = "smooth"
   document.getElementById("main").scrollLeft = sectionWidth*x
 
   localStorage.setItem("sectionOpen", x)
-
+  checkTypePresence(activeSection);
   setTimeout(()=> {document.getElementById("antiScroll").style.visibility = "hidden"},650)
-}
+
 }
 
 
