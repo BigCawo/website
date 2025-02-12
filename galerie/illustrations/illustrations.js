@@ -1,10 +1,9 @@
 // reload
 
 window.onresize = function(){
-  if (localStorage.getItem("sectionOpen") !== undefined){
-    sectionChange(localStorage.getItem("sectionOpen"));}
-  else {sectionChange(activeSection)}
-
+  sectionChange(activeSection)
+  if(Mq480.matches){genButtonTypesContainer.style.alignItems = "left"}
+  else{genButtonTypesContainer.style.alignItems = "center"}
 }
 
 
@@ -18,6 +17,7 @@ window.onresize = function(){
 
 let sections = document.getElementsByClassName("section")
 let sectionButtons = document.getElementById("menuBar").querySelectorAll("#menuBar>div")
+
 for (i = 0; i< sections.length; i++){
 
 
@@ -31,9 +31,19 @@ currscroll = Math.ceil(st / 50) * 50;
 // console.log("last : "+lastscroll+", current : "+currscroll)
 
 if (currscroll > lastscroll) {
-    Sidebar.style.bottom= "calc(-1*var(--h-sidebar))"} 
-else 
+    Sidebar.style.bottom= "calc(-1*var(--h-sidebar))"
+    if (buttonTypesContainer != undefined){
+      console.log("oui")
+      buttonTypesContainer.style.height = "70dvh"
+    }
+
+  } 
+else {
     Sidebar.style.bottom= "0"
+    if (buttonTypesContainer != undefined){
+      console.log("non")
+      buttonTypesContainer.style.height = "60dvh"
+    }}
    }}
   )     
 } 
@@ -47,7 +57,7 @@ let illusListLists = [illusListObservation,illusListImagination]
 let slides = document.getElementById("imgZoom")
 let slideContainer =  document.getElementById("modalImg")
 let slideFrame = document.getElementById("myModal")
-
+let buttonTypesContainer = undefined
 let activeSection = 0
 
 loadIllustrations();
@@ -55,29 +65,38 @@ generateTypesButtons();
 checkTypePresence(activeSection);
 
 function generateTypesButtons(){
-  const buttonTypesContainer = document.createElement("div")
-  buttonTypesContainer.id = "buttonTypesContainer"
-  buttonTypesContainer.style.position = "fixed"
-  buttonTypesContainer.style.top = "0"
-  buttonTypesContainer.style.display = "flex"
-  buttonTypesContainer.style.flexDirection = "column"
-  buttonTypesContainer.style.justifyContent = "center"
-  buttonTypesContainer.style.width = "20dvw"
-  buttonTypesContainer.style.height = "80dvh"
-  document.body.appendChild(buttonTypesContainer)
+  const genButtonTypesContainer = document.createElement("div")
+  genButtonTypesContainer.id = "buttonTypesContainer"
+  genButtonTypesContainer.style.position = "absolute"
+  genButtonTypesContainer.style.bottom = "0"
+  genButtonTypesContainer.style.display = "flex"
+  genButtonTypesContainer.style.flexDirection = "column"
+  genButtonTypesContainer.style.justifyContent = "space-around"
+  if(Mq480.matches){genButtonTypesContainer.style.alignItems = "left"}
+  else{genButtonTypesContainer.style.alignItems = "center"}
+  genButtonTypesContainer.style.width = "100%"
+  genButtonTypesContainer.style.height = "60dvh"
+  genButtonTypesContainer.style.transition = "all ease 0.2s"
+  document.getElementById("buttonTypeFrame").appendChild(genButtonTypesContainer)
+
+  buttonTypesContainer = document.getElementById("buttonTypesContainer")
 
   for (let i = 0; i< illusTypes.length;i++){
     const buttonTypes = document.createElement("button")
     buttonTypes.setAttribute("onclick","sortBy('"+illusTypes[i]+"')")
     buttonTypes.innerHTML = illusTypes[i]
-    buttonTypes.style.width ="100%"
+    buttonTypes.style.width ="fit-content"   
+    buttonTypes.style.padding ="0 3vw 0 3vw"  
+    buttonTypes.style.borderRadius ="1vw"  
     buttonTypes.style.fontSize ="150%"
     buttonTypes.style.fontFamily ="Fababrac"
+    buttonTypes.style.backgroundColor = "rgba(255,255,255,0.75"
+    buttonTypes.style.filter = "unset"
     buttonTypes.className = "buttonType"
-    buttonTypes.style.backgroundColor = "unset"
     buttonTypes.id = "buttonType"+illusTypes[i]
-    buttonTypes.style.height = 70/illusTypes.length+"dvh"
-    document.getElementById("buttonTypesContainer").appendChild(buttonTypes)   
+    buttonTypes.style.height = "fit-content"
+    // buttonTypes.style.height = 60/illusTypes.length+"dvh"
+    buttonTypesContainer.appendChild(buttonTypes)   
     
   }
 
@@ -191,8 +210,10 @@ for (i = 0; i < illusListImagination.length ; i++){
 function clearIllustrations(){
   const elements = document.getElementsByClassName("imgGallery");
   while(elements.length > 0){
-      elements[0].parentNode.removeChild(elements[0]);
-  }
+
+      elements[0].parentNode.removeChild(elements[0]);}
+
+
 }
 // ~~~~~ 
 
@@ -214,6 +235,10 @@ function sortBy(x){
     illusListObservation = newIllusList.filter(function test(x){if (x.type.includes(0)){return x}})
     illusListImagination = newIllusList.filter(function test(x){if (x.type.includes(1)){return x}})
 
+      for (i = 0; i < illusTypes.length; i++){
+        document.getElementsByClassName("buttonType")[i].style.fontWeight = "unset"
+      }
+    
     document.getElementById("buttonType"+x).style.fontWeight = "900"
     document.getElementsByClassName("buttonType")[illusTypes.length-1].style.fontWeight = "900"
   }

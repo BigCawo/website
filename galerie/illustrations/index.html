@@ -27,7 +27,7 @@
     
     <style>
         :root{
-            --scaleButtonsIllustration : 0.8
+            --scaleButtonsIllustration : 1
         }
 
         #main{
@@ -45,6 +45,10 @@
             display: flex; 
             flex-direction: row; 
 
+        }
+
+        #menuBar{
+            padding: 0 1vmax 0 1vmax;
         }
 
         #menuBar > div{
@@ -179,13 +183,10 @@
         @media  screen and (max-width: 480px) {
 
             :root{
-            --scaleButtonsIllustration : 0.8
+            --scaleButtonsIllustration : 1
         }
 
-            #menuBar > div{
 
-            margin: 3vmin;
-        }
 
         .close {
             top : unset;
@@ -205,6 +206,8 @@
 <body>
     
     <div id="footer">
+
+
         
         <div>
             <button class="bottomButton" onclick="serviceSelected(9)"></button>
@@ -212,10 +215,13 @@
             
             <div animation="title-apropos" class="bottomTitle animatedTitle" style="visibility: hidden;"></div>
         </div>
-        <div id="menuBar" style="position: absolute;  bottom: 11dvh; justify-content: space-between; padding-left: 2vmin;  padding-right: 2vmin;"> 
+
+        <div id="menuBar" style="position: absolute;  bottom: 11dvh; justify-content: space-between; width: 100dvw;"> 
             <div>
                 <button class="anyButton" onclick="sectionChange(0)"></button>
                 <div animation="title-imagination" class="animatedContent " style="width: calc(var(--scaleRatio)*25vmin);"></div>
+                <div id="buttonTypeFrame" style=" width: 100%; position: absolute; bottom: 17dvh;"></div>
+
             </div>
             <div>
                 <button class="anyButton" onclick="sectionChange(1)"></button>
@@ -223,6 +229,7 @@
             </div>
 
         </div>
+
         <div>
             <button  class="bottomButton"> <a href="/aPropos/" style="display: inline-block; width: 100%; height: 100%;"></a></button>
             <div animation="apropos" class="cone animatedContent"></div>
