@@ -66,6 +66,8 @@ loadIllustrations();
 generateTypesButtons();
 checkTypePresence(activeSection);
 
+//#region generation boutons classification
+
 function generateTypesButtons(){
   const genButtonTypesContainer = document.createElement("div")
   genButtonTypesContainer.id = "buttonTypesContainer"
@@ -123,6 +125,9 @@ function checkTypePresence(q){
   }
 }
 
+
+//#endregion
+
 // ~~~~~ IMAGE GENERATION ~~~~~
 
 
@@ -154,6 +159,9 @@ for (i = 0; i < illusListImagination.length ; i++){
   illusCanvas.setAttribute("onclick","openModal(event);")
   illusCanvas.className = "imgGallery"
   illusCanvas.id = illusListImagination[i].name
+  
+
+  document.getElementsByClassName("galleryPhone")[0].appendChild(illusCanvas)
 
   if (i % 2 == 0) {document.getElementsByClassName("imgRight")[0].appendChild(illusCanvas)}
   else{document.getElementsByClassName("imgLeft")[0].appendChild(illusCanvas)}
@@ -163,6 +171,7 @@ for (i = 0; i < illusListImagination.length ; i++){
   illus.setAttribute("onclick","openModal(event);")
   illus.loading = "lazy"
   illus.src = illusListImagination[i].src
+  
   document.getElementById(illusListImagination[i].name).appendChild(illus)
 }
 
@@ -321,7 +330,7 @@ function openModal(event) {
     document.getElementById("main").style.maxHeight = "100dvh";
     document.getElementById("main").style.overflowY = "hidden";
 
-
+    
     slides.src = source.src
     
     imgRatio = slides.naturalHeight / slides.naturalWidth

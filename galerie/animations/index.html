@@ -25,7 +25,164 @@
     <script src="animDatas.js" defer></script>
     <script src="animations.js" defer></script>
 
+    <style>
+        :root{
+            --scaleButtonsIllustration : 1
+        }
 
+        #main{
+            overflow-x: hidden;
+        }
+
+
+
+        #menuBar{
+            padding: 0 1vmax 0 1vmax;
+        }
+
+        #menuBar > div{
+            
+            scale: var(--scaleButtonsIllustration);
+            border-radius: 2vmin; 
+            
+            background-color: rgba(255, 255, 255, 0.75);
+            border: solid black calc(var(--borderWidth)/var(--scaleButtonsIllustration));
+            margin: 0;
+        }
+
+
+        #antiScroll{
+            width: 100dvw; 
+            height: 100dvh; 
+            position: fixed; 
+            z-index: 4; 
+            visibility: hidden;
+        }
+
+        #menuBar >  div{
+            transition: opacity ease 0.1s;
+            opacity: 0.85;
+        }
+
+        #menuBar >  div:hover{
+            transition: opacity ease 0.1s;
+            opacity: 1;
+        }
+
+        #modalImg{
+            overflow: hidden;
+            padding: 2vmin;  
+
+        } 
+        #myModal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            height: 100dvh;
+            max-width: 100dvw;
+            overflow: scroll;
+            background-color: rgba(0, 0, 0, 0.2);
+            }
+
+
+        
+        #imgZoom{
+            overflow: hidden;
+        }
+
+        #galleryComputer{
+            display: flex;            
+            flex-direction: row;
+            max-width: 100%;
+ 
+        }
+        #galleryComputer > div{
+            flex-basis: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .close{
+            top: 3vh;
+        }
+
+
+
+        /* Galerie */
+
+        .imgGallery img {
+            padding: 1vmin;
+        }
+
+        .imgGallery img{
+            z-index: 50;
+
+            transition: 0.3s;
+            }
+            
+        .imgGallery img:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        /* The Modal (background) */
+
+        /* Modal Content */
+
+        /* .modalImg{
+            position: fixed;
+            overflow: scroll;
+            padding: 2vmin;
+            display: block;       
+            height: 100dvh;     
+        } */
+
+        /* The Close Button */
+        .close {
+        display: block;
+        z-index: 10;
+        color: rgb(255, 255, 255);
+        width: 30px;
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0.75);
+        position: fixed;
+        top: 5vh;
+        right: 5vh;
+        font-size: 35px;
+        line-height: 27px;
+        text-align: center;
+        }
+
+        .close:hover
+         {
+        color: rgb(0, 0, 0);
+        background-color: rgba(255, 255, 255, 0.75);
+        text-decoration: none;
+        cursor: pointer;
+        }
+
+
+            
+        @media  screen and (max-width: 480px) {
+
+            :root{
+            --scaleButtonsIllustration : 1
+        }
+
+
+
+        .close {
+            top : unset;
+            bottom : 5vh
+        }
+
+
+
+
+        }
+    </style>
 
 
 </head>
@@ -65,47 +222,34 @@
     </div>
 
     <div id="antiScroll"></div>
-    <div id = "main" style="width: 100dvw;">
-        
+    <div id = "main">
+        <div style="max-height: 80dvh; padding-left: 5dvh;">
+            <div class="carton" >
+                <h1>Animations</h1>
+                <p>Quelques travaux contenant des créations animées :
+                    <br><br>
+                    <u><b><a href="/galerie/pommeDeTerre/">Pomme De Terre</a></b></u> &nbsp;&lpar;Stop-motion&rpar;<br>
+                    <u><b><a href="/galerie/terresLointaines/">Terres Lointaines</a></b></u> &nbsp;&lpar; <i>Stop-motion ; animation numérique</i> &rpar;<br>
+                    <u><b><a href="/galerie/poleImage/">Pôles images</a></b></u> &nbsp;&lpar;Stop-motion ; animation numérique&rpar;<br>
+                    <u><b><a href="/galerie/chmupTheDog/">Chmup The Dog</a></b></u> &nbsp;&lpar;pixel art&rpar;<br>
+                    <u><b><a href="/galerie/fabriqueABrac/">La Fabrique à Brac</a></b></u> &nbsp;&lpar;Stop-motion ; animation numérique&rpar;
+                    <br><br> 
+                    Et une petite sélection d'animations ! :</b></p>
+            </div>
+
+            <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
+        </div> 
 
         <div id="sectionContainer">
-            <div class="section" id="illustrations" style="width: 100dvw; overflow: scroll;">
+            <div class="section" id="illustrations">
 
-                <div class="galleryComputer" id="bttt" style="width: 650dvw; align-items: end;">
-                    <div style="height: 80dvh; padding-left: 5dvh; min-width: 40dvw;">
-                        <div class="carton" style="max-width: 40dvw;">
-                            <h1>Animations</h1>
-                            <p>Quelques travaux contenant des créations animées :
-                                <br><br>
-                                <u><b><a href="/galerie/pommeDeTerre/">Pomme De Terre</a></b></u> &nbsp;&lpar;Stop-motion&rpar;<br>
-                                <u><b><a href="/galerie/terresLointaines/">Terres Lointaines</a></b></u> &nbsp;&lpar; <i>Stop-motion ; animation numérique</i> &rpar;<br>
-                                <u><b><a href="/galerie/poleImage/">Pôles images</a></b></u> &nbsp;&lpar;Stop-motion ; animation numérique&rpar;<br>
-                                <u><b><a href="/galerie/chmupTheDog/">Chmup The Dog</a></b></u> &nbsp;&lpar;pixel art&rpar;<br>
-                                <u><b><a href="/galerie/fabriqueABrac/">La Fabrique à Brac</a></b></u> &nbsp;&lpar;Stop-motion ; animation numérique&rpar;
-                                <br><br> 
-                                Et une petite sélection d'animations ! :</b></p>
-                        </div>
-
-                        <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
-                    </div>
-                    <!-- <div class="imgLeft"></div>
-                    <div class="imgRight"></div> -->
+                <div class="galleryComputer">
+                    <div class="imgLeft"></div>
+                    <div class="imgRight"></div>
                 </div>
 
-                <div class="galleryPhone" style="display: none !important; flex-direction: column; align-items: center">
-                    <div class="flexcontainer" style="min-height: 40dvh; padding : 3dvh;">
-                        <div class="carton">
-                            <h1>Animations</h1>
-                            <p>Quelques travaux contenant des créations animées :
-                                <br><br>
-                                <u><b><a href="/galerie/pommeDeTerre/">Pomme De Terre</a></b></u> &nbsp;&lpar;Stop-motion&rpar;<br>
-                                <u><b><a href="/galerie/terresLointaines/">Terres Lointaines</a></b></u> &nbsp;&lpar; <i>Stop-motion ; animation numérique</i> &rpar;<br>
-                                <u><b><a href="/galerie/poleImage/">Pôles images</a></b></u> &nbsp;&lpar;Stop-motion ; animation numérique&rpar;<br>
-                                <u><b><a href="/galerie/chmupTheDog/">Chmup The Dog</a></b></u> &nbsp;&lpar;pixel art&rpar;<br>
-                                <u><b><a href="/galerie/fabriqueABrac/">La Fabrique à Brac/a></b></u> &nbsp;&lpar;Stop-motion ; animation numérique&rpar;
-                                <br><br> 
-                                Et une petite sélection d'animations ! :</b></p>
-                        </div>
+                <div class="galleryPhone" style=" flex-direction: column; align-items: center">
+
                 </div>
 
             </div>
@@ -129,6 +273,7 @@
 
 
     
+    
     <div id="myModal">
         <span class="close cursor" onclick="closeModal()">&times;</span>
         
@@ -137,7 +282,7 @@
         <img id="imgZoom" loading="lazy" src="" style="height: 100%;">
         </div>            
 
-    </div>  
+    </div>    
 
 
 

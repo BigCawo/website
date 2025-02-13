@@ -4,7 +4,7 @@ let illusList =[
     name :"blessée",
     src : "01b.gif",
     type : [1],
-    size: 1,
+    size: 0.8,
     date : ""
 },
 {
@@ -59,6 +59,34 @@ let illusList =[
 {
     name :"toupie 03",
     src : "05_toupies_répartition-masse.gif",
+    type : [1],
+    size: 1,
+    date : ""
+},
+{
+    name :"pince a dessin 01",
+    src : "pince_a_dessin_F.gif",
+    type : [1],
+    size: 1,
+    date : ""
+},
+{
+    name :"pince a dessin 02",
+    src : "pince_a_dessin_FM_poignee_zone_prehension.gif",
+    type : [1],
+    size: 1,
+    date : ""
+},
+{
+    name :"pince a dessin 03",
+    src : "pince_a_dessin_P_ressort_01.gif",
+    type : [1],
+    size: 1,
+    date : ""
+},
+{
+    name :"pince a dessin 04",
+    src : "pince_a_dessin_P_ressort_03.gif",
     type : [1],
     size: 1,
     date : ""

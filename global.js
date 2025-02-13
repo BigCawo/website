@@ -62,10 +62,12 @@ for (let i = 0; i< clickableImgs.length; i++){
 
 function imgClick(event){
     const source = event.srcElement;
-    // console.log(source.src);
+    console.log(source.naturalWidth);
 
     const imgContainer = document.createElement("div")
     imgContainer.id = "imgViewer"
+    if (source.naturalWidth < 200 ){imgContainer.style.imageRendering = "pixelated"}
+    else{imgContainer.style.imageRendering = "unset"}
     imgContainer.style.position = "fixed"
     imgContainer.style.zIndex = "500"
     imgContainer.style.top = "0"
