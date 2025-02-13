@@ -1,9 +1,11 @@
 // reload
 
 window.onresize = function(){
+
+  if(Mq480.matches == true){document.getElementById("buttonTypesContainer").style.alignItems = "left"}
+  else{document.getElementById("buttonTypesContainer").style.alignItems = "center"}
   sectionChange(activeSection)
-  if(Mq480.matches){genButtonTypesContainer.style.alignItems = "left"}
-  else{genButtonTypesContainer.style.alignItems = "center"}
+
 }
 
 
@@ -33,7 +35,7 @@ currscroll = Math.ceil(st / 50) * 50;
 if (currscroll > lastscroll) {
     Sidebar.style.bottom= "calc(-1*var(--h-sidebar))"
     if (buttonTypesContainer != undefined){
-      console.log("oui")
+
       buttonTypesContainer.style.height = "70dvh"
     }
 
@@ -41,7 +43,7 @@ if (currscroll > lastscroll) {
 else {
     Sidebar.style.bottom= "0"
     if (buttonTypesContainer != undefined){
-      console.log("non")
+
       buttonTypesContainer.style.height = "60dvh"
     }}
    }}
@@ -319,7 +321,7 @@ function openModal(event) {
     document.getElementById("main").style.maxHeight = "100dvh";
     document.getElementById("main").style.overflowY = "hidden";
 
-    console.log(source)
+
     slides.src = source.src
     
     imgRatio = slides.naturalHeight / slides.naturalWidth
