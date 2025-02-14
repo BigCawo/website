@@ -302,7 +302,7 @@ let projectList = [
         scale : 1,
         imgSrc2 : "none",
         class : "multimedia mediation illustration ",
-        link : "https://html-classic.itch.zone/html/7436639/index.html",
+        link : "",
         mirror : 0,
         miniature : 0,
         
