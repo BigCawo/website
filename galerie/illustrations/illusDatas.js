@@ -24,7 +24,7 @@ let illusList =[
 {
     name :"observation à Paris, Montmartre",
     src : "2024-10-21-montmartre-unfinished.jpg",
-    type : [1,"architecture"],
+    type : [1,"architecture","paysage"],
 },
 {
     name :"la plaine encore",
@@ -259,7 +259,7 @@ let illusList =[
 {
     name :"Voyage interrail - 02",
     src : "voyage-interrail-02.jpg",
-    type : [1,"architecture"],
+    type : [1,"architecture","paysage"],
 },
 {
     name :"Voyage interrail - 03",
