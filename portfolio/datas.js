@@ -293,7 +293,7 @@ let projectList = [
         size : [837,532],
         id: "parlersEspace",
         name: "Parlers Espace",
-        text: "Dans le monde matériel auquel nous appartenons, notre personnalité transparaît à travers nos espaces. Des langages, propres à chacun émergent des aménagements, des objets avec lesquels nous bâtissons nos quotidiens.<br> <br> Dans ce mémoire, je pars à l'exploration de ces 'parlers espace' qui me fascinent. (attention ! ne fonctionne pas sur Safari)",
+        text: "Dans le monde matériel auquel nous appartenons, notre personnalité transparaît à travers nos espaces. Des langages, propres à chacun émergent des aménagements, des objets avec lesquels nous bâtissons nos quotidiens.<br> <br> Dans ce mémoire, je pars à l'exploration de ces 'parlers espace' qui me fascinent.",
         desc:"",
         type: "Mémoire",
         date: "2021",
