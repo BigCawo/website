@@ -35,7 +35,7 @@
             
             <div style="padding: 3vmin; display: flex; flex-direction: column; align-items: center;">
 
-                <p>Vous trouverez dans ce portfolio différents travaux que j'ai réalisés et qui se rapportent de près où de loin à mes intentions pour la résidence. Un clic pour avoir un aperçu du projet, deux clics pour accéder aux détails. <br> Pour voir les autres projets que j'ai réalisés, vous pouvez visiter le reste de mon site par <a href="/" target="_blank">ici </a> !</p>
+                <p>Vous trouverez dans ce portfolio une sélection de mes travaux.  <br> Un clic pour avoir un aperçu du projet, deux clics pour accéder aux détails. <br> Pour voir les autres projets que j'ai réalisés, vous pouvez visiter le reste de mon site par <a href="/" target="_blank">ici </a> !</p>
                 <p   style="font-size: 150%; font-family: Fababrac-soustitre; cursor: pointer;" onclick="heyooo()">X</p>
             </div>
         </div> 
@@ -124,7 +124,7 @@
     </div>
     <script defer>
 
-      if (localStorage.getItem("visited") != 1){
+      if (sessionStorage.getItem("visited") != 1){
 
         document.getElementById("introPorfolio").style.opacity = "1"
         document.getElementById("introPorfolio").style.display = "flex"
@@ -138,7 +138,7 @@
         document.getElementById("introPorfolio").style.opacity = "0"
         document.getElementById("projects").style.transition = "opacity ease 1s"; 
         document.getElementById("projects").style.opacity = "1";
-        localStorage.setItem("visited",1)}
+        sessionStorage.setItem("visited",1)}
       
       </script>
     
