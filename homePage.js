@@ -8,7 +8,7 @@
 let name = sessionStorage.getItem("explored")
 sessionStorage.setItem("ServicePage","home");
 
-
+oui();
 
 if (name == 1){
     oui();
