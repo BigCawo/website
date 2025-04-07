@@ -32,6 +32,29 @@ let illusList =[
     type : [1,"architecture","corps","paysage"],
 },
 {
+    name :"un dimanche aux goudes",
+    src : "2025-03-30-le dimanche aux goudes-01LQ.jpg",
+    type : [1,"paysage","nature"],
+},
+
+{
+    name :"en garde ! illustration anthologie n°2",
+    src : "2025-03-05_illustration LQ.jpg",
+    type : [0,"paysage","architecture","corps","vaisseau"],
+},
+
+{
+    name :"vivum, le plateau",
+    src : "2024_12_27_plateau_jeu_LQ.jpg",
+    type : [0,"paysage","nature"],
+},
+
+{
+    name :"vivum, la boîte",
+    src : "2025_01_24_couverture LQ.jpg",
+    type : [0,"paysage","nature"],
+},
+{
     name :"serpents à face humaine",
     src : "6.jpg",
     type : [0,"corps","creature"],
@@ -189,7 +212,7 @@ let illusList =[
 {
     name :"l'usine de Gardanne",
     src : "v.jpg",
-    type : [1,"architecture","paysage"],
+    type : [1,"architecture","paysage","nature"],
 },
 {
     name :"nouvel an 2024 - 02",
