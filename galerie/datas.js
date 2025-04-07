@@ -141,7 +141,7 @@ let projectList = [
         imgSrc1 : "lafabriqueabrac.gif",
         scale : 1,
         imgSrc2 : "none",
-        class : "mediation multimedia",
+        class : "mediation multimedia illustration",
         link : "",
         mirror : 0,
         miniature : 0,
