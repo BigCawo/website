@@ -129,7 +129,7 @@ let projectList = [
     },
     // FABRIQUE A BRAC
     {
-        offset : [1956,370],
+        offset : [1956,370],    
         size : [652,481],
         id: "fabriqueABrac",
         name: "Fabrique À Brac",

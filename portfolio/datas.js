@@ -29,7 +29,7 @@ let projectList = [
     // },
     // TERRES LOINTAINES
     {
-        offset : [3200,230],
+        offset : [2950,720],
         size : [707,208],
         id: "terresLointaines",
         name: "Terres Lointaines",
@@ -129,7 +129,7 @@ let projectList = [
     // },
     // FABRIQUE A BRAC
     {
-        offset : [0,370],
+        offset : [1650,370],
         size : [652,481],
         id: "fabriqueABrac",
         name: "Fabrique À Brac",
@@ -149,7 +149,7 @@ let projectList = [
     },
     // NASA
     {
-        offset : [0,0],
+        offset : [1650,0],
         size : [670,380],
         id: "nasa",
         name: "NASA",
@@ -229,7 +229,7 @@ let projectList = [
     // },
     // CHMUP
     {
-        offset : [2250,150],
+        offset : [1050,75],
         size : [424,386],
         id: "chmupTheDog",
         name: "Chmup The Dog",
@@ -289,7 +289,7 @@ let projectList = [
     // },
     // PARLERS ESPACE
     {
-        offset : [900,500],
+        offset : [0,75],
         size : [837,532],
         id: "parlersEspace",
         name: "Parlers Espace",
@@ -309,7 +309,7 @@ let projectList = [
     },
     // POMME DE TERRE
     {
-        offset : [4100,0],
+        offset : [2500,0],
         size : [653,586],
         id: "pommeDeTerre",
         name: "Pomme de Terre",
@@ -349,7 +349,7 @@ let projectList = [
     // },
     // POLES IMAGES
     {
-        offset : [1600,-3],
+        offset : [3500,-3],
         size : [445,589],
         id: "poleImage",
         name: "Qu'est ce qu'un Pôle Image ?",
@@ -369,7 +369,7 @@ let projectList = [
     },
     // ILLUSTRATIONS
     {
-        offset : [2900,500],
+        offset : [4200  ,300],
         size : [650,350],
         id: "illustrations",
         name: "Illustrations",
@@ -429,50 +429,50 @@ let projectList = [
         
     // },
     // STELLARIUM
-    {
-        offset : [5100,0],
-        size : [882,598],
-        id: "stellarium",
-        name: "Stellarium",
-        text: "Cet observatoire stellaire est un de mes premiers projets.<br><br> J'y propose au spectateur une visite guidée de la voie lactée et des exoplanètes potentiellement habitables proches de la terre.",
-        desc:"",
-        type: "Projet personnel",
-        date: "2016",
-        spot : 1,
-        imgSrc1 : "stellarium.png",
-        scale : 1,
-        imgSrc2 : "none",
-        class : "objet mediation",
-        link : "",
-        mirror : 0,
-        miniature : 0,
+    // {
+    //     offset : [5100,0],
+    //     size : [882,598],
+    //     id: "stellarium",
+    //     name: "Stellarium",
+    //     text: "Cet observatoire stellaire est un de mes premiers projets.<br><br> J'y propose au spectateur une visite guidée de la voie lactée et des exoplanètes potentiellement habitables proches de la terre.",
+    //     desc:"",
+    //     type: "Projet personnel",
+    //     date: "2016",
+    //     spot : 1,
+    //     imgSrc1 : "stellarium.png",
+    //     scale : 1,
+    //     imgSrc2 : "none",
+    //     class : "objet mediation",
+    //     link : "",
+    //     mirror : 0,
+    //     miniature : 0,
         
-    },
+    // },
     // ANIMATIONS
-    {
-        offset : [3800,660],
-        size : [491,350],
-        id: "animations",
-        name: "Animations",
-        text: "Vous trouverez par ici une selection d'animations que j'ai créées dans le cadre de projets ou pour le simple plaisir de donner vie aux images !",
-        desc:"",
-        type: "",
-        date: "",
-        spot : 1,
-        imgSrc1 : "animation_accueil.gif",
-        scale : 0.6,
-        imgSrc2 : "none",
-        class : "illustration multimedia",
-        link : "",
-        mirror : 0,
-        miniature : 0,
+    // {
+    //     offset : [3800,660],
+    //     size : [491,350],
+    //     id: "animations",
+    //     name: "Animations",
+    //     text: "Vous trouverez par ici une selection d'animations que j'ai créées dans le cadre de projets ou pour le simple plaisir de donner vie aux images !",
+    //     desc:"",
+    //     type: "",
+    //     date: "",
+    //     spot : 1,
+    //     imgSrc1 : "animation_accueil.gif",
+    //     scale : 0.6,
+    //     imgSrc2 : "none",
+    //     class : "illustration multimedia",
+    //     link : "",
+    //     mirror : 0,
+    //     miniature : 0,
         
-    },
+    // },
 
 
     // // SITE WEB
     {
-        offset : [2100,640],
+        offset : [0,700],
         size : [625,756],
         id: "siteWeb",
         name: "Site Web",
@@ -491,7 +491,7 @@ let projectList = [
     },
     // MADMAXVR
     {
-        offset : [4800,550],
+        offset : [750,550],
         size : [335,335],
         id: "madMaxVr",
         name: "Max Max VR",
