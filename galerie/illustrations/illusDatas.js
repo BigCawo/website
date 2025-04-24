@@ -1,6 +1,23 @@
 let illusTypes = ["architecture","vaisseau","paysage","corps", "nature","objet","machine","interieur","X"]
 let illusList =[
 {
+    name :"illustration de la Lettre à Dark Vador",
+    src : "darkVador.jpg",
+    type : [0,"vaisseau","corps"],
+},
+
+{
+    name :"en garde ! illustration anthologie n°2",
+    src : "2025-03-05_illustration LQ.jpg",
+    type : [0,"paysage","architecture","corps","vaisseau"],
+},
+
+{
+    name :"château perché n°1",
+    src : "2025-04-19-chato-champote.jpg",
+    type : [0,"paysage","architecture","nuages","nature"],
+},
+{
     name :"le survol",
     src : "1.jpg",
     type : [0,"vaisseau", "paysage"],
@@ -17,11 +34,6 @@ let illusList =[
     type : [0,"vaisseau","architecture","paysage"],
 },
 {
-    name :"illustration de la Lettre à Dark Vador",
-    src : "darkVador.jpg",
-    type : [0,"vaisseau","corps"],
-},
-{
     name :"observation à Paris, Montmartre",
     src : "2024-10-21-montmartre-unfinished.jpg",
     type : [1,"architecture","paysage"],
@@ -35,12 +47,6 @@ let illusList =[
     name :"un dimanche aux goudes",
     src : "2025-03-30-le dimanche aux goudes-01LQ.jpg",
     type : [1,"paysage","nature"],
-},
-
-{
-    name :"en garde ! illustration anthologie n°2",
-    src : "2025-03-05_illustration LQ.jpg",
-    type : [0,"paysage","architecture","corps","vaisseau"],
 },
 
 {
