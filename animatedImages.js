@@ -1,10 +1,8 @@
 const animatedImage = document.querySelectorAll('[animation]')
 let animState = 1
 
-
 setInterval(function(){imageAnim(animatedImage,animState)},200  )
     
-
 function imageAnim(animatedImage){
 
     for(let i = 0 ; i < animatedImage.length; i++){
@@ -15,10 +13,6 @@ function imageAnim(animatedImage){
     else animState = 1
 
 }
-
-
-
-
 // const hoverableImage =  document.querySelectorAll('[hover]') 
 
 // for(let i = 0 ; i < hoverableImage.length; i++){
@@ -34,6 +28,29 @@ function imageAnim(animatedImage){
 //     }
 //     )
 // }
+
+//#region random wallpaper
+let wallpaperNbr = 3;
+let wallpaper = document.getElementById("papierPeint")
+if (wallpaper != null){
+
+    let imgSrc = "/assets/animated/homeBackground-0"+(Math.floor(Math.random() * wallpaperNbr)+1)+".png"
+
+    //get wallpaper dimensions
+    let image = new Image();
+    image.src = imgSrc;
+    image.onload = function () {
+    let width = image.width
+    // console.log(width)
+    wallpaper.style.backgroundImage = "url("+imgSrc+")"
+    wallpaper.style.backgroundSize = "calc(var(--scaleRatio)*"+50*width/1148+"vmin)"
+}
+
+
+}
+//#endregion
+
+//#region animation design objet
 const blouc = document.getElementsByClassName("animObjet")
 let n = 0
 intervalTest = 100
@@ -44,8 +61,6 @@ startInterval(intervalTest);
 function startInterval(intervalTest){
     intervalId = setInterval(function(){animObjet(blouc)},intervalTest)
 }
-
-
 function animObjet(blouc){
     for (let i = 0; i< blouc.length; i++)
     if(n < 12){
@@ -59,3 +74,4 @@ function animObjet(blouc){
     startInterval(intervalTest)
     n += 1
 }
+//#endregion

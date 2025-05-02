@@ -189,8 +189,8 @@ h3{
 }
 #papierPeint{
     background-image: url(/assets/animated/homeBackground-01.png); 
-    background-size: contain;
-
+    /* background-size: contain; */
+    background-repeat: repeat;
     background-size: calc(var(--scaleRatio)*50vmin);
     background-position: left;
     width: 100%;
