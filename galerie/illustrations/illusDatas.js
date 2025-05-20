@@ -8,7 +8,7 @@ let illusList =[
 
 {
     name :"en garde ! illustration anthologie n°2",
-    src : "2025-03-05_illustration LQ.jpg",
+    src : "2025-03-05_illustration-LQ.jpg",
     type : [0,"paysage","architecture","corps","vaisseau"],
 },
 
@@ -24,7 +24,7 @@ let illusList =[
     date : ""
 },
 {
-    name :"ville en bordure du monde n°2",
+    name :"ville-en-bordure-du-monde-n°2",
     src : "2.jpg",
     type : [0,"architecture","paysage"],
 },
@@ -45,7 +45,7 @@ let illusList =[
 },
 {
     name :"un dimanche aux goudes",
-    src : "2025-03-30-le dimanche aux goudes-01LQ.jpg",
+    src : "2025-03-30-le-dimanche-aux-goudes-01LQ.jpg",
     type : [1,"paysage","nature"],
 },
 
@@ -57,7 +57,7 @@ let illusList =[
 
 {
     name :"vivum, la boîte",
-    src : "2025_01_24_couverture LQ.jpg",
+    src : "2025_01_24_couverture-LQ.jpg",
     type : [0,"paysage","nature"],
 },
 {
@@ -72,7 +72,7 @@ let illusList =[
 },
 {
     name :"crystaux",
-    src : "2025-01-03-crystaux VLQ cop.jpg",
+    src : "2025-01-03-crystaux-VLQ-cop.jpg",
     type : [0,"objet","nature"],
 },
 {
@@ -122,7 +122,7 @@ let illusList =[
 },
 {
     name :"cours julien - 01",
-    src : "2025-02-07-cours julien.jpg",
+    src : "2025-02-07-cours-julien.jpg",
     type : [1,"architecture"],
 },
 {
@@ -137,17 +137,17 @@ let illusList =[
 },
 {
     name :"coloc à marseil bebeh",
-    src : "2025-03-10-la colocLQ.jpg",
+    src : "2025-03-10-la-colocLQ.jpg",
     type : [1,"architecture","interieur"],
 },
 {
     name :"chez Marc 02",
-    src : "2025-01-28 chez marc.jpg",
+    src : "2025-01-28-chez-marc.jpg",
     type : [1,"architecture"],
 },
 {
     name :"tiens mais c'est où ?",
-    src : "2025-01-28 plaine pour toujoursbb.jpg",
+    src : "2025-01-28-plaine-pour-toujoursbb.jpg",
     type : [1,"architecture"],
 },
 {
@@ -157,7 +157,7 @@ let illusList =[
 },
 {
     name :"plante grasse",
-    src : "2025-01-03-plante grasse.jpg",
+    src : "2025-01-03-plante-grasse.jpg",
     type : [1,"plante","nature"],
 },
 {
@@ -222,7 +222,7 @@ let illusList =[
 },
 {
     name :"nouvel an 2024 - 02",
-    src : "2025-01-03-nouvel an 02.jpg",
+    src : "2025-01-03-nouvel-an-02.jpg",
     type : [1,"interieur"],
 },
 {
@@ -232,17 +232,17 @@ let illusList =[
 },
 {
     name :"marseille la plaine - 01",
-    src : "2024-10-21-0006_0001_marseille la plaine.jpg",
+    src : "2024-10-21-0006_0001_marseille-la-plaine.jpg",
     type : [1,"architecture"],
 },
 {
     name :"marseille la plaine - 02",
-    src : "carnet-canson-A5-n2-2024-10-21-marseille la plaine toujours.jpg",
+    src : "carnet-canson-A5-n2-2024-10-21-marseille-la-plaine-toujours.jpg",
     type : [1,"architecture"],
 },
 {
     name :"nouvel an 2024 - 01",
-    src : "2025-01-03-nouvel an 015.jpg",
+    src : "2025-01-03-nouvel-an-015.jpg",
     type : [1,"interieur","corps"],
 },
 {
@@ -252,7 +252,7 @@ let illusList =[
 },
 {
     name :"observation à la maison 2024-12",
-    src : "2025-01-03-0014observatuion a la maison.jpg",
+    src : "2025-01-03-0014observatuion-a-la-maison.jpg",
     type : [1,"interieur"],
 },
 {

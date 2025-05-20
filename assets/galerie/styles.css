@@ -146,7 +146,7 @@ h3{
     z-index: 0;
     height: var(--h-center) !important; 
     width: 100vw;
-    overflow-x: scroll; 
+    overflow-x: hidden; 
     overflow-y: hidden;
 }
 /* #footer{
@@ -176,10 +176,8 @@ h3{
 }
 
 #arrierePlan{
-    position: relative;
     display: inline;
-    height: var(--h-center); 
-    width: max-content  ; 
+    height: var(--h-center);  
     position: absolute; 
     z-index: -50;
     height: 100%; 
