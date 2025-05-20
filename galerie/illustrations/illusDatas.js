@@ -141,14 +141,14 @@ let illusList =[
     type : [1,"architecture","interieur"],
 },
 {
-    name :"vue de la coloc n°2",
-    src : "2025_04_29_vue-de-la-coloc.jpg",
-    type : [1,"architecture","interieur","paysage"],
-},
-{
     name :"vieux port n°1",
     src : "2025_04_29_sur-le-vieux-port.jpg",
     type : [1,"architecture","paysage"],
+},
+{
+    name :"vue de la coloc n°2",
+    src : "2025_04_29_vue-de-la-coloc.jpg",
+    type : [1,"architecture","interieur","paysage"],
 },
 {
     name :"la plaine et la barbapapa",
@@ -159,6 +159,11 @@ let illusList =[
     name :"week-end à claviers n°1",
     src : "2025_05_12_claviers-into-space.jpg",
     type : [0,"architecture","paysage","nature"],
+},
+{
+    name :"pastis à la plaine",
+    src : "2025_04_pastagalaplaine.jpg",
+    type : [1,"architecture","interieur","paysage"],
 },
 {
     name :"chez Marc 02",
