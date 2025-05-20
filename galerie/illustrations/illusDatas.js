@@ -76,6 +76,16 @@ let illusList =[
     type : [0,"objet","nature"],
 },
 {
+    name :"modele vivant à MarseilleCity 02",
+    src : "2025_05_modele-vivant.jpg",
+    type : [1,"corps"],
+},
+{
+    name :"espaces personnels - chez Chloé",
+    src : "2022_memoire-dessin.jpg",
+    type : [1,"architecture","interieur","nature"],
+},
+{
     name :"fusion de planètes",
     src : "8.jpg",
     type : [0,"paysage","vaisseau"],
@@ -104,6 +114,26 @@ let illusList =[
     name :"ville en bordure du monde n°1",
     src : "11.jpg",
     type : [0,"architecture","paysage"],
+},
+{
+    name :"modele vivant à MarseilleCity 03",
+    src : "2025_05_modele-vivant-02.jpg",
+    type : [1,"corps"],
+},
+{
+    name :"modele vivant à MarseilleCity 04",
+    src : "2025_05_modele-vivant-03.jpg",
+    type : [1,"corps"],
+},
+{
+    name :"modele vivant à MarseilleCity 05",
+    src : "2025_03_modele-vivant.jpg",
+    type : [1,"corps"],
+},
+{
+    name :"modele vivant à MarseilleCity 06",
+    src : "2024-10-21-modeleVivant.jpg",
+    type : [1,"corps"],
 },
 {
     name :"montre",
