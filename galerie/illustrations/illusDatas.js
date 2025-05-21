@@ -116,7 +116,7 @@ let illusList =[
     type : [0,"architecture","paysage"],
 },
 {
-    name :"modele vivant à MarseilleCity 03",
+    name :"modele vivant à Marseille-City 03",
     src : "2025_05_modele-vivant-02.jpg",
     type : [1,"corps"],
 },
