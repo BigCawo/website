@@ -151,6 +151,16 @@ let illusList =[
     type : [0,"architecture","paysage"],
 },
 {
+    name :"après-midi à Saint-Jean du Desert n°1",
+    src : "skatepark-st-jean-01.jpg",
+    type : [1,"architecture","paysage","nature"],
+},
+{
+    name :"après-midi à Saint-Jean du Desert n°2",
+    src : "skatepark-st-jean-02.jpg",
+    type : [1,"architecture","paysage","nature"],
+},
+{
     name :"cours julien - 01",
     src : "2025-02-07-cours-julien.jpg",
     type : [1,"architecture"],
@@ -193,7 +203,7 @@ let illusList =[
 {
     name :"pastis à la plaine",
     src : "2025_04_pastagalaplaine.jpg",
-    type : [1,"architecture","interieur","paysage"],
+    type : [1,"architecture","paysage"],
 },
 {
     name :"chez Marc 02",
