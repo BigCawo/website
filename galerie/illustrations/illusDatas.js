@@ -161,6 +161,21 @@ let illusList =[
     type : [1,"architecture","paysage","nature"],
 },
 {
+    name :"vidage de tête à la plaine n°1",
+    src : "2025-05-23-0016LQ.jpg",
+    type : [1,"architecture","paysage","nature"],
+},
+{
+    name :"apres-midi à Malmousque n°1",
+    src : "2025-05-23-0003LQ.jpg",
+    type : [1,"architecture","paysage","nature"],
+},
+{
+    name :"apres-midi à Malmousque n°2",
+    src : "2025-05-23-0010LQ.jpg",
+    type : [1,"architecture","paysage","nature"],
+},
+{
     name :"cours julien - 01",
     src : "2025-02-07-cours-julien.jpg",
     type : [1,"architecture"],
