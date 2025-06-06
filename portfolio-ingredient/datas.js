@@ -28,25 +28,25 @@ let projectList = [
         
     // },
     // TERRES LOINTAINES
-    // {
-    //     offset : [2950,720],
-    //     size : [707,208],
-    //     id: "terresLointaines",
-    //     name: "Terres Lointaines",
-    //     text: "Ce court métrage, inspiré du 'Monde d'Edena' écrit et dessiné par Moebius, raconte l'histoire d'un être humanoïde échoué sur une terre inconnue, qu'il va devoir arpenter et découvrir.",
-    //     desc:"",
-    //     type: "Projet d'études",
-    //     date: "2020",
-    //     spot : 1,
-    //     imgSrc1 : "terreslointaines.png",
-    //     scale : 1,
-    //     imgSrc2 : "none",
-    //     class : "illustration multimedia ",
-    //     link : "",
-    //     mirror : 0,
-    //     miniature : 0,
+    {
+        offset : [3550,350],
+        size : [707,208],
+        id: "terresLointaines",
+        name: "Terres Lointaines",
+        text: "Ce court métrage, inspiré du 'Monde d'Edena' écrit et dessiné par Moebius, raconte l'histoire d'un être humanoïde échoué sur une terre inconnue, qu'il va devoir arpenter et découvrir.",
+        desc:"",
+        type: "Projet d'études",
+        date: "2020",
+        spot : 1,
+        imgSrc1 : "terreslointaines.png",
+        scale : 1,
+        imgSrc2 : "none",
+        class : "illustration multimedia ",
+        link : "",
+        mirror : 0,
+        miniature : 0,
         
-    // },
+    },
     // OLLAS
     // {
     //     offset : [839,396],
@@ -129,7 +129,7 @@ let projectList = [
     // },
     // FABRIQUE A BRAC
     {
-        offset : [2350,370],
+        offset : [2550,370],
         size : [652,481],
         id: "fabriqueABrac",
         name: "Fabrique À Brac",
@@ -149,7 +149,7 @@ let projectList = [
     },
     // NASA
     {
-        offset : [2350,0],
+        offset : [2550,0],
         size : [670,380],
         id: "nasa",
         name: "NASA",
@@ -327,26 +327,26 @@ let projectList = [
     //     miniature : 0,
         
     // },
-    // CARNETS
-    {
-        offset : [1850,200],
-        size : [238,335],
-        id: "carnets",
-        name: "Carnets",
-        text: "Mes carnets m'accompagnent partout où je vais. En voyage, dans la rue, dans le métro, chez moi, chez mes amis...<br><br>J'y dessine et j'y écrit ce que je vois, pense et imagine, sans but particulier. Ils évoluent avec moi.",
-        desc:"",
-        type: "",
-        date: "",
-        spot : 1,
-        imgSrc1 : "carnets.png",
-        scale : 0.6,
-        imgSrc2 : "none",
-        class : "illustration ",
-        link : "",
-        mirror : 0,
-        miniature : 0,
+    // // CARNETS
+    // {
+    //     offset : [1850,200],
+    //     size : [238,335],
+    //     id: "carnets",
+    //     name: "Carnets",
+    //     text: "Mes carnets m'accompagnent partout où je vais. En voyage, dans la rue, dans le métro, chez moi, chez mes amis...<br><br>J'y dessine et j'y écrit ce que je vois, pense et imagine, sans but particulier. Ils évoluent avec moi.",
+    //     desc:"",
+    //     type: "",
+    //     date: "",
+    //     spot : 1,
+    //     imgSrc1 : "carnets.png",
+    //     scale : 0.6,
+    //     imgSrc2 : "none",
+    //     class : "illustration ",
+    //     link : "",
+    //     mirror : 0,
+    //     miniature : 0,
         
-    },
+    // },
     // // POLES IMAGES
     // {
     //     offset : [3500,-3],
@@ -472,7 +472,7 @@ let projectList = [
 
     // // SITE WEB
     {
-        offset : [1650,700],
+        offset : [1750,100],
         size : [625,756],
         id: "siteWeb",
         name: "Site Web",
