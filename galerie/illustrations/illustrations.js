@@ -110,6 +110,9 @@ function generateTypesButtons(){
 }
 
 function checkTypePresence(q){
+  //"invert" q
+  q = 1-q
+
   for (let i = 0; i< illusTypes.length-1; i++){
     let illusSectioncheck = illusList.filter(function test(z){if (z.type.includes(q)){return z}})
     let illusCheck = illusSectioncheck.filter(function test(z){if (z.type.includes(illusTypes[i])){return z}})
