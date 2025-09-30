@@ -29,6 +29,26 @@ let illusList =[
     type : [0,"architecture","paysage"],
 },
 {
+    name :"Marseille, vers NDG",
+    src : "2025-09-29-0002LQ.jpg",
+    type : [1,"architecture","paysage"],
+},
+{
+    name :"Marseille, depuis NDG",
+    src : "2025-09-29-0001LQ.jpg",
+    type : [1,"architecture","paysage"],
+},
+{
+    name :"Ptite vue du Drops festival",
+    src : "2025-08-20-0011LQ.jpg",
+    type : [1,"paysage"],
+},
+{
+    name :"Grands basaltes n°1",
+    src : "2025-07-27-0001LQ.jpg",
+    type : [0,"paysage"],
+},
+{
     name :"forteresse volante",
     src : "3.jpg",
     type : [0,"vaisseau","architecture","paysage"],
