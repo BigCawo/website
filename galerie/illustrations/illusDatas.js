@@ -29,6 +29,21 @@ let illusList =[
     type : [0,"architecture","paysage"],
 },
 {
+    name :"Marseille, chateau longchamp",
+    src : "2025-10-21-0001LQ.jpg",
+    type : [1,"architecture","paysage"],
+},
+{
+    name :"Marseille, reformes - plume",
+    src : "2025-10-15-0001LQ.jpg",
+    type : [1,"architecture","paysage"],
+},
+{
+    name :"Marseille, reformes - crayon",
+    src : "2025-10-15-0002LQ.jpg",
+    type : [1,"architecture","paysage"],
+},
+{
     name :"Marseille, vers NDG",
     src : "2025-09-29-0002LQ.jpg",
     type : [1,"architecture","paysage"],
