@@ -495,7 +495,7 @@ function descSpawn(x){
         
 
             spawnState = -1
-            projectValue = 0
+            projectValue = -1
             }
             ,350);
         
