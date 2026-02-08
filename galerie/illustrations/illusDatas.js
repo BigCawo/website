@@ -1,5 +1,30 @@
-let illusTypes = ["architecture","vaisseau","paysage","corps", "nature","objet","machine","interieur","X"]
+let illusTypes = ["architecture","vaisseau","paysage","corps", "nature","objet","machine","bete","interieur","X"]
 let illusList =[
+{
+    name :"le maitre des toits",
+    src : "2025_12_maitre-des-toitsLQ.jpg",
+    type : [0,"architecture","bete"],
+},
+{
+    name :"facades de la ville noire",
+    src : "2026_01_facades-de-la-ville-noireLQ.jpg",
+    type : [0,"architecture"],
+},
+{
+    name :"le tir",
+    src : "2026_02_le-tirLQ.jpg",
+    type : [0,"architecture","corps"],
+},
+{
+    name :"plongee en eaux profondes",
+    src : "2026_02_plongee-en-eaux-profondesLQ.jpg",
+    type : [0,"corps"],
+},
+{
+    name :"le moine",
+    src : "2025_12_moineLQ.jpg",
+    type : [0,"corps"],
+},
 {
     name :"illustration de la Lettre à Dark Vador",
     src : "darkVador.jpg",
@@ -39,8 +64,13 @@ let illusList =[
     type : [1,"architecture","paysage"],
 },
 {
-    name :"Marseille, reformes - crayon",
-    src : "2025-10-15-0002LQ.jpg",
+    name :"ptits poissons",
+    src : "2025_11_poissonsLQ.jpg",
+    type : [0,"bete"],
+},
+{
+    name :"Londres sous les flammes",
+    src : "2026_02-londres-sous-le-feuLQ.jpg",
     type : [1,"architecture","paysage"],
 },
 {

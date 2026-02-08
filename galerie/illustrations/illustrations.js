@@ -157,17 +157,14 @@ document.getElementsByClassName("galleryPhone")[0].appendChild(illusCanvas)
 
 //(computer)
 
+// id_tmp = 0
+height_test = [0,0]
 for (i = 0; i < illusListImagination.length ; i++){
+
   const illusCanvas = document.createElement("div")
   illusCanvas.setAttribute("onclick","openModal(event);")
   illusCanvas.className = "imgGallery"
   illusCanvas.id = illusListImagination[i].name
-  
-
-  document.getElementsByClassName("galleryPhone")[0].appendChild(illusCanvas)
-
-  if (i % 2 == 0) {document.getElementsByClassName("imgRight")[0].appendChild(illusCanvas)}
-  else{document.getElementsByClassName("imgLeft")[0].appendChild(illusCanvas)}
 
   const illus = document.createElement("img")
   illus.setAttribute("number",i)
@@ -175,7 +172,29 @@ for (i = 0; i < illusListImagination.length ; i++){
   illus.loading = "lazy"
   illus.src = illusListImagination[i].src
   
-  document.getElementById(illusListImagination[i].name).appendChild(illus)
+ illusCanvas.appendChild(illus)
+
+  // if(i == illusListImagination.length - 1){
+  //   if (height_test[0] < height_test[1]) {document.getElementsByClassName("imgRight")[0].appendChild(illusCanvas)
+  //     side = 0
+  //   }
+  //   else{document.getElementsByClassName("imgLeft")[0].appendChild(illusCanvas)
+  //     side = 1
+  //   }
+  // }
+
+  if (height_test[0] > height_test[1]) {
+    console.log( "height left :", height_test[0], "\nheight right :", height_test[1], "\nappend", illusListImagination[i].name ,"at right")
+    document.getElementsByClassName("imgRight")[0].appendChild(illusCanvas)
+    side = 1
+  }
+  else{
+    console.log( "height left :", height_test[0], "\nheight right :", height_test[1], "\nappend", illusListImagination[i].name ,"at left")
+    document.getElementsByClassName("imgLeft")[0].appendChild(illusCanvas)
+    side = 0
+  }
+  height_test[side] += illus.naturalHeight
+
 }
 
 
@@ -202,21 +221,34 @@ for (i = 0; i < illusListImagination.length ; i++){
   }
   
   //(computer)
+  height_test = [0,0]
   
   for (i = 0; i < illusListObservation.length ; i++){
     const illusCanvas = document.createElement("div")
     illusCanvas.setAttribute("onclick","openModal(event);")
     illusCanvas.className = "imgGallery"
     illusCanvas.id = illusListObservation[i].name
-  
-    if (i % 2 == 0) {document.getElementsByClassName("imgRight")[1].appendChild(illusCanvas)}
-    else{document.getElementsByClassName("imgLeft")[1].appendChild(illusCanvas)}
-  
     const illus = document.createElement("img")
     illus.setAttribute("number",i)
     illus.loading = "lazy"
     illus.src = illusListObservation[i].src
-    document.getElementById(illusListObservation[i].name).appendChild(illus)
+    illusCanvas.appendChild(illus)
+  
+  // if(i == illusListObservation.length - 1){
+  //   if (height_test[0] < height_test[1]) {document.getElementsByClassName("imgRight")[1].appendChild(illusCanvas)}
+  //   else{document.getElementsByClassName("imgLeft")[1].appendChild(illusCanvas)}
+  // }
+  
+  if (height_test[0] > height_test[1]) {
+    document.getElementsByClassName("imgRight")[1].appendChild(illusCanvas)
+    side = 1
+  }
+  else{
+    document.getElementsByClassName("imgLeft")[1].appendChild(illusCanvas)
+    side = 0
+  }
+  height_test[side] += illus.naturalHeight
+  
   }
 
 }
