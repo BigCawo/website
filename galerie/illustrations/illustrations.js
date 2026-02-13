@@ -133,133 +133,51 @@ function checkTypePresence(q){
 
 // ~~~~~ IMAGE GENERATION ~~~~~
 
-
-// IMAGINATION
-
 function loadIllustrations(){
-//(phone)
-
-
-for (i = 0; i < illusListImagination.length ; i++){
-  const illusCanvas = document.createElement("div")
-  illusCanvas.setAttribute("onclick","openModal(event);")
-  illusCanvas.className = "imgGallery"
-  illusCanvas.id = illusListImagination[i].name
-
-document.getElementsByClassName("galleryPhone")[0].appendChild(illusCanvas)
-
-  const illus = document.createElement("img")
-  illus.setAttribute("number",i)
-  illus.loading = "lazy"
-  illus.src = illusListImagination[i].src
-  document.getElementById(illusListImagination[i].name).appendChild(illus)
-}
-
-//(computer)
-
-// id_tmp = 0
-height_test = [0,0]
-for (i = 0; i < illusListImagination.length ; i++){
-
-  const illusCanvas = document.createElement("div")
-  illusCanvas.setAttribute("onclick","openModal(event);")
-  illusCanvas.className = "imgGallery"
-  illusCanvas.id = illusListImagination[i].name
-
-  const illus = document.createElement("img")
-  illus.setAttribute("number",i)
-  illus.setAttribute("onclick","openModal(event);")
-  illus.loading = "lazy"
-  illus.src = illusListImagination[i].src
   
- illusCanvas.appendChild(illus)
+  // IMAGINATION / OBSERVATION
+  illusSections = [illusListImagination,illusListObservation]
+  for (y = 0; y < illusSections.length ; y++){
+    
+    height_test = [0,0]
+    for (i = 0; i < illusSections[y].length ; i++){
+      
+      const illusCanvas = document.createElement("div")
+      illusCanvas.className = "imgGallery"
+      illusCanvas.id = illusSections[y][i].name
 
-  // if(i == illusListImagination.length - 1){
-  //   if (height_test[0] < height_test[1]) {document.getElementsByClassName("imgRight")[0].appendChild(illusCanvas)
-  //     side = 0
-  //   }
-  //   else{document.getElementsByClassName("imgLeft")[0].appendChild(illusCanvas)
-  //     side = 1
-  //   }
-  // }
-
-  if (height_test[0] > height_test[1]) {
-    console.log( "height left :", height_test[0], "\nheight right :", height_test[1], "\nappend", illusListImagination[i].name ,"at right")
-    document.getElementsByClassName("imgRight")[0].appendChild(illusCanvas)
-    side = 1
+      const illus = document.createElement("img")
+      illus.setAttribute("number",i)
+      illus.setAttribute("onclick","openModal(event);")
+      illus.loading = "lazy"
+      illus.src = illusSections[y][i].src
+      
+      illusCanvas.appendChild(illus)
+      illusCanvasPhone = illusCanvas.cloneNode(true)
+      
+      //(computer)
+      if (height_test[0] > height_test[1]) {
+        console.log( "height left :", height_test[0], "\nheight right :", height_test[1], "\nappend", illusSections[y][i].name ,"at right")
+        document.getElementsByClassName("imgRight")[y].appendChild(illusCanvas)
+        side = 1
+      }
+      else{
+        console.log( "height left :", height_test[0], "\nheight right :", height_test[1], "\nappend", illusSections[y][i].name ,"at left")
+        document.getElementsByClassName("imgLeft")[y].appendChild(illusCanvas)
+        side = 0
+      }
+      //(phone)
+      document.getElementsByClassName("galleryPhone")[y].appendChild(illusCanvasPhone)
+      height_test[side] += illus.naturalHeight
+      
+    }
   }
-  else{
-    console.log( "height left :", height_test[0], "\nheight right :", height_test[1], "\nappend", illusListImagination[i].name ,"at left")
-    document.getElementsByClassName("imgLeft")[0].appendChild(illusCanvas)
-    side = 0
-  }
-  height_test[side] += illus.naturalHeight
-
-}
-
-
-// OBSERVATION
-
-
-
-//(phone)
-
-
-  for (i = 0; i < illusListObservation.length ; i++){
-    const illusCanvas = document.createElement("div")
-    illusCanvas.setAttribute("onclick","openModal(event);")
-    illusCanvas.className = "imgGallery"
-    illusCanvas.id = illusListObservation[i].name
-  
-  document.getElementsByClassName("galleryPhone")[1].appendChild(illusCanvas)
-  
-    const illus = document.createElement("img")
-    illus.setAttribute("number",i)
-    illus.loading = "lazy"
-    illus.src = illusListObservation[i].src
-    document.getElementById(illusListObservation[i].name).appendChild(illus)
-  }
-  
-  //(computer)
-  height_test = [0,0]
-  
-  for (i = 0; i < illusListObservation.length ; i++){
-    const illusCanvas = document.createElement("div")
-    illusCanvas.setAttribute("onclick","openModal(event);")
-    illusCanvas.className = "imgGallery"
-    illusCanvas.id = illusListObservation[i].name
-    const illus = document.createElement("img")
-    illus.setAttribute("number",i)
-    illus.loading = "lazy"
-    illus.src = illusListObservation[i].src
-    illusCanvas.appendChild(illus)
-  
-  // if(i == illusListObservation.length - 1){
-  //   if (height_test[0] < height_test[1]) {document.getElementsByClassName("imgRight")[1].appendChild(illusCanvas)}
-  //   else{document.getElementsByClassName("imgLeft")[1].appendChild(illusCanvas)}
-  // }
-  
-  if (height_test[0] > height_test[1]) {
-    document.getElementsByClassName("imgRight")[1].appendChild(illusCanvas)
-    side = 1
-  }
-  else{
-    document.getElementsByClassName("imgLeft")[1].appendChild(illusCanvas)
-    side = 0
-  }
-  height_test[side] += illus.naturalHeight
-  
-  }
-
 }
 
 function clearIllustrations(){
   const elements = document.getElementsByClassName("imgGallery");
   while(elements.length > 0){
-
       elements[0].parentNode.removeChild(elements[0]);}
-
-
 }
 // ~~~~~ 
 
@@ -274,7 +192,6 @@ function sortBy(x){
     for (i = 0; i < illusTypes.length; i++){
       document.getElementsByClassName("buttonType")[i].style.fontWeight = "unset"
     }
-    
   }
   else{
     newIllusList = illusList.filter(function test(y){if (y.type.includes(x)){return y}})
@@ -304,19 +221,6 @@ function displayMode(){
 }
 displayMode();
 Mq480.addEventListener("change", function() {displayMode();}); 
-
-// hovering
-// const imgGallery = document.getElementsByClassName("imgGallery")
-// for (i = 0 ; i < imgGallery.length ; i ++){
-
-//   imgGallery[i].getElementsByTagName("img")[0].addEventListener("mousemove", function(e){
-//     imgGallery[i].style.backgroundColor = "blue"
-//     imgGallery[i].getElementsByTagName("img")[0].style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
-//   })
-//   imgGallery[i].addEventListener("mouseout", function(e){
-//     imgGallery[i].getElementsByTagName("img")[0].style.boxShadow = "initial"
-//   })
-// }
 
 // section change
 
@@ -364,23 +268,36 @@ function openModal(event) {
     document.getElementById("myModal").scrollTo(0,0); 
     document.getElementById("main").style.maxHeight = "100dvh";
     document.getElementById("main").style.overflowY = "hidden";
-
-    
+    test = document.getElementById("modalImg")
     slides.src = source.src
     
     imgRatio = slides.naturalHeight / slides.naturalWidth
     windowRatio = window.innerHeight / window.innerWidth
 
     if(imgRatio >= windowRatio){
-      slideContainer.style.width = "100dvw";
-      slideContainer.style.height = slideContainer.offsetWidth*imgRatio+"px";
-      slideFrame.style.overflowX = "hidden";
-      slideFrame.style.overflowY = "scroll";}
+      if(Mq480){
+        test.style.height = "100dvh";
+        slideContainer.style.width = (slideContainer.offsetHeight/imgRatio)+"px";
+        slideFrame.style.overflowX = "hidden";
+        slideFrame.style.overflowY = "hidden";
+      }
+      else{        
+        slideContainer.style.width = "100dvw";
+        slideContainer.style.height = (slideContainer.offsetWidth*imgRatio)+"px";
+        slideFrame.style.overflowX = "hidden";
+        slideFrame.style.overflowY = "scroll";
+      }
+      // slideContainer.style.width = "100dvw";
+      // slideContainer.style.height = (slideContainer.offsetWidth*imgRatio)+"px";
+    }
     else{
       slideContainer.style.height = "100dvh";
       slideContainer.style.width = slideContainer.offsetHeight/imgRatio+"px";
-      slideFrame.style.overflowX = "scroll";
-      slideFrame.style.overflowY = "hidden";}
+      // slideContainer.style.height = "100dvh";
+      // slideContainer.style.width = slideContainer.offsetHeight/imgRatio+"px";
+      slideFrame.style.overflowX = "hidden";
+      slideFrame.style.overflowY = "hidden";
+    }
 
 
 }
