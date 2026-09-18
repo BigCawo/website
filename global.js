@@ -60,40 +60,40 @@ for (let i = 0; i< clickableImgs.length; i++){
 }
 
 
-// function imgClick(event){
-//     const source = event.srcElement;
-//     console.log(source.naturalWidth);
+function imgClick(event){
+    const source = event.srcElement;
+    console.log(source.naturalWidth);
 
-//     const imgContainer = document.createElement("div")
-//     imgContainer.id = "imgViewer"
-//     if (source.naturalWidth < 200 ){imgContainer.style.imageRendering = "pixelated"}
-//     else{imgContainer.style.imageRendering = "unset"}
-//     imgContainer.style.position = "fixed"
-//     imgContainer.style.zIndex = "500"
-//     imgContainer.style.top = "0"
-//     imgContainer.style.width = "100%"
-//     imgContainer.style.height = "100%"
-//     imgContainer.style.backgroundColor = "rgba(0,0,0,0.5)"
-//     if(source.nodeName == "DIV"){
-//         url = document.defaultView.getComputedStyle(source).backgroundImage
-//         // style = source.currentStyle
-//         imgContainer.style.backgroundImage = url
-//     }
-//     else{
-//         imgContainer.style.backgroundImage = "url("+ source.src +")"
-//     }
-//     imgContainer.style.backgroundSize = "contain"
-//     imgContainer.style.backgroundPosition = "center"
-//     imgContainer.style.backgroundRepeat = "no-repeat"
-//     imgContainer.style.scale = "0"
-//     imgContainer.style.transition = "scale ease 0.2s"
-//     imgContainer.setAttribute("onclick","imgDismiss(event);")
+    const imgContainer = document.createElement("div")
+    imgContainer.id = "imgViewer"
+    if (source.naturalWidth < 200 ){imgContainer.style.imageRendering = "pixelated"}
+    else{imgContainer.style.imageRendering = "unset"}
+    imgContainer.style.position = "fixed"
+    imgContainer.style.zIndex = "500"
+    imgContainer.style.top = "0"
+    imgContainer.style.width = "100%"
+    imgContainer.style.height = "100%"
+    imgContainer.style.backgroundColor = "rgba(0,0,0,0.5)"
+    if(source.nodeName == "DIV"){
+        url = document.defaultView.getComputedStyle(source).backgroundImage
+        // style = source.currentStyle
+        imgContainer.style.backgroundImage = url
+    }
+    else{
+        imgContainer.style.backgroundImage = "url("+ source.src +")"
+    }
+    imgContainer.style.backgroundSize = "contain"
+    imgContainer.style.backgroundPosition = "center"
+    imgContainer.style.backgroundRepeat = "no-repeat"
+    imgContainer.style.scale = "0"
+    imgContainer.style.transition = "scale ease 0.2s"
+    imgContainer.setAttribute("onclick","imgDismiss(event);")
 
-//     document.body.appendChild(imgContainer);
-//     document.getElementById("imgViewer").style.scale = "1"
-//     console.log(source)
-//     console.log(document.getElementById("imgViewer"))
-// }
+    document.body.appendChild(imgContainer);
+    document.getElementById("imgViewer").style.scale = "1"
+    console.log(source)
+    console.log(document.getElementById("imgViewer"))
+}
 
 function imgDismiss(event){
     const source = event.srcElement;

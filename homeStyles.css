@@ -21,7 +21,7 @@
   }
   
   #subTitle{
-    background-origin: content-box; 
+    background-origin: content-box ; 
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

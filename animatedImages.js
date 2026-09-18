@@ -32,7 +32,7 @@ function imageAnim(animatedImage){
 //#region random wallpaper
 let wallpaperNbr = 3;
 let wallpaper = document.getElementById("papierPeint")
-if (wallpaper != null){
+if (wallpaper != null){ 
 
     let imgSrc = "/assets/animated/homeBackground-0"+(Math.floor(Math.random() * wallpaperNbr)+1)+".png"
 
@@ -42,7 +42,7 @@ if (wallpaper != null){
     image.onload = function () {
     let width = image.width
     // console.log(width)
-    wallpaper.style.backgroundImage = "url("+imgSrc+")"
+    wallpaper.style.backgroundImage = "url("+imgSrc+") "
     wallpaper.style.backgroundSize = "calc(var(--scaleRatio)*"+50*width/1148+"vmin)"
 }
 

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliot Bernaud Design Dessin Bricolage</title>
+    <link rel="shortcut icon" href="/assets/course.gif">
+    <link rel="stylesheet" href="/assets/galerie/styles.css">
+    <link rel="stylesheet" href="/footerStyles.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Roboto:wght@400&display=swap" rel="stylesheet"> 
+    
+    <script src="/galerie/datas.js"></script>
+    <script src="/global.js" defer></script>
+    <script src="/animatedImages.js" defer></script>
+    <script src="/buttonsBehavior.js" defer></script>
+    <script src="/galerie/scriptSidebar.js" defer></script>
+    <!-- <script src="/galerie/scriptIntro.js" defer> </script> -->
+
+    <script src="illusDatas.js" defer></script>
+    <script src="illustrationsTest.js" defer></script>
+
+    <style>
+        :root{
+            --scaleButtonsIllustration : 1
+        }
+        #arrierePlan{
+        display: inline;
+
+        position: absolute; 
+
+
+        width: 1800%;
+
+    }
+
+        #galerieIllustration{
+            height: 90dvh;
+            overflow: hidden;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.1);
+            transition: background-color ease 0.25s;
+            width: 100%;
+
+        }
+
+        #sectionContainer{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            overflow-x: scroll;
+        }
+
+        #center{
+            height: 90dvh !important;
+            width: 100%;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+    
+    <div id="footer">
+
+
+        
+        <div>
+            <button class="bottomButton" onclick="serviceSelected(9)"></button>
+            <div animation="cone" class="animatedContent"></div>        
+            <div animation="title-apropos" class="bottomTitle animatedTitle" style="visibility: hidden;"></div>
+        </div>
+
+        <div id="menuBar" style="position: absolute;  bottom: 11dvh; justify-content: space-between; width: 100dvw;"> 
+            <div>
+                <button class="anyButton" onclick="sectionChange(0)"></button>
+                <div animation="title-imagination" class="animatedContent " style="width: calc(var(--scaleRatio)*25vmin);"></div>
+                <div id="buttonTypeFrame" style=" width: 100%; position: absolute; bottom: 17dvh;"></div>
+
+            </div>
+            <div>
+                <button class="anyButton" onclick="sectionChange(1)"></button>
+                <div animation="title-observation" class="animatedContent "  style="width: calc(var(--scaleRatio)*25vmin);"></div>
+            </div>
+
+        </div>
+
+        <div>
+            <button  class="bottomButton"> <a href="/aPropos/" style="display: inline-block; width: 100%; height: 100%;"></a></button>
+            <div animation="apropos" class="cone animatedContent"></div>
+            <div style="display: none;"></div>
+            <div animation="title-apropos" class="bottomTitle animatedTitle"></div>
+        </div>
+
+
+    </div>
+
+
+    <div id="center">
+        <div id="antiScroll"></div>
+        <div id = "galerieIllustration">
+
+
+
+            <div id="sectionContainer" style="height: 95%;">
+                <div id="arrierePlan" >     
+                    <div id="papierPeint">
+                    
+                    </div>
+        
+                </div>
+
+
+                <!-- <div class="section"id="croquis" style="background-color: aqua;">
+
+                    <div class="galleryComputer" style="margin-top: 10dvh;">
+                        <div class="imgLeft"></div>
+                        <div class="imgRight"></div>
+                    </div>
+
+                    <div class="galleryPhone">
+                    </div>
+                        
+                    
+                </div>
+                <div class="section" id="illustrations">
+
+                    <div class="galleryComputer" style="margin-top: 10dvh;" >
+                        <div class="imgLeft"></div>
+                        <div class="imgRight"></div>
+                    </div>
+
+                    <div class="galleryPhone" >
+                    </div>
+
+                </div> -->
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    
+   
+    
+</body>
+
+
+</html>

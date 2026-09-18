@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliot Bernaud Design Dessin Bricolage</title>
+    <link rel="shortcut icon" href="/assets/course.gif">
+    <link rel="stylesheet" href="/galerie/styles.css">
+    <link rel="stylesheet" href="/footerStyles.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Roboto:wght@400&display=swap" rel="stylesheet"> 
+    
+    <script src="/galerie/datas.js"></script>
+    <script src="/global.js" defer></script>
+    <script src="/animatedImages.js" defer></script>
+    <script src="/buttonsBehavior.js" defer></script>
+    <script src="/galerie/scriptSidebar.js" defer></script>
+    <!-- <script src="/galerie/scriptIntro.js" defer> </script> -->
+
+    <script src="illusDatas.js" defer></script>
+    <script src="illustrations.js" defer></script>
+    
+    <style>
+        :root{
+            --scaleButtonsIllustration : 1
+        }
+
+        #main{
+            overflow-x: hidden;
+        }
+
+        #sectionContainer > div{
+            padding-top: 5dvh;
+            scroll-snap-align: center;
+            width: 100%;
+            height: 100dvh;
+            overflow-y: scroll;
+            position: absolute;
+            display: inline-block;
+            display: flex; 
+            flex-direction: row; 
+
+        }
+
+        #menuBar{
+            padding: 0 1vmax 0 1vmax;
+        }
+
+        #menuBar > div{
+            scale: var(--scaleButtonsIllustration);
+            border-radius: 2vmin; 
+            
+            background-color: rgba(255, 255, 255, 0.75);
+            border: solid black calc(var(--borderWidth)/var(--scaleButtonsIllustration));
+            margin: 0;
+        }
+
+        #illustrations{
+            left: 0;
+        }
+        #croquis{
+
+            left: 100%;
+
+        }
+        #antiScroll{
+            width: 100dvw; 
+            height: 100dvh; 
+            position: fixed; 
+            z-index: 4; 
+            visibility: hidden;
+        }
+
+        #menuBar >  div{
+            transition: opacity ease 0.1s;
+            opacity: 0.85;
+        }
+
+        #menuBar >  div:hover{
+            transition: opacity ease 0.1s;
+            opacity: 1;
+        }
+
+        #modalImg{
+            overflow: hidden;
+            padding: 2vmin;  
+
+        } 
+        #myModal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            height: 100dvh;
+            max-width: 100dvw;
+            overflow: scroll;
+            background-color: rgba(0, 0, 0, 0.2);
+            }
+
+
+        
+        #imgZoom{
+            overflow: hidden;
+        }
+
+        #galleryComputer{
+            display: flex;            
+            flex-direction: row;
+        }
+        #galleryComputer > div{
+            flex-basis: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .close{
+            top: 3vh;
+        }
+
+
+
+        /* Galerie */
+
+        .imgGallery img {
+            padding: 1vmin;
+        }
+
+        .imgGallery img{
+            z-index: 50;
+
+            transition: 0.3s;
+            }
+            
+        .imgGallery img:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        /* The Modal (background) */
+
+        /* Modal Content */
+
+        /* .modalImg{
+            position: fixed;
+            overflow: scroll;
+            padding: 2vmin;
+            display: block;       
+            height: 100dvh;     
+        } */
+
+        /* The Close Button */
+        .close {
+        display: block;
+        z-index: 10;
+        color: rgb(255, 255, 255);
+        width: 30px;
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0.75);
+        position: fixed;
+        top: 5vh;
+        right: 5vh;
+        font-size: 35px;
+        line-height: 27px;
+        text-align: center;
+        }
+
+        .close:hover
+         {
+        color: rgb(0, 0, 0);
+        background-color: rgba(255, 255, 255, 0.75);
+        text-decoration: none;
+        cursor: pointer;
+        }
+
+
+            
+        @media  screen and (max-width: 480px) {
+
+            :root{
+            --scaleButtonsIllustration : 1
+        }
+
+
+
+        .close {
+            top : unset;
+            bottom : 5vh
+        }
+
+
+
+
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+    
+    <div id="footer">
+
+
+        
+        <div>
+            <button class="bottomButton" onclick="serviceSelected(9)"></button>
+            <div animation="cone" class="animatedContent"></div>        
+            <div animation="title-apropos" class="bottomTitle animatedTitle" style="visibility: hidden;"></div>
+        </div>
+
+        <div id="menuBar" style="position: absolute;  bottom: 11dvh; justify-content: space-between; width: 100dvw;"> 
+            <div style="visibility: hidden;">
+                <button class="anyButton" onclick="sectionChange(0)"></button>
+                <div animation="title-observation" class="animatedContent " style="width: calc(var(--scaleRatio)*25vmin);"></div>
+                <div id="buttonTypeFrame" style=" width: 100%; position: absolute; bottom: 17dvh; visibility: hidden;"></div>
+
+            </div>
+            <div style="visibility: hidden;">
+                <button class="anyButton" onclick="sectionChange(1)"></button>
+                <div animation="title-imagination" class="animatedContent "  style="width: calc(var(--scaleRatio)*25vmin);"></div>
+            </div>
+
+        </div>
+
+        <div>
+            <button  class="bottomButton"> <a href="/aPropos/" style="display: inline-block; width: 100%; height: 100%;"></a></button>
+            <div animation="apropos" class="cone animatedContent"></div>
+            <div style="display: none;"></div>
+            <div animation="title-apropos" class="bottomTitle animatedTitle"></div>
+        </div>
+
+
+    </div>
+
+    <div id="antiScroll"></div>
+    <div id = "main">
+        
+
+
+        <div id="sectionContainer" style="margin-left: 0; margin-right: 0; padding: 0;">
+
+                <div class="section" id="illustrations" style="margin-left: 0; margin-right: 0; padding: 0;">
+
+                <div class="galleryComputer" style="margin-top: 10dvh;"  style="margin-left: 0; margin-right: 0;">
+                    <div class="imgLeft" style="margin-left: 0; margin-right: 0; padding: 0;"></div>
+                    <div class="imgRight"style="margin-left: 0; margin-right: 0; padding: 0;"></div>
+                </div>
+
+                <div class="galleryPhone" style="margin-left: 0; margin-right: 0;" >
+                </div>
+
+            </div>
+
+            <div class="section"id="croquis"  style="margin-left: 0; margin-right: 0;">
+
+                <div class="galleryComputer" style="margin-top: 10dvh;">
+                    <div class="imgLeft"></div>
+                    <div class="imgRight"></div>
+                </div>
+
+                <div class="galleryPhone">
+                </div>
+                    
+                
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+    
+    <div id="myModal" style="min-width: 100dvw; min-height: 100dvh; display: flex; margin: 0; padding: 0;">
+        <span class="close cursor" onclick="closeModal()" style="min-width: 100dvw; min-height: 100dvh; position: fixed; right: 0; top: 0; opacity: 0;">&times;</span>
+        
+        <div id="modalImg" style="padding: 0; margin: auto">      
+            <div style="width: 100%; height: 100%; position: absolute;"></div> 
+            <img id="imgZoom" loading="lazy" src="" style="height: 100%; padding: 1dvw;">
+        </div>            
+
+    </div>  
+
+
+
+
+    
+</body>
+
+    
+</html>
